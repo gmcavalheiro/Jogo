@@ -1,6 +1,7 @@
 package jogo;
 
 import java.awt.*;
+import java.util.Map;
 
 public class Mundo {
 
@@ -20,11 +21,18 @@ public class Mundo {
 
     public void render(Graphics g) {
 
-        //TEMP
-        for(int y = 0;y < height;y++){
-            for(int x = 0;x < width;x++){
-                getTile(x, y).render(g, x * Ladrilho.LAD_WIDTH, y * Ladrilho.LAD_HEIGHT);
+        //renderiza apenas a parte que aparece na tela
+        int xStart = (int) Math.max(0, game.getCamera().getxOffset() / Ladrilho.LAD_WIDTH);
+        int xEnd = (int) Math.min(width, (game.getCamera().getxOffset() + game.getWidth()) / Ladrilho.LAD_WIDTH + 1);
+        int yStart = (int) Math.max(0, game.getCamera().getyOffset() / Ladrilho.LAD_HEIGHT);
+        int yEnd = (int) Math.min(height, (game.getCamera().getyOffset() + game.getHeight()) / Ladrilho.LAD_HEIGHT + 1);
 
+        //TEMP
+        for(int y = yStart; y < yEnd; y++){
+            for(int x = xStart ;x < xEnd; x++){
+                getTile(x, y).render(g,
+                        (int) (x * Ladrilho.LAD_WIDTH - game.getCamera().getxOffset()),
+                        (int) (y * Ladrilho.LAD_HEIGHT - game.getCamera().getyOffset()));
             }
         }
     }
@@ -49,10 +57,6 @@ public class Mundo {
         height = Utilidades.parseInt(tokens[1]);
         spawnX = Utilidades.parseInt(tokens[2]);
         spawnY = Utilidades.parseInt(tokens[3]);
-
-        System.out.println(spawnX);
-        System.out.println(spawnY);
-
 
         lad = new int[width][height];
         for (int y = 0; y < height; y++){

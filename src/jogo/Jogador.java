@@ -14,6 +14,7 @@ public class Jogador extends Criatura {
     public void atualiza() {
         entrada();
         movimento();
+        game.getCamera().centralizar(this);
     }
 
     private void entrada(){
@@ -28,6 +29,9 @@ public class Jogador extends Criatura {
 
     @Override
     public void render(Graphics g) {
-        g.drawImage(Assets.jogador_f, (int) x, (int) y, width, height, null);
+        g.drawImage(Assets.jogador_f,
+                (int) (x - game.getCamera().getxOffset()),
+                (int) (y - game.getCamera().getyOffset()),
+                width, height, null);
     }
 }

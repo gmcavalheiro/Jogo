@@ -6,7 +6,7 @@ import java.awt.image.BufferedImage;
 
 public class Jogo implements Runnable{
     private Display display;
-    public int width, height;
+    private int width, height;
     public String titulo;
 
     private boolean executando = false;
@@ -15,10 +15,13 @@ public class Jogo implements Runnable{
     private BufferStrategy bs;
     private Graphics g;
 
-    private Estado estadoJogo;
-    private Estado estadoMenu;
+    //estados do programa
+    private Estado estadoJogo; //estado de jogo
+    private Estado estadoMenu; //estado de menu
 
-    private KeyManager keyManager;
+    private KeyManager keyManager; //Leitor do teclado
+
+    private Camera camera;
 
 
     public Jogo(String titulo, int width, int height){
@@ -32,6 +35,7 @@ public class Jogo implements Runnable{
         display = new Display(titulo, width, height);
         display.getFrame().addKeyListener(keyManager);
         Assets.init();
+        camera = new Camera(this, 0, 0);
 
         estadoJogo = new EstadoJogo(this);
         estadoMenu = new EstadoMenu(this);
@@ -96,6 +100,16 @@ public class Jogo implements Runnable{
 
     public KeyManager getKeyManager(){
         return keyManager;
+    }
+
+    public Camera getCamera(){ return camera; }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
     }
 
     public synchronized void start(){

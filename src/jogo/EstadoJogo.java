@@ -11,12 +11,14 @@ public class EstadoJogo extends Estado {
         super(game);
         mundo = new Mundo(game, "res/mundos/mundo1.txt");
         player = new Jogador(game,mundo.getSpawnX(),mundo.getSpawnY());
+
     }
 
     @Override
     public void atualiza() {
         mundo.atualiza();
         player.atualiza();
+
     }
 
     @Override
