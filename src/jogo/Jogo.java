@@ -15,22 +15,35 @@ public class Jogo implements Runnable{
     private BufferStrategy bs;
     private Graphics g;
 
-    private BufferedImage testeI;
+    private Estado estadoJogo;
+    private Estado estadoMenu;
+
+    private KeyManager keyManager;
 
 
     public Jogo(String titulo, int width, int height){
         this.width = width;
         this.height = height;
         this.titulo = titulo;
+        keyManager = new KeyManager();
     }
 
     public void init (){
         display = new Display(titulo, width, height);
-        testeI = ImageLoader.loadImage("/texturas/teste.png");
+        display.getFrame().addKeyListener(keyManager);
+        Assets.init();
+
+        estadoJogo = new EstadoJogo(this);
+        estadoMenu = new EstadoMenu(this);
+        Estado.setEstadoAtual(estadoJogo);
+
     }
 
     private void atualiza(){
-
+        keyManager.atualiza();
+       if(Estado.getEstadoAtual() != null){
+           Estado.getEstadoAtual().atualiza();
+       }
     }
 
     private void render(){
@@ -44,7 +57,9 @@ public class Jogo implements Runnable{
         g.clearRect(0,0,width,height); //limpa a tela
         // começo desenho
 
-        g.drawImage(testeI,50,80,null);
+        if(Estado.getEstadoAtual() != null){
+            Estado.getEstadoAtual().render(g);
+        }
 
         // final desenho
         bs.show();
@@ -53,11 +68,34 @@ public class Jogo implements Runnable{
 
     public void run(){
         init();
+
+
+        //codigo necessario para manter a consistencia na execução do jogo,
+        //assim ele roda na mesma "velocidade" independente do computador.
+        int fps = 60; //quantidade de quadros por segundo
+        double t_Atualizacao = 1000000000 / fps; //determina quantos milisegundos cada quadro aparece na tela
+        double delta = 0;
+        long now;
+        long lastTime = System.nanoTime(); //marca o primeiro tempo de execução do jogo
+
+
         while (executando){
-            atualiza();
-            render();
+            now = System.nanoTime(); //marca o tempo que o loop inicia
+            delta += (now - lastTime) / t_Atualizacao; //determina quando atualizar a tela
+            lastTime = now; // grava o tempo que o loop foi executado pela úlltima vez
+
+            if(delta >=1) { //se delta for maior que 1 esta na hora de atualizar
+                atualiza();
+                render();
+                delta--;
+            }
         }
+
         stop();
+    }
+
+    public KeyManager getKeyManager(){
+        return keyManager;
     }
 
     public synchronized void start(){

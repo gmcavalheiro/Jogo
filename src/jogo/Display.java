@@ -29,9 +29,10 @@ public class Display {
 
         //Cria a exibição do jogo, com tamanho definido
         canvas = new Canvas();
-        canvas.setPreferredSize(new Dimension( widtth, height));
+        canvas.setPreferredSize(new Dimension(widtth, height));
         canvas.setMaximumSize(new Dimension(widtth, height));
         canvas.setMinimumSize(new Dimension(widtth, height));
+        canvas.setFocusable(false);
 
         frame.add(canvas);
         frame.pack();
