@@ -41,7 +41,7 @@ public class Jogo implements Runnable{
 
 
         musica = new Musica();
-        //musica.bgMusica("res/musicas/afterburn.mid",999);
+        //musica.bgMusica("res/musicas/Dance.mid",999);
 
         estadoJogo = new EstadoJogo(handler);
         estadoMenu = new EstadoMenu(handler);
