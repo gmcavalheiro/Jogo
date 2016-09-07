@@ -20,8 +20,9 @@ public class Jogo implements Runnable{
     private Estado estadoMenu; //estado de menu
 
     private KeyManager keyManager; //Leitor do teclado
-
+    private Handler handler;
     private Camera camera;
+    private Musica musica;
 
 
     public Jogo(String titulo, int width, int height){
@@ -35,10 +36,15 @@ public class Jogo implements Runnable{
         display = new Display(titulo, width, height);
         display.getFrame().addKeyListener(keyManager);
         Assets.init();
-        camera = new Camera(this, 0, 0);
+        handler = new Handler(this);
+        camera = new Camera(handler, 0, 0);
 
-        estadoJogo = new EstadoJogo(this);
-        estadoMenu = new EstadoMenu(this);
+
+        musica = new Musica();
+        //musica.bgMusica("res/musicas/afterburn.mid",999);
+
+        estadoJogo = new EstadoJogo(handler);
+        estadoMenu = new EstadoMenu(handler);
         Estado.setEstadoAtual(estadoJogo);
 
     }

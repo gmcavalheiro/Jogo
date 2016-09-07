@@ -5,14 +5,14 @@ import java.util.Map;
 
 public class Mundo {
 
-    private Jogo game;
+    private Handler handler;
     private int width, height;
     private int spawnX, spawnY;
     private int[][] lad;
 
-    public Mundo(Jogo game, String caminho){
+    public Mundo(Handler handler, String caminho){
         carregador(caminho);
-        this.game = game;
+        this.handler = handler;
     }
 
     public void atualiza() {
@@ -22,27 +22,27 @@ public class Mundo {
     public void render(Graphics g) {
 
         //renderiza apenas a parte que aparece na tela
-        int xStart = (int) Math.max(0, game.getCamera().getxOffset() / Ladrilho.LAD_WIDTH);
-        int xEnd = (int) Math.min(width, (game.getCamera().getxOffset() + game.getWidth()) / Ladrilho.LAD_WIDTH + 1);
-        int yStart = (int) Math.max(0, game.getCamera().getyOffset() / Ladrilho.LAD_HEIGHT);
-        int yEnd = (int) Math.min(height, (game.getCamera().getyOffset() + game.getHeight()) / Ladrilho.LAD_HEIGHT + 1);
+        int xStart = (int) Math.max(0, handler.getCamera().getxOffset() / Ladrilho.LAD_WIDTH);
+        int xEnd = (int) Math.min(width, (handler.getCamera().getxOffset() + handler.getWidth()) / Ladrilho.LAD_WIDTH + 1);
+        int yStart = (int) Math.max(0, handler.getCamera().getyOffset() / Ladrilho.LAD_HEIGHT);
+        int yEnd = (int) Math.min(height, (handler.getCamera().getyOffset() + handler.getHeight()) / Ladrilho.LAD_HEIGHT + 1);
 
         //TEMP
         for(int y = yStart; y < yEnd; y++){
             for(int x = xStart ;x < xEnd; x++){
                 getTile(x, y).render(g,
-                        (int) (x * Ladrilho.LAD_WIDTH - game.getCamera().getxOffset()),
-                        (int) (y * Ladrilho.LAD_HEIGHT - game.getCamera().getyOffset()));
+                        (int) (x * Ladrilho.LAD_WIDTH - handler.getCamera().getxOffset()),
+                        (int) (y * Ladrilho.LAD_HEIGHT - handler.getCamera().getyOffset()));
             }
         }
     }
 
     public Ladrilho getTile(int x, int y){
-
+        if(x < 0 || y < 0 || x >= width || y >= height){
+            return Ladrilho.grama;
+        }
 
         Ladrilho t = Ladrilho.titles[lad[x][y]];
-
-        //Ladrilho t = Ladrilho.ladrilho[1];
         if (t == null){
             return Ladrilho.asfalto;
         }
@@ -64,6 +64,14 @@ public class Mundo {
                 lad[x][y] = Utilidades.parseInt(tokens[(x + y * width) + 4]);
             }
         }
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
     }
 
     public int getSpawnX() {

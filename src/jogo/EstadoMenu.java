@@ -4,8 +4,8 @@ import java.awt.*;
 
 public class EstadoMenu extends Estado {
 
-    public EstadoMenu(Jogo game){
-        super(game);
+    public EstadoMenu(Handler handler){
+        super(handler);
 
     }
 

@@ -4,16 +4,18 @@ import java.awt.*;
 
 public abstract class Entidade {
 
-    protected Jogo game;
+    protected Handler handler;
     protected float x, y;
     protected int width, height;
+    protected Rectangle bounds;
 
-    public Entidade(Jogo game, float x, float y, int width, int height){
-        this.game = game;
+    public Entidade(Handler handler, float x, float y, int width, int height){
+        this.handler = handler;
         this.x = x;
         this.y = y;
         this.width = width;
         this.height = height;
+        bounds = new Rectangle(0,0,width,height);
     }
 
     public abstract void atualiza();

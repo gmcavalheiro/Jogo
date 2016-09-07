@@ -14,10 +14,10 @@ public abstract class Estado {
         return estadoAtual;
     }
 
-    protected Jogo game;
+    protected Handler handler;
 
-    public Estado(Jogo game){
-        this.game = game;
+    public Estado(Handler handler){
+        this.handler = handler;
     }
 
     //Class

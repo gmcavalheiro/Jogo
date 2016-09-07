@@ -7,10 +7,11 @@ public class EstadoJogo extends Estado {
     private Jogador player;
     private Mundo mundo;
 
-    public EstadoJogo(Jogo game){
-        super(game);
-        mundo = new Mundo(game, "res/mundos/mundo1.txt");
-        player = new Jogador(game,mundo.getSpawnX(),mundo.getSpawnY());
+    public EstadoJogo(Handler handler){
+        super(handler);
+        mundo = new Mundo(handler, "res/mundos/mundo1.txt");
+        handler.setMundo(mundo);
+        player = new Jogador(handler,mundo.getSpawnX(),mundo.getSpawnY());
 
     }
 
