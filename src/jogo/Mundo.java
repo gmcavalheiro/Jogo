@@ -10,13 +10,24 @@ public class Mundo {
     private int spawnX, spawnY;
     private int[][] lad;
 
+    //Entidades
+    private GerenciadorDeEntidades gerenciadorDeEntidades;
+
     public Mundo(Handler handler, String caminho){
         carregador(caminho);
+        gerenciadorDeEntidades = new GerenciadorDeEntidades(handler, new Jogador(handler,100,100));
+
         this.handler = handler;
+
+        gerenciadorDeEntidades.getPlayer().setX(spawnX * Ladrilho.LAD_WIDTH);
+        gerenciadorDeEntidades.getPlayer().setY(spawnY * Ladrilho.LAD_HEIGHT);
+
+        gerenciadorDeEntidades.adicionaEntidade(new Arvore(handler, 100, 200));
+
     }
 
     public void atualiza() {
-
+        gerenciadorDeEntidades.atualiza();
     }
 
     public void render(Graphics g) {
@@ -35,6 +46,9 @@ public class Mundo {
                         (int) (y * Ladrilho.LAD_HEIGHT - handler.getCamera().getyOffset()));
             }
         }
+
+        //Entidades
+        gerenciadorDeEntidades.render(g);
     }
 
     public Ladrilho getTile(int x, int y){
@@ -72,6 +86,10 @@ public class Mundo {
 
     public int getHeight() {
         return height;
+    }
+
+    public GerenciadorDeEntidades getGerenciadorDeEntidades() {
+        return gerenciadorDeEntidades;
     }
 
     public int getSpawnX() {

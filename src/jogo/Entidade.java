@@ -22,6 +22,23 @@ public abstract class Entidade {
 
     public abstract void render(Graphics g);
 
+    public boolean colisaoEntidade(float xOffset, float yOffset){
+        for(Entidade e: handler.getMundo().getGerenciadorDeEntidades().getEntidades()){
+            if(e.equals(this)) continue;
+
+            if(e.getCBounds(0f,0f).intersects(getCBounds(xOffset,yOffset))){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public Rectangle getCBounds(float xOffset, float yOffset){
+        return new Rectangle((int)(x + bounds.x + xOffset),
+                (int)(y + bounds.y + yOffset),
+                bounds.width, bounds.height);
+    }
+
     public float getX() {
         return x;
     }

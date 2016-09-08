@@ -5,7 +5,7 @@ import java.awt.image.BufferedImage;
 public class Assets {
 
     private static final int width = 64, height = 64;
-    public static BufferedImage grama, asfalto, tijolo, player;
+    public static BufferedImage grama, asfalto, tijolo, player, arvore;
     public static BufferedImage[] jogador_baixo, jogador_cima, jogador_dir, jogador_esq;
 
     public static void init(){
@@ -37,5 +37,6 @@ public class Assets {
         grama = textura.corta(0,0,width,height);
         asfalto = textura.corta(width,0,width,height);
         tijolo = textura.corta(width*2,0,width,height);
+        arvore = textura.corta(0,height,width,height);
     }
 }

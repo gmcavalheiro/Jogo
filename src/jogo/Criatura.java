@@ -23,8 +23,12 @@ public abstract class Criatura extends Entidade {
     }
 
     public void movimento(){
-        movX();
-        movY();
+        if(!colisaoEntidade(xMove, 0f)){
+            movX();
+        }
+        if(!colisaoEntidade(0f, yMove)){
+            movY();
+        }
     }
 
     public void movX(){//Movimenta e Colisão horizontal
