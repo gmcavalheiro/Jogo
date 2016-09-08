@@ -10,6 +10,7 @@ import javax.sound.midi.Sequencer;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
+import javax.sound.sampled.FloatControl;
 
 import java.io.*;
 
@@ -30,11 +31,13 @@ public class Musica {
         }
     }
 
-    public void wavMusic(String caminho){
+    public void wavMusic(String caminho, float vol){
         try {
             Clip clip = AudioSystem.getClip();
             AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File(caminho));
             clip.open(inputStream);
+            FloatControl volume = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
+            volume.setValue(vol);
             clip.start();
         }catch (Exception e){
             System.out.println(e);

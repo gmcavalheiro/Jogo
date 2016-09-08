@@ -41,7 +41,7 @@ public class Jogo implements Runnable{
 
 
         musica = new Musica();
-        musica.wavMusic("res/musicas/TPnTD.wav");
+        musica.wavMusic("res/musicas/TPnTD.wav", -10.0f);
 
 
         estadoJogo = new EstadoJogo(handler);
