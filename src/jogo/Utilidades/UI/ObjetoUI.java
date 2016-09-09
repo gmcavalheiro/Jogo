@@ -1,4 +1,4 @@
-package jogo.Utilidades;
+package jogo.Utilidades.UI;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;

@@ -12,12 +12,14 @@ public class Assets {
     public static BufferedImage arvore, arvore_grande, arbusto, arbusto_grande;
     public static BufferedImage casa;
     public static BufferedImage[] jogador_baixo, jogador_cima, jogador_dir, jogador_esq;
+    public static BufferedImage[] btn_inico, btn_sair;
 
     public static void init(){
         SpriteSheet textura = new SpriteSheet(ImageLoader.loadImage("/texturas/texturas.png"));
         SpriteSheet jogador = new SpriteSheet(ImageLoader.loadImage("/texturas/player.png"));
         SpriteSheet folhas = new SpriteSheet(ImageLoader.loadImage("/texturas/arvores.png"));
         SpriteSheet predio = new SpriteSheet(ImageLoader.loadImage("/texturas/predios.png"));
+        SpriteSheet botoes = new SpriteSheet(ImageLoader.loadImage("/texturas/botoes.png"));
 
         jogador_baixo = new BufferedImage[2];
         jogador_cima = new BufferedImage[2];
@@ -54,5 +56,15 @@ public class Assets {
 
         //predios
         casa = predio.corta(0,0,width,height);
+
+        //Botões
+        btn_inico = new BufferedImage[2];
+        btn_sair = new BufferedImage[2];
+
+        btn_inico[0] = botoes.corta(0,0, width*2, height);
+        btn_inico[1] = botoes.corta(width*2, 0, width*2, height);
+
+        btn_sair[0] = botoes.corta(0,height,width*2,height);
+        btn_sair[1] = botoes.corta(width*2, height, width*2, height);
     }
 }
