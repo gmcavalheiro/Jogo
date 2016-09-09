@@ -18,7 +18,11 @@ public class EstadoMenu extends Estado {
         gerenciadorUI = new GerenciadorUI(handler);
         handler.getMouseManager().setGerenciadorUI(gerenciadorUI);
 
-        gerenciadorUI.addObjeto(new BotaoUI(200,200, Ladrilho.LAD_WIDTH*2, Ladrilho.LAD_HEIGHT, Assets.btn_inico,
+        gerenciadorUI.addObjeto(new BotaoUI(
+                200, 200, //Posição
+                Ladrilho.LAD_WIDTH*2, //Largura
+                Ladrilho.LAD_HEIGHT, //Comprimento
+                Assets.btn_inico,  //Imagem
                 new ClickListener(){
                     @Override
                     public void onClick() {
@@ -26,6 +30,19 @@ public class EstadoMenu extends Estado {
                        Estado.setEstadoAtual(handler.getGame().estadoJogo);
                     }
                 }));
+
+        gerenciadorUI.addObjeto(new BotaoUI(
+                200, 300,
+                Ladrilho.LAD_WIDTH * 2,
+                Ladrilho.LAD_HEIGHT,
+                Assets.btn_sair,
+                new ClickListener() {
+                    @Override
+                    public void onClick() {
+                        System.exit(0);
+                    }
+                }
+        ));
     }
 
     @Override
