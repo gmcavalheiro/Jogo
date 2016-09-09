@@ -1,4 +1,4 @@
-package jogo.Assets.Objetos;
+package jogo.Entidades.Objetos;
 
 import jogo.Assets.Assets;
 import jogo.Assets.Ladrilho;
