@@ -1,6 +1,8 @@
 package jogo;
 
 import jogo.Assets.*;
+import jogo.Assets.Objetos.Arvore;
+import jogo.Assets.Objetos.ArvoreGrande;
 import jogo.Entidades.*;
 import jogo.Utilidades.*;
 

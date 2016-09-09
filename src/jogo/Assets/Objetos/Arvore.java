@@ -1,5 +1,7 @@
-package jogo.Assets;
+package jogo.Assets.Objetos;
 
+import jogo.Assets.Assets;
+import jogo.Assets.Ladrilho;
 import jogo.Entidades.EntidadeEstatica;
 import jogo.Utilidades.Handler;
 

@@ -1,5 +1,9 @@
 package jogo.Assets;
 
+import jogo.Assets.Ladrilhos.Asfalto;
+import jogo.Assets.Ladrilhos.Grama;
+import jogo.Assets.Ladrilhos.Tijolo;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
