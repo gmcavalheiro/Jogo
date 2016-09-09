@@ -1,11 +1,10 @@
-package jogo;
+package jogo.Entidades;
 
-import jogo.Entidades.Entidade;
-import jogo.Entidades.Jogador;
 import jogo.Utilidades.Handler;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Comparator;
 
 //player = new Jogador(handler,mundo.getSpawnX(),mundo.getSpawnY());
 
@@ -14,6 +13,17 @@ public class GerenciadorDeEntidades {
     private Handler handler;
     private Jogador player;
     private ArrayList<Entidade> entidades;
+    private Comparator<Entidade> orderRender = new Comparator<Entidade>() {
+        @Override
+        public int compare(Entidade a, Entidade b) {
+            //Comparador de entidades, verifica o que tem que ser exibido primeiro
+            if (a.getY() + a.getHeight() < b.getY() + b.getHeight()) {
+                return -1;
+            } else {
+                return 1;
+            }
+        }
+    };
 
     public GerenciadorDeEntidades(Handler handler, Jogador player){
         this.handler = handler;
@@ -28,6 +38,8 @@ public class GerenciadorDeEntidades {
             Entidade e = entidades.get(i);
             e.atualiza();
         }
+        //ordena o ArrayList de acordo com a coordenada Y de baixo.
+        entidades.sort(orderRender);
     }
 
     public void render(Graphics g) {

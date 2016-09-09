@@ -28,7 +28,7 @@ public class Mundo {
         gerenciadorDeEntidades.getPlayer().setY(spawnY * Ladrilho.LAD_HEIGHT);
 
         gerenciadorDeEntidades.adicionaEntidade(new Arvore(handler, 2, 2));
-        gerenciadorDeEntidades.adicionaEntidade(new ArvoreGrande(handler, 5, 6));
+        gerenciadorDeEntidades.adicionaEntidade(new ArvoreGrande(handler, 5, 10));
 
     }
 
@@ -64,7 +64,7 @@ public class Mundo {
 
         Ladrilho t = Ladrilho.titles[lad[x][y]];
         if (t == null){
-            return Ladrilho.asfalto;
+            return Ladrilho.grama;
         }
             return t;
 

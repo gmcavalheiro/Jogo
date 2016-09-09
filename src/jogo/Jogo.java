@@ -3,6 +3,7 @@ package jogo;
 import jogo.Assets.Assets;
 import jogo.Utilidades.Handler;
 import jogo.Utilidades.KeyManager;
+import jogo.Utilidades.MouseManager;
 import jogo.Utilidades.Musica;
 
 import java.awt.*;
@@ -20,10 +21,11 @@ public class Jogo implements Runnable{
     private Graphics g;
 
     //estados do programa
-    private Estado estadoJogo; //estado de jogo
-    private Estado estadoMenu; //estado de menu
+    public Estado estadoJogo; //estado de jogo
+    public Estado estadoMenu; //estado de menu
 
     private KeyManager keyManager; //Leitor do teclado
+    private MouseManager mouseManager; //Leitor do mouse
     private Handler handler;
     private Camera camera;
     private Musica musica;
@@ -34,23 +36,31 @@ public class Jogo implements Runnable{
         this.height = height;
         this.titulo = titulo;
         keyManager = new KeyManager();
+        mouseManager = new MouseManager();
     }
 
     public void init (){
         display = new Display(titulo, width, height);
         display.getFrame().addKeyListener(keyManager);
+
+        display.getFrame().addMouseListener(mouseManager);
+        display.getFrame().addMouseMotionListener(mouseManager);
+        display.getCanvas().addMouseListener(mouseManager);
+        display.getCanvas().addMouseMotionListener(mouseManager);
+
         Assets.init();
         handler = new Handler(this);
         camera = new Camera(handler, 0, 0);
 
-
         musica = new Musica();
-        musica.wavMusic("res/musicas/TPnTD.wav", -10.0f);
+        musica.wavMusic("res/musicas/TPnTD.wav", -20.0f, true);
 
 
         estadoJogo = new EstadoJogo(handler);
         estadoMenu = new EstadoMenu(handler);
-        Estado.setEstadoAtual(estadoJogo);
+        Estado.setEstadoAtual(estadoMenu);
+
+
 
     }
 
@@ -111,6 +121,10 @@ public class Jogo implements Runnable{
 
     public KeyManager getKeyManager(){
         return keyManager;
+    }
+
+    public MouseManager getMouseManager() {
+        return mouseManager;
     }
 
     public Camera getCamera(){ return camera; }

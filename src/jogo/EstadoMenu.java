@@ -13,11 +13,13 @@ public class EstadoMenu extends Estado {
 
     @Override
     public void atualiza() {
-
+        if(handler.getMouseManager().isMouseDireito() && handler.getMouseManager().isMouseEsquerdo()){
+            Estado.setEstadoAtual(handler.getGame().estadoJogo);
+        }
     }
 
     @Override
     public void render(Graphics g) {
-
+        g.fillRect(handler.getMouseManager().getMouseX(), handler.getMouseManager().getMouseY(), 50, 50 );
     }
 }

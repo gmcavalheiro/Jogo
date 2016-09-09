@@ -31,11 +31,14 @@ public class Musica {
         }
     }
 
-    public void wavMusic(String caminho, float vol){
+    public void wavMusic(String caminho, float vol, boolean rep){
         try {
             Clip clip = AudioSystem.getClip();
             AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File(caminho));
             clip.open(inputStream);
+            if(rep == true){
+                clip.loop(Clip.LOOP_CONTINUOUSLY);
+            }
             FloatControl volume = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
             volume.setValue(vol);
             clip.start();
