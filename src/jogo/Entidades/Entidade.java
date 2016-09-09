@@ -1,4 +1,6 @@
-package jogo;
+package jogo.Entidades;
+
+import jogo.Utilidades.Handler;
 
 import java.awt.*;
 

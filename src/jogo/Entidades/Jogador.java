@@ -1,4 +1,7 @@
-package jogo;
+package jogo.Entidades;
+
+import jogo.Assets.Assets;
+import jogo.Utilidades.Handler;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -10,7 +13,7 @@ public class Jogador extends Criatura {
     int animVel = 300;
 
     public Jogador(Handler handler, float x, float y) {
-        super(handler, x * Criatura.CP_WIDTH, y * Criatura.CP_HEIGHT, Criatura.CP_WIDTH, Criatura.CP_HEIGHT);
+        super(handler, x * CP_WIDTH, y * CP_HEIGHT, CP_WIDTH, CP_HEIGHT);
 
         //define o tamanho do bounding box, para colisão
         bounds.x = 24;

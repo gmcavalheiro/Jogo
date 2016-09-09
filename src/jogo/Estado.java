@@ -1,5 +1,7 @@
 package jogo;
 
+import jogo.Utilidades.Handler;
+
 import java.awt.*;
 
 public abstract class Estado {

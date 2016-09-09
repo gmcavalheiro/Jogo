@@ -1,6 +1,6 @@
-package jogo;
+package jogo.Assets;
 
-public class Asfalto extends Ladrilho{
+public class Asfalto extends Ladrilho {
 
     public Asfalto(int id){
         super(Assets.asfalto, id);

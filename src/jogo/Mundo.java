@@ -1,7 +1,10 @@
 package jogo;
 
+import jogo.Assets.*;
+import jogo.Entidades.*;
+import jogo.Utilidades.*;
+
 import java.awt.*;
-import java.util.Map;
 
 public class Mundo {
 
@@ -22,7 +25,8 @@ public class Mundo {
         gerenciadorDeEntidades.getPlayer().setX(spawnX * Ladrilho.LAD_WIDTH);
         gerenciadorDeEntidades.getPlayer().setY(spawnY * Ladrilho.LAD_HEIGHT);
 
-        gerenciadorDeEntidades.adicionaEntidade(new Arvore(handler, 100, 200));
+        gerenciadorDeEntidades.adicionaEntidade(new Arvore(handler, 2, 2));
+        gerenciadorDeEntidades.adicionaEntidade(new ArvoreGrande(handler, 5, 6));
 
     }
 

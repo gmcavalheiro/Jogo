@@ -1,4 +1,4 @@
-package jogo;
+package jogo.Assets;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;

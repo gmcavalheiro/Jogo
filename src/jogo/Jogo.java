@@ -1,8 +1,12 @@
 package jogo;
 
+import jogo.Assets.Assets;
+import jogo.Utilidades.Handler;
+import jogo.Utilidades.KeyManager;
+import jogo.Utilidades.Musica;
+
 import java.awt.*;
 import java.awt.image.BufferStrategy;
-import java.awt.image.BufferedImage;
 
 public class Jogo implements Runnable{
     private Display display;

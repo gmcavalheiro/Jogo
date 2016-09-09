@@ -1,5 +1,9 @@
 package jogo;
 
+import jogo.Entidades.Entidade;
+import jogo.Entidades.Jogador;
+import jogo.Utilidades.Handler;
+
 import java.awt.*;
 import java.util.ArrayList;
 

@@ -1,4 +1,8 @@
-package jogo;
+package jogo.Utilidades;
+
+import jogo.Camera;
+import jogo.Jogo;
+import jogo.Mundo;
 
 public class Handler {
 

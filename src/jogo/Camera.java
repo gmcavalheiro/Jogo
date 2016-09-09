@@ -1,5 +1,9 @@
 package jogo;
 
+import jogo.Assets.*;
+import jogo.Entidades.Entidade;
+import jogo.Utilidades.Handler;
+
 public class Camera {
 
     private float xOffset, yOffset;
@@ -20,8 +24,8 @@ public class Camera {
 
         if(yOffset < 0){
             yOffset = 0;
-        }else if(yOffset > handler.getMundo().getHeight()*Ladrilho.LAD_HEIGHT - handler.getHeight()){
-            yOffset = handler.getMundo().getHeight()*Ladrilho.LAD_HEIGHT - handler.getHeight();
+        }else if(yOffset > handler.getMundo().getHeight()* Ladrilho.LAD_HEIGHT - handler.getHeight()){
+            yOffset = handler.getMundo().getHeight()* Ladrilho.LAD_HEIGHT - handler.getHeight();
         }
     }
 

@@ -1,4 +1,4 @@
-package jogo;
+package jogo.Entidades;
 
 import java.awt.image.BufferedImage;
 

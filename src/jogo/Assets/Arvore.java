@@ -1,11 +1,14 @@
-package jogo;
+package jogo.Assets;
+
+import jogo.Entidades.EntidadeEstatica;
+import jogo.Utilidades.Handler;
 
 import java.awt.*;
 
-public class Arvore extends EntidadeEstatica{
+public class Arvore extends EntidadeEstatica {
 
     public Arvore(Handler handler, float x, float y){
-        super(handler, x, y, Ladrilho.LAD_WIDTH, Ladrilho.LAD_HEIGHT);
+        super(handler, x* Ladrilho.LAD_WIDTH, y*Ladrilho.LAD_HEIGHT, Ladrilho.LAD_WIDTH, Ladrilho.LAD_HEIGHT);
 
         bounds.x = 30;
         bounds.y = 40;
