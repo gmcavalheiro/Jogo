@@ -37,4 +37,9 @@ public class Arvore extends EntidadeEstatica {
                 bounds.width, bounds.height);
         */
     }
+
+    @Override
+    public void morre() {
+
+    }
 }

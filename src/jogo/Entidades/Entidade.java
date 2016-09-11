@@ -6,9 +6,13 @@ import java.awt.*;
 
 public abstract class Entidade {
 
+    public static final int saude_padrao = 10;
+
     protected Handler handler;
     protected float x, y;
     protected int width, height;
+    protected int saude;
+    protected boolean ativo = true;
     protected Rectangle bounds;
 
     public Entidade(Handler handler, float x, float y, int width, int height){
@@ -18,6 +22,7 @@ public abstract class Entidade {
         this.width = width;
         this.height = height;
         bounds = new Rectangle(0,0,width,height);
+        saude = saude_padrao;
     }
 
     public abstract void atualiza();
@@ -33,6 +38,16 @@ public abstract class Entidade {
             }
         }
         return false;
+    }
+
+    public abstract void morre();
+
+    public void dano(int q){
+        saude -= q;
+        if(saude <= 0){
+            ativo = false;
+            morre();
+        }
     }
 
     public Rectangle getCBounds(float xOffset, float yOffset){
@@ -71,5 +86,21 @@ public abstract class Entidade {
 
     public void setHeight(int height) {
         this.height = height;
+    }
+
+    public int getSaude() {
+        return saude;
+    }
+
+    public void setSaude(int saude) {
+        this.saude = saude;
+    }
+
+    public boolean isAtivo() {
+        return ativo;
+    }
+
+    public void setAtivo(boolean ativo) {
+        this.ativo = ativo;
     }
 }

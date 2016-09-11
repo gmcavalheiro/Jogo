@@ -53,7 +53,7 @@ public class Jogo implements Runnable{
         camera = new Camera(handler, 0, 0);
 
         musica = new Musica();
-        musica.wavMusic("res/musicas/TPnTD.wav", -20.0f, true);
+        musica.wavMusic("res/musicas/TPnTD.wav", -28.0f, true);
 
 
         estadoJogo = new EstadoJogo(handler);

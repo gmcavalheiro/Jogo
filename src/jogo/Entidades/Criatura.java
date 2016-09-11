@@ -6,12 +6,12 @@ import jogo.Utilidades.Handler;
 public abstract class Criatura extends Entidade {
 
     int tamanho = 64;
-    public static final int saude_padrao = 10;
+
     public static final float velocidade_padrao = 3.0f;
     public static final int CP_WIDTH = 64,
                             CP_HEIGHT = 64;
 
-    protected int saude;
+
     protected float velocidade;
     protected float xMove, yMove;
 

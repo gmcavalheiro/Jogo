@@ -7,6 +7,7 @@ public class KeyManager implements KeyListener{
 
     private boolean[] teclas;
     public boolean cima, baixo, direita, esquerda;
+    public boolean attk;
 
     public KeyManager(){
         teclas = new boolean[256];
@@ -17,6 +18,8 @@ public class KeyManager implements KeyListener{
         baixo = teclas[KeyEvent.VK_S];
         direita = teclas[KeyEvent.VK_A];
         esquerda = teclas[KeyEvent.VK_D];
+
+        attk = teclas[KeyEvent.VK_E];
     }
 
     @Override

@@ -37,6 +37,9 @@ public class GerenciadorDeEntidades {
         for(int i = 0; i < entidades.size(); i++){
             Entidade e = entidades.get(i);
             e.atualiza();
+            if(!e.ativo){
+                entidades.remove(e);
+            }
         }
         //ordena o ArrayList de acordo com a coordenada Y de baixo.
         entidades.sort(orderRender);
