@@ -1,57 +1,37 @@
 package jogo.Entidades;
 
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Rectangle;
+import java.awt.image.BufferedImage;
+import java.util.Random;
+
 import jogo.Assets.Assets;
-import jogo.Estado;
 import jogo.Utilidades.Handler;
 import jogo.Utilidades.Musica;
 
-import javax.swing.*;
-import java.awt.*;
-import java.awt.image.BufferedImage;
 
-public class Jogador extends Criatura {
-
-    //Animação
+public class Inimigo extends Criatura{
     private Animacao animBaixo, animCima, animEsquerda, animDireita;
     int animVel = 300;
-
     private Musica musica = new Musica();
+    private long lastAttk, attkEspera = 10, attkTimer = attkEspera;
+    private long lastMov, movEspera = 100, movTimer = movEspera;
 
-
-    //Ataque
-    private long lastAttk, attkEspera = 500, attkTimer = attkEspera;
-
-    public Jogador(Handler handler, float x, float y) {
+    public Inimigo(Handler handler, float x, float y) {
         super(handler, x * CP_WIDTH, y * CP_HEIGHT, CP_WIDTH, CP_HEIGHT);
+        velocidade = 20.0f;
 
-        //define o tamanho do bounding box, para colisão
-        bounds.x = 24;
-        bounds.y = 32;
-        bounds.width = 16;
-        bounds.height = 30;
+        bounds.x = 0;
+        bounds.y = 0;
+        bounds.width = 64;
+        bounds.height = 64;
 
         //Animação
         animBaixo = new Animacao(animVel, Assets.jogador_baixo);
         animCima = new Animacao(animVel, Assets.jogador_cima);
         animDireita = new Animacao(animVel, Assets.jogador_dir);
         animEsquerda = new Animacao(animVel, Assets.jogador_esq);
-    }
-
-    @Override
-    public void atualiza() {
-        //animação
-        animBaixo.atualiza();
-        animCima.atualiza();
-        animDireita.atualiza();
-        animEsquerda.atualiza();
-
-        //movimento
-        entrada();
-        movimento();
-        handler.getCamera().centralizar(this);
-
-        //Ataques
-        ataques();
     }
 
     private void ataques() {
@@ -66,23 +46,20 @@ public class Jogador extends Criatura {
         ra.width = raTamanho;
         ra.height = raTamanho;
 
-        if(handler.getKeyManager().attk) {
-            if (xMove < 0) { //Esquerda
-                ra.x = cb.x - raTamanho;
-                ra.y = cb.y  + cb.height /2 - raTamanho/2;
-            } else if (xMove > 0) { //Direita
-                ra.x = cb.x + cb.width;;
-                ra.y = cb.y  + cb.height /2 - raTamanho/2;
-            } else if (yMove < 0) { //Cima
-                ra.x = cb.x + cb.width/2 - raTamanho/2;
-                ra.y = cb.y - raTamanho;
-            } else if (yMove > 0) { //Baixo
-                ra.x = cb.x + cb.width/2 - raTamanho/2;
-                ra.y = cb.y + cb.height;
-            }
-        }else {
-            return;
+        if (xMove < 0) { //Esquerda
+            ra.x = cb.x - raTamanho;
+            ra.y = cb.y  + cb.height /2 - raTamanho/2;
+        } else if (xMove > 0) { //Direita
+            ra.x = cb.x + cb.width;;
+            ra.y = cb.y  + cb.height /2 - raTamanho/2;
+        } else if (yMove < 0) { //Cima
+            ra.x = cb.x + cb.width/2 - raTamanho/2;
+            ra.y = cb.y - raTamanho;
+        } else if (yMove > 0) { //Baixo
+            ra.x = cb.x + cb.width/2 - raTamanho/2;
+            ra.y = cb.y + cb.height;
         }
+
 
         attkTimer = 0;
 
@@ -92,7 +69,7 @@ public class Jogador extends Criatura {
             }
             if(e.getCBounds(0,0).intersects(ra) && e.atacavel){
                 e.dano(1);
-                musica.wavMusic("res/musicas/Punch.wav", -5f, false);
+                //musica.wavMusic("res/musicas/Punch.wav", -5f, false);
                 return;
             }
         }
@@ -102,10 +79,44 @@ public class Jogador extends Criatura {
         xMove = 0;
         yMove = 0;
 
-        if(handler.getKeyManager().cima) yMove = -velocidade;
-        if(handler.getKeyManager().baixo) yMove = velocidade;
-        if(handler.getKeyManager().direita) xMove = -velocidade;
-        if(handler.getKeyManager().esquerda) xMove = velocidade;
+        movTimer += System.currentTimeMillis() - lastMov;
+        lastMov = System.currentTimeMillis();
+
+        if(movTimer < movEspera) return;
+
+        switch(rndMovimento()){
+            case 0:
+                //System.out.println("Baixo");
+                yMove = velocidade; //baixo
+                break;
+            case 1:
+                //System.out.println("cima");
+                yMove = -velocidade; //cima
+                break;
+            case 2:
+                //System.out.println("esq.");
+                xMove = velocidade; //esquerda
+                break;
+            case 3:
+                //System.out.println("dir.");
+                xMove = -velocidade; //direita
+                break;
+        }
+        movTimer = 0;
+
+    }
+
+    private int rndMovimento(){
+        Random r = new Random();
+        return r.nextInt(4);
+    }
+
+
+    @Override
+    public void atualiza() {
+        entrada();
+        movimento();
+        ataques();
     }
 
     @Override
@@ -118,8 +129,7 @@ public class Jogador extends Criatura {
 
     @Override
     public void morre() {
-        JOptionPane.showMessageDialog(null,"Morreu!", "Aps", JOptionPane.DEFAULT_OPTION);
-        Estado.setEstadoAtual(handler.getGame().estadoFim);
+
     }
 
     private BufferedImage getCAFrame(){
@@ -135,4 +145,6 @@ public class Jogador extends Criatura {
             return Assets.player;
         }
     }
+
+
 }

@@ -30,6 +30,8 @@ public class Mundo {
         gerenciadorDeEntidades.adicionaEntidade(new Arvore(handler, 2, 2));
         gerenciadorDeEntidades.adicionaEntidade(new ArvoreGrande(handler, 5, 10));
 
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 9,11));
+
     }
 
     public void atualiza() {

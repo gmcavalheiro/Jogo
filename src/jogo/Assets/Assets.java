@@ -23,6 +23,7 @@ public class Assets {
 
     //Personagens
     public static BufferedImage[] jogador_baixo, jogador_cima, jogador_dir, jogador_esq;
+    public static BufferedImage[] inimigo_baixo, inimigo_cima, inimigo_dir, inimigo_esq;
 
     //UI
     public static BufferedImage[] btn_inico, btn_sair;
@@ -34,9 +35,11 @@ public class Assets {
         SpriteSheet folhas = new SpriteSheet(ImageLoader.loadImage("/texturas/arvores.png"));
         SpriteSheet predio = new SpriteSheet(ImageLoader.loadImage("/texturas/predios.png"));
         SpriteSheet botoes = new SpriteSheet(ImageLoader.loadImage("/texturas/botoes.png"));
+        SpriteSheet inimigo = new SpriteSheet(ImageLoader.loadImage("/texturas/inimigo.png"));
 
 
         //Personagens
+        //Jogador
         jogador_baixo = new BufferedImage[2];
         jogador_cima = new BufferedImage[2];
         jogador_dir = new BufferedImage[2];
@@ -55,6 +58,32 @@ public class Assets {
         //direita
         jogador_dir[0] = jogador.corta(width*3,height,width,height);
         jogador_dir[1] = jogador.corta(width*3,height*2,width,height);
+
+        //Inimigo
+        inimigo_baixo = new BufferedImage[2];
+        inimigo_cima = new BufferedImage[2];
+        inimigo_dir = new BufferedImage[2];
+        inimigo_esq = new BufferedImage[2];
+        player = inimigo.corta(0,0,width,height);
+
+        //baixo
+        inimigo_baixo[0] = inimigo.corta(0,height,width,height);
+        inimigo_baixo[1] = inimigo.corta(0,height*2,width,height);
+        //cima
+        inimigo_cima[0] = inimigo.corta(width,height,width,height);
+        inimigo_cima[1] = inimigo.corta(width,height*2,width,height);
+        //esquerda
+        inimigo_esq[0] = inimigo.corta(width*2,height,width,height);
+        inimigo_esq[1] = inimigo.corta(width*2,height*2,width,height);
+        //direita
+        inimigo_dir[0] = inimigo.corta(width*3,height,width,height);
+        inimigo_dir[1] = inimigo.corta(width*3,height*2,width,height);
+
+
+
+
+
+
 
         //texturas
         grama_cse = textura.corta(0,0,tam,tam);

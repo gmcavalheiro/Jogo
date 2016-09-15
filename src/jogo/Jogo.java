@@ -23,6 +23,7 @@ public class Jogo implements Runnable{
     //estados do programa
     public Estado estadoJogo; //estado de jogo
     public Estado estadoMenu; //estado de menu
+    public Estado estadoFim;
 
     private KeyManager keyManager; //Leitor do teclado
     private MouseManager mouseManager; //Leitor do mouse
