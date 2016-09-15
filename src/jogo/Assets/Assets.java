@@ -22,6 +22,9 @@ public class Assets {
     public static BufferedImage arvore, arvore_grande, arbusto, arbusto_grande;
     public static BufferedImage casa;
 
+    //objetos
+    public static BufferedImage papel, pizza, garrafa;
+
     //Personagens
     public static BufferedImage[] jogador_baixo, jogador_cima, jogador_dir, jogador_esq;
     public static BufferedImage[] inimigo_baixo, inimigo_cima, inimigo_dir, inimigo_esq;
@@ -37,6 +40,7 @@ public class Assets {
         SpriteSheet predio = new SpriteSheet(ImageLoader.loadImage("/texturas/predios.png"));
         SpriteSheet botoes = new SpriteSheet(ImageLoader.loadImage("/texturas/botoes.png"));
         SpriteSheet inimigo = new SpriteSheet(ImageLoader.loadImage("/texturas/inimigo.png"));
+        SpriteSheet objetos = new SpriteSheet(ImageLoader.loadImage("/texturas/objetos.png"));
 
 
         /*  ------ Personagens ------*/
@@ -140,6 +144,9 @@ public class Assets {
 
         //predios
         casa = predio.corta(0,0,width,height);
+
+        //lixo
+        papel = objetos.corta(0,0,width,height)
 
 
         /*  ------ UI ------*/
