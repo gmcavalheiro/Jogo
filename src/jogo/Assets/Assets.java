@@ -9,6 +9,7 @@ public class Assets {
     private static final int width = 64, height = 64;
     private static final int tam = 64;
     public static BufferedImage player;
+    public static BufferedImage inimigo_parado;
     //Ladrilhos
     public static BufferedImage terra_cse, terra_s, terra_csd, terra_e, terra, terra_d, terra_cie, terra_i, terra_cid;
     public static BufferedImage grama_cse, grama_s, grama_csd, grama_e, grama, grama_d, grama_cie, grama_i, grama_cid;
@@ -64,7 +65,7 @@ public class Assets {
         inimigo_cima = new BufferedImage[2];
         inimigo_dir = new BufferedImage[2];
         inimigo_esq = new BufferedImage[2];
-        player = inimigo.corta(0,0,width,height);
+        inimigo_parado = inimigo.corta(0,0,width,height);
 
         //baixo
         inimigo_baixo[0] = inimigo.corta(0,height,width,height);

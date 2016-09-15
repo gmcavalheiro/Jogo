@@ -142,7 +142,7 @@ public class Inimigo extends Criatura{
         }else if(yMove > 0){
             return animBaixo.getCFrame();
         }else{
-            return Assets.player;
+            return Assets.inimigo_parado;
         }
     }
 
