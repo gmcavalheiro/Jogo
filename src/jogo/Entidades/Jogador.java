@@ -120,7 +120,7 @@ public class Jogador extends Criatura {
     @Override
     public void morre() {
         handler.getMundo().stop();
-        JOptionPane.showMessageDialog(null,"Morreu!" + "\n" + "Tempo: " + handler.getMundo().getTempo() + " segundos",
+        JOptionPane.showMessageDialog(null,"Morreu!" + "\n" + "Tempo: " + (String.format("%.1f", handler.getMundo().getTempo())) + " segundos",
                 "Aps", JOptionPane.DEFAULT_OPTION);
         JOptionPane.showMessageDialog(null,"Pontos: " + handler.getGame().getPontos() + "\n"
                 + "Kills: " + handler.getGame().getKills(),

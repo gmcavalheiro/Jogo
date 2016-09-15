@@ -6,6 +6,7 @@ import jogo.Entidades.Objetos.ArvoreGrande;
 import jogo.Entidades.*;
 import jogo.Entidades.Itens.Papel;
 import jogo.Utilidades.*;
+import jogo.Utilidades.UI.Info;
 
 import java.awt.*;
 
@@ -16,7 +17,8 @@ public class Mundo {
     private int spawnX, spawnY;
     private int[][] lad;
     private long startTimer, stopTimer;
-    private long duracao = 0;
+    private long duracao = 10;
+    private Info info;
 
     //Entidades
     private GerenciadorDeEntidades gerenciadorDeEntidades;
@@ -24,6 +26,7 @@ public class Mundo {
     public Mundo(Handler handler, String caminho){
         carregador(caminho);
         gerenciadorDeEntidades = new GerenciadorDeEntidades(handler, new Jogador(handler,100,100));
+        info = new Info(handler);
 
         this.handler = handler;
 
@@ -43,7 +46,7 @@ public class Mundo {
 
     public void atualiza() {
         gerenciadorDeEntidades.atualiza();
-        System.out.println(getTempoReal());
+        info.atualiza();
 
         if(getTempoReal() > duracao && duracao != 0){
             gerenciadorDeEntidades.getPlayer().morre();
@@ -70,6 +73,9 @@ public class Mundo {
 
         //Entidades
         gerenciadorDeEntidades.render(g);
+
+        info.render(g);
+
     }
 
     public Ladrilho getTile(int x, int y){
@@ -130,11 +136,15 @@ public class Mundo {
     }
 
     public float getTempo(){
-        return (float) ((stopTimer - startTimer)/1000.0f);
+        return (stopTimer - startTimer)/1000.0f;
     }
 
     public float getTempoReal(){
-        return (float) ((System.currentTimeMillis() - startTimer)/1000.0f);
+        return  (System.currentTimeMillis() - startTimer)/1000.0f;
+    }
+
+    public float getTempoRestante(){
+        return duracao - getTempoReal();
     }
 
 
