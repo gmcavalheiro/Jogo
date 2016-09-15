@@ -146,7 +146,9 @@ public class Assets {
         casa = predio.corta(0,0,width,height);
 
         //lixo
-        papel = objetos.corta(0,0,width,height)
+        papel = objetos.corta(0,0,width,height);
+        pizza = objetos.corta(width,0,width,height);
+        garrafa = objetos.corta(width*2,0,width,height);
 
 
         /*  ------ UI ------*/

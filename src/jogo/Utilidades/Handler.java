@@ -9,6 +9,7 @@ public class Handler {
     private Jogo game;
     private Mundo mundo;
 
+
     public Handler(Jogo game){
         this.game = game;
     }
@@ -47,4 +48,6 @@ public class Handler {
     public void setMundo(Mundo mundo) {
         this.mundo = mundo;
     }
+
+
 }

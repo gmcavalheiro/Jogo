@@ -1,10 +1,7 @@
 package jogo;
 
 import jogo.Assets.Assets;
-import jogo.Utilidades.Handler;
-import jogo.Utilidades.KeyManager;
-import jogo.Utilidades.MouseManager;
-import jogo.Utilidades.Musica;
+import jogo.Utilidades.*;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
@@ -13,6 +10,8 @@ public class Jogo implements Runnable{
     private Display display;
     private int width, height;
     public String titulo;
+
+    private int kills = 0, pontos = 0;
 
     private boolean executando = false;
     private Thread processo;
@@ -23,13 +22,14 @@ public class Jogo implements Runnable{
     //estados do programa
     public Estado estadoJogo; //estado de jogo
     public Estado estadoMenu; //estado de menu
-    public Estado estadoFim;
+
 
     private KeyManager keyManager; //Leitor do teclado
     private MouseManager mouseManager; //Leitor do mouse
     private Handler handler;
     private Camera camera;
     private Musica musica;
+
 
 
     public Jogo(String titulo, int width, int height){
@@ -53,13 +53,14 @@ public class Jogo implements Runnable{
         handler = new Handler(this);
         camera = new Camera(handler, 0, 0);
 
+
         musica = new Musica();
         musica.wavMusic("res/musicas/TPnTD.wav", -28.0f, true);
 
 
         estadoJogo = new EstadoJogo(handler);
         estadoMenu = new EstadoMenu(handler);
-        estadoFim = new EstadoFim(handler);
+
         Estado.setEstadoAtual(estadoMenu);
 
 
@@ -138,6 +139,18 @@ public class Jogo implements Runnable{
     public int getHeight() {
         return height;
     }
+
+    public int getKills() {
+        return kills;
+    }
+
+    public int getPontos() {
+        return pontos;
+    }
+
+    public void addPonto(){ pontos++; }
+
+    public void addKill(){ kills++; }
 
     public synchronized void start(){
         if(executando){

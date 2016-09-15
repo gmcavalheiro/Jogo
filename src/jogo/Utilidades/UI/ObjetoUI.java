@@ -28,6 +28,7 @@ public abstract class ObjetoUI {
     public void onMouseMove(MouseEvent e){
         if(bounds.contains(e.getX(), e.getY())){
             sobre = true;
+
         }else{
             sobre = false;
         }

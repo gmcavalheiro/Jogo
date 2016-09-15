@@ -13,10 +13,12 @@ import jogo.Utilidades.Musica;
 
 public class Inimigo extends Criatura{
     private Animacao animBaixo, animCima, animEsquerda, animDireita;
-    int animVel = 300;
+    int animVel = 100;
     private Musica musica = new Musica();
     private long lastAttk, attkEspera = 10, attkTimer = attkEspera;
-    private long lastMov, movEspera = 100, movTimer = movEspera;
+    private long lastMov, movEspera = 200, movTimer = movEspera;
+    private long lastEnt, entEspera = 200, entTimer = entEspera;
+    private int mov = 0;
 
     public Inimigo(Handler handler, float x, float y) {
         super(handler, x * CP_WIDTH, y * CP_HEIGHT, CP_WIDTH, CP_HEIGHT);
@@ -28,10 +30,10 @@ public class Inimigo extends Criatura{
         bounds.height = 64;
 
         //Animação
-        animBaixo = new Animacao(animVel, Assets.jogador_baixo);
-        animCima = new Animacao(animVel, Assets.jogador_cima);
-        animDireita = new Animacao(animVel, Assets.jogador_dir);
-        animEsquerda = new Animacao(animVel, Assets.jogador_esq);
+        animBaixo = new Animacao(animVel, Assets.inimigo_baixo);
+        animCima = new Animacao(animVel, Assets.inimigo_cima);
+        animDireita = new Animacao(animVel, Assets.inimigo_dir);
+        animEsquerda = new Animacao(animVel, Assets.inimigo_esq);
     }
 
     private void ataques() {
@@ -69,7 +71,7 @@ public class Inimigo extends Criatura{
             }
             if(e.getCBounds(0,0).intersects(ra) && e.atacavel){
                 e.dano(1);
-                //musica.wavMusic("res/musicas/Punch.wav", -5f, false);
+                musica.wavMusic("res/musicas/Punch.wav", -5f, false);
                 return;
             }
         }
@@ -78,30 +80,40 @@ public class Inimigo extends Criatura{
     private void entrada(){
         xMove = 0;
         yMove = 0;
+        int rnd = rndMovimento();
+        int passos = 0;
 
         movTimer += System.currentTimeMillis() - lastMov;
         lastMov = System.currentTimeMillis();
 
         if(movTimer < movEspera) return;
 
-        switch(rndMovimento()){
-            case 0:
-                //System.out.println("Baixo");
-                yMove = velocidade; //baixo
-                break;
-            case 1:
-                //System.out.println("cima");
-                yMove = -velocidade; //cima
-                break;
-            case 2:
-                //System.out.println("esq.");
-                xMove = velocidade; //esquerda
-                break;
-            case 3:
-                //System.out.println("dir.");
-                xMove = -velocidade; //direita
-                break;
+        while (passos < 4) {
+            switch (rnd) {
+                case 0:
+                    //System.out.println("Baixo");
+                    yMove = velocidade; //baixo
+                    mov = 1;
+                    break;
+                case 1:
+                    //System.out.println("cima");
+                    yMove = -velocidade; //cima
+                    mov = 2;
+                    break;
+                case 2:
+                    //System.out.println("esq.");
+                    xMove = velocidade; //esquerda
+                    mov = 3;
+                    break;
+                case 3:
+                    //System.out.println("dir.");
+                    xMove = -velocidade; //direita
+                    mov = 4;
+                    break;
+            }
+            passos++;
         }
+
         movTimer = 0;
 
     }
@@ -114,6 +126,12 @@ public class Inimigo extends Criatura{
 
     @Override
     public void atualiza() {
+        //animação
+        animBaixo.atualiza();
+        animCima.atualiza();
+        animDireita.atualiza();
+        animEsquerda.atualiza();
+
         entrada();
         movimento();
         ataques();
@@ -125,14 +143,35 @@ public class Inimigo extends Criatura{
                 (int) (x - handler.getCamera().getxOffset()),
                 (int) (y - handler.getCamera().getyOffset()),
                 width, height, null);
+
     }
 
     @Override
     public void morre() {
-
+            handler.getGame().addKill();
     }
 
     private BufferedImage getCAFrame(){
+
+        switch (mov){
+            case 1:
+                return animBaixo.getCFrame();
+                //break;
+            case 2:
+                return animCima.getCFrame();
+                //break;
+            case 4:
+                return animEsquerda.getCFrame();
+                //break;
+            case 3:
+                return animDireita.getCFrame();
+                //break;
+            default:
+                return Assets.inimigo_parado;
+               // break;
+        }
+
+        /*
         if(xMove < 0){
             return animEsquerda.getCFrame();
         }else if(xMove > 0){
@@ -144,6 +183,7 @@ public class Inimigo extends Criatura{
         }else{
             return Assets.inimigo_parado;
         }
+        */
     }
 
 

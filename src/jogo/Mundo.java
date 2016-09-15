@@ -4,6 +4,7 @@ import jogo.Assets.*;
 import jogo.Entidades.Objetos.Arvore;
 import jogo.Entidades.Objetos.ArvoreGrande;
 import jogo.Entidades.*;
+import jogo.Entidades.Itens.Papel;
 import jogo.Utilidades.*;
 
 import java.awt.*;
@@ -14,6 +15,8 @@ public class Mundo {
     private int width, height;
     private int spawnX, spawnY;
     private int[][] lad;
+    private long startTimer, stopTimer;
+    private long duracao = 0;
 
     //Entidades
     private GerenciadorDeEntidades gerenciadorDeEntidades;
@@ -30,12 +33,22 @@ public class Mundo {
         gerenciadorDeEntidades.adicionaEntidade(new Arvore(handler, 2, 2));
         gerenciadorDeEntidades.adicionaEntidade(new ArvoreGrande(handler, 5, 10));
 
+        gerenciadorDeEntidades.adicionaEntidade(new Papel(handler, 3, 8));
+
         gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 9,11));
+
+        start();
 
     }
 
     public void atualiza() {
         gerenciadorDeEntidades.atualiza();
+        System.out.println(getTempoReal());
+
+        if(getTempoReal() > duracao && duracao != 0){
+            gerenciadorDeEntidades.getPlayer().morre();
+        }
+
     }
 
     public void render(Graphics g) {
@@ -107,4 +120,22 @@ public class Mundo {
     public int getSpawnY() {
         return spawnY;
     }
+
+    public void start(){
+        startTimer = System.currentTimeMillis();
+    }
+
+    public void stop(){
+        stopTimer = System.currentTimeMillis();
+    }
+
+    public float getTempo(){
+        return (float) ((stopTimer - startTimer)/1000.0f);
+    }
+
+    public float getTempoReal(){
+        return (float) ((System.currentTimeMillis() - startTimer)/1000.0f);
+    }
+
+
 }

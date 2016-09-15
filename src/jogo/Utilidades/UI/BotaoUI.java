@@ -27,6 +27,7 @@ public class BotaoUI extends ObjetoUI {
             g.drawImage(img[1], (int) x, (int) y, width, height, null);
         }else{
             g.drawImage(img[0], (int) x, (int) y, width, height, null);
+
         }
     }
 

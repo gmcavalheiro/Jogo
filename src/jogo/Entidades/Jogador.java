@@ -18,6 +18,7 @@ public class Jogador extends Criatura {
     private Musica musica = new Musica();
 
 
+
     //Ataque
     private long lastAttk, attkEspera = 500, attkTimer = attkEspera;
 
@@ -118,9 +119,16 @@ public class Jogador extends Criatura {
 
     @Override
     public void morre() {
-        JOptionPane.showMessageDialog(null,"Morreu!", "Aps", JOptionPane.DEFAULT_OPTION);
-        Estado.setEstadoAtual(handler.getGame().estadoFim);
+        handler.getMundo().stop();
+        JOptionPane.showMessageDialog(null,"Morreu!" + "\n" + "Tempo: " + handler.getMundo().getTempo() + " segundos",
+                "Aps", JOptionPane.DEFAULT_OPTION);
+        JOptionPane.showMessageDialog(null,"Pontos: " + handler.getGame().getPontos() + "\n"
+                + "Kills: " + handler.getGame().getKills(),
+                "Aps", JOptionPane.DEFAULT_OPTION);
+        System.exit(0);
     }
+
+
 
     private BufferedImage getCAFrame(){
         if(xMove < 0){

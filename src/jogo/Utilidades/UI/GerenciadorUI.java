@@ -32,6 +32,7 @@ public class GerenciadorUI {
     public void onMouseMove(MouseEvent e){
         for(ObjetoUI o: objetos){
             o.onMouseMove(e);
+
         }
     }
 

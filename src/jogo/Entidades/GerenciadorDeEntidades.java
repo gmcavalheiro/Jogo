@@ -5,6 +5,7 @@ import jogo.Utilidades.Handler;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Iterator;
 
 //player = new Jogador(handler,mundo.getSpawnX(),mundo.getSpawnY());
 
@@ -34,11 +35,12 @@ public class GerenciadorDeEntidades {
 
 
     public void atualiza() {
-        for(int i = 0; i < entidades.size(); i++){
-            Entidade e = entidades.get(i);
+        Iterator<Entidade> it = entidades.iterator();
+        while (it.hasNext()){
+            Entidade e = it.next();
             e.atualiza();
             if(!e.ativo){
-                entidades.remove(e);
+                it.remove();
             }
         }
         //ordena o ArrayList de acordo com a coordenada Y de baixo.
