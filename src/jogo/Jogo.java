@@ -59,6 +59,7 @@ public class Jogo implements Runnable{
 
         estadoJogo = new EstadoJogo(handler);
         estadoMenu = new EstadoMenu(handler);
+        estadoFim = new EstadoFim(handler);
         Estado.setEstadoAtual(estadoMenu);
 
 

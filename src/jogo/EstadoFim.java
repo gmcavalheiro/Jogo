@@ -53,5 +53,7 @@ public class EstadoFim extends Estado {
     @Override
     public void render(Graphics g) {
         gerenciadorUI.render(g);
+        g.drawString("Fim", 50,60);
+
     }
 }

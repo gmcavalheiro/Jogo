@@ -39,7 +39,7 @@ public class Assets {
         SpriteSheet inimigo = new SpriteSheet(ImageLoader.loadImage("/texturas/inimigo.png"));
 
 
-        //Personagens
+        /*  ------ Personagens ------*/
         //Jogador
         jogador_baixo = new BufferedImage[2];
         jogador_cima = new BufferedImage[2];
@@ -81,12 +81,7 @@ public class Assets {
         inimigo_dir[1] = inimigo.corta(width*3,height*2,width,height);
 
 
-
-
-
-
-
-        //texturas
+        /*  ------ texturas ------*/
         grama_cse = textura.corta(0,0,tam,tam);
         grama_s = textura.corta(tam,0,tam,tam);
         grama_csd = textura.corta(tam*2,0,tam,tam);
@@ -135,6 +130,8 @@ public class Assets {
         bloco_2 = textura.corta(tam*4,tam*6,tam,tam);
         bloco_3 = textura.corta(tam*5,tam*6,tam,tam);
 
+
+        /*  ------ Objetos ------*/
         //arvores
         arvore = folhas.corta(0,height,width,height);
         arbusto = folhas.corta(0,0,width,height);
@@ -144,6 +141,8 @@ public class Assets {
         //predios
         casa = predio.corta(0,0,width,height);
 
+
+        /*  ------ UI ------*/
         //Botões
         btn_inico = new BufferedImage[2];
         btn_sair = new BufferedImage[2];

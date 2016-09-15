@@ -16,6 +16,7 @@ public class ArvoreGrande extends EntidadeEstatica {
         bounds.y = 83;
         bounds.width = 20;
         bounds.height = 30;
+        atacavel = false;
     }
 
     @Override

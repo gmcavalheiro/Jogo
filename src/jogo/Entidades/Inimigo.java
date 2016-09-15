@@ -46,16 +46,16 @@ public class Inimigo extends Criatura{
         ra.width = raTamanho;
         ra.height = raTamanho;
 
-        if (xMove < 0) { //Esquerda
+        if (xMove < 0) { //Esquerda.
             ra.x = cb.x - raTamanho;
             ra.y = cb.y  + cb.height /2 - raTamanho/2;
-        } else if (xMove > 0) { //Direita
+        } else if (xMove > 0) { //Direita.
             ra.x = cb.x + cb.width;;
             ra.y = cb.y  + cb.height /2 - raTamanho/2;
-        } else if (yMove < 0) { //Cima
+        } else if (yMove < 0) { //Cima.
             ra.x = cb.x + cb.width/2 - raTamanho/2;
             ra.y = cb.y - raTamanho;
-        } else if (yMove > 0) { //Baixo
+        } else if (yMove > 0) { //Baixo.
             ra.x = cb.x + cb.width/2 - raTamanho/2;
             ra.y = cb.y + cb.height;
         }
