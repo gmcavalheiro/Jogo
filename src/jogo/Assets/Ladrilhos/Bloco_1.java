@@ -3,10 +3,10 @@ package jogo.Assets.Ladrilhos;
 import jogo.Assets.Assets;
 import jogo.Assets.Ladrilho;
 
-public class Tijolo extends Ladrilho {
+public class Bloco_1 extends Ladrilho {
 
-    public Tijolo(int id){
-        super(Assets.tijolo, id);
+    public Bloco_1(int id) {
+        super(Assets.bloco_1, id);
     }
 
     @Override

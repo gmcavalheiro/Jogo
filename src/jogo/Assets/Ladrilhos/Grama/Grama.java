@@ -1,4 +1,4 @@
-package jogo.Assets.Ladrilhos;
+package jogo.Assets.Ladrilhos.Grama;
 
 import jogo.Assets.Assets;
 import jogo.Assets.Ladrilho;
