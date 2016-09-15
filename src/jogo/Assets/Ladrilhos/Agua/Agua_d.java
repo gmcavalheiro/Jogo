@@ -3,10 +3,10 @@ package jogo.Assets.Ladrilhos.Agua;
 import jogo.Assets.Assets;
 import jogo.Assets.Ladrilho;
 
-public class Agua extends Ladrilho {
+public class Agua_d extends Ladrilho {
 
-    public Agua (int id) {
-        super(Assets.agua, id);
+    public Agua_d(int id) {
+        super(Assets.agua_d, id);
     }
 
     @Override

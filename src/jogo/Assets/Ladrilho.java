@@ -1,7 +1,9 @@
 package jogo.Assets;
 
 import jogo.Assets.Ladrilhos.*;
+import jogo.Assets.Ladrilhos.Agua.*;
 import jogo.Assets.Ladrilhos.Grama.*;
+import jogo.Assets.Ladrilhos.Terra.*;
 import jogo.Assets.Ladrilhos.Tijolo.*;
 
 
@@ -27,19 +29,41 @@ public class Ladrilho {
     public static Ladrilho asfalto_hor = new Asfalto_hor(21);
     public static Ladrilho asfalto_ver = new Asfalto_ver(22);
 
-    public static Ladrilho tijolo_ces = new Tijolo(51);
-    public static Ladrilho tijolo_s = new Tijolo(52);
-    public static Ladrilho tijolo_ced = new Tijolo(53);
-    public static Ladrilho tijolo_e = new Tijolo(54);
-    public static Ladrilho tijolo = new Tijolo(50);
-    public static Ladrilho tijolo_d = new Tijolo(55);
-    public static Ladrilho tijolo_cie = new Tijolo(56);
-    public static Ladrilho tijolo_i = new Tijolo(57);
-    public static Ladrilho tijolo_cid = new Tijolo(58);
-
     public static Ladrilho bloco_1 = new Bloco_1(30);
     public static Ladrilho bloco_2 = new Bloco_2(31);
     public static Ladrilho bloco_3 = new Bloco_3(32);
+
+    public static Ladrilho terra_ces = new Terra_cse(41);
+    public static Ladrilho terra_s = new Terra_s(42);
+    public static Ladrilho terra_ced = new Terra_csd(43);
+    public static Ladrilho terra_e = new Terra_e(44);
+    public static Ladrilho terra = new Terra(40);
+    public static Ladrilho terra_d = new Terra_d(45);
+    public static Ladrilho terra_cie = new Terra_cie(46);
+    public static Ladrilho terra_i = new Terra_i(47);
+    public static Ladrilho terra_cid = new Terra_cid(48);
+    
+    public static Ladrilho tijolo_ces = new Tijolo_cse(51);
+    public static Ladrilho tijolo_s = new Tijolo_s(52);
+    public static Ladrilho tijolo_ced = new Tijolo_csd(53);
+    public static Ladrilho tijolo_e = new Tijolo_e(54);
+    public static Ladrilho tijolo = new Tijolo(50);
+    public static Ladrilho tijolo_d = new Tijolo_d(55);
+    public static Ladrilho tijolo_cie = new Tijolo_cie(56);
+    public static Ladrilho tijolo_i = new Tijolo_i(57);
+    public static Ladrilho tijolo_cid = new Tijolo_cid(58);
+
+    public static Ladrilho agua_ces = new Agua_cse(61);
+    public static Ladrilho agua_s = new Agua_s(62);
+    public static Ladrilho agua_ced = new Agua_csd(63);
+    public static Ladrilho agua_e = new Agua_e(64);
+    public static Ladrilho agua = new Agua(60);
+    public static Ladrilho agua_d = new Agua_d(65);
+    public static Ladrilho agua_cie = new Agua_cie(66);
+    public static Ladrilho agua_i = new Agua_i(67);
+    public static Ladrilho agua_cid = new Agua_cid(68);
+
+    
 
 
 
