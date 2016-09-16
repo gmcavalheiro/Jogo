@@ -128,6 +128,16 @@ public class Jogador extends Criatura {
         System.exit(0);
     }
 
+    public void fim() {
+        handler.getMundo().stop();
+        JOptionPane.showMessageDialog(null,"Acabou!" + "\n" + "Tempo: " + (String.format("%.1f", handler.getMundo().getTempo())) + " segundos",
+                "Aps", JOptionPane.DEFAULT_OPTION);
+        JOptionPane.showMessageDialog(null,"Pontos: " + handler.getGame().getPontos() + "\n"
+                        + "Kills: " + handler.getGame().getKills(),
+                "Aps", JOptionPane.DEFAULT_OPTION);
+        System.exit(0);
+    }
+
 
 
     private BufferedImage getCAFrame(){

@@ -143,6 +143,9 @@ public class Inimigo extends Criatura{
                 (int) (x - handler.getCamera().getxOffset()),
                 (int) (y - handler.getCamera().getyOffset()),
                 width, height, null);
+        g.drawString("Vida: " + saude,
+                (int) (x - handler.getCamera().getxOffset() + 10),
+                (int) (y - handler.getCamera().getyOffset()));
 
     }
 

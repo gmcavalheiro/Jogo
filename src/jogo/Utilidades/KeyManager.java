@@ -1,5 +1,6 @@
 package jogo.Utilidades;
 
+import javax.swing.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -7,7 +8,7 @@ public class KeyManager implements KeyListener{
 
     private boolean[] teclas;
     public boolean cima, baixo, direita, esquerda;
-    public boolean attk;
+    public boolean attk, exit;
 
     public KeyManager(){
         teclas = new boolean[256];
@@ -20,6 +21,11 @@ public class KeyManager implements KeyListener{
         esquerda = teclas[KeyEvent.VK_D];
 
         attk = teclas[KeyEvent.VK_E];
+        exit = teclas[KeyEvent.VK_ESCAPE];
+
+        if(exit) System.exit(0);
+
+
     }
 
     @Override

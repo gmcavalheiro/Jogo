@@ -17,7 +17,7 @@ public class Mundo {
     private int spawnX, spawnY;
     private int[][] lad;
     private long startTimer, stopTimer;
-    private long duracao = 10;
+    private long duracao = 60;
     private Info info;
 
     //Entidades
@@ -49,7 +49,7 @@ public class Mundo {
         info.atualiza();
 
         if(getTempoReal() > duracao && duracao != 0){
-            gerenciadorDeEntidades.getPlayer().morre();
+            gerenciadorDeEntidades.getPlayer().fim();
         }
 
     }
