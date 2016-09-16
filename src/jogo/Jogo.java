@@ -152,6 +152,8 @@ public class Jogo implements Runnable{
 
     public void addKill(){ kills++; }
 
+    public Musica getMusica(){ return musica; }
+
     public synchronized void start(){
         if(executando){
             return;

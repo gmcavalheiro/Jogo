@@ -120,6 +120,8 @@ public class Jogador extends Criatura {
     @Override
     public void morre() {
         handler.getMundo().stop();
+        handler.getGame().getMusica().paraMusica();
+        handler.getGame().getMusica().wavMusic("res/musicas/Out.wav", -20.0f, false);
         JOptionPane.showMessageDialog(null,"Morreu!" + "\n" + "Tempo: " + (String.format("%.1f", handler.getMundo().getTempo())) + " segundos",
                 "Aps", JOptionPane.DEFAULT_OPTION);
         JOptionPane.showMessageDialog(null,"Pontos: " + handler.getGame().getPontos() + "\n"
@@ -130,6 +132,8 @@ public class Jogador extends Criatura {
 
     public void fim() {
         handler.getMundo().stop();
+        handler.getGame().getMusica().paraMusica();
+        handler.getGame().getMusica().wavMusic("res/musicas/Out.wav", -20.0f, false);
         JOptionPane.showMessageDialog(null,"Acabou!" + "\n" + "Tempo: " + (String.format("%.1f", handler.getMundo().getTempo())) + " segundos",
                 "Aps", JOptionPane.DEFAULT_OPTION);
         JOptionPane.showMessageDialog(null,"Pontos: " + handler.getGame().getPontos() + "\n"

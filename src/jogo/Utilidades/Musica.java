@@ -17,6 +17,7 @@ import java.io.*;
 public class Musica {
 
     Sequencer player;
+    Clip clip;
 
     public void MidiMusic(String caminho, int rep){
         try{
@@ -33,7 +34,7 @@ public class Musica {
 
     public void wavMusic(String caminho, float vol, boolean rep){
         try {
-            Clip clip = AudioSystem.getClip();
+            clip = AudioSystem.getClip();
             AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File(caminho));
             clip.open(inputStream);
             if(rep == true){
@@ -45,6 +46,10 @@ public class Musica {
         }catch (Exception e){
             System.out.println(e);
         }
+    }
+
+    public void paraMusica(){
+        clip.stop();
     }
 
 
