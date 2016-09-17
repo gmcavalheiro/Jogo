@@ -43,6 +43,7 @@ public class Papel extends Iten {
     public void morre() {
         try {
             handler.getGame().addPonto();
+            //handler.getMundo().getGerenciadorDeEntidades().getPlayer().setSaude(10);
         }catch (Exception e){
             System.out.println(e);
         }
