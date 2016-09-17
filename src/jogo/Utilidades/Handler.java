@@ -1,6 +1,7 @@
 package jogo.Utilidades;
 
 import jogo.Camera;
+import jogo.Estado;
 import jogo.Jogo;
 import jogo.Mundo;
 
@@ -8,6 +9,7 @@ public class Handler {
 
     private Jogo game;
     private Mundo mundo;
+    private Estado estado;
 
 
     public Handler(Jogo game){
@@ -49,5 +51,11 @@ public class Handler {
         this.mundo = mundo;
     }
 
+    public Estado getEstado() {
+        return estado;
+    }
 
+    public void setEstado(Estado estado) {
+        this.estado = estado;
+    }
 }

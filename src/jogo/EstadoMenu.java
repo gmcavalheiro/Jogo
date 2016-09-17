@@ -18,7 +18,7 @@ public class EstadoMenu extends Estado {
         gerenciadorUI = new GerenciadorUI(handler);
         handler.getMouseManager().setGerenciadorUI(gerenciadorUI);
 
-        gerenciadorUI.addObjeto(new BotaoUI(
+        gerenciadorUI.addObjeto(new BotaoUI( //Botão de começar
                 200, 200, //Posição
                 Ladrilho.LAD_WIDTH*2, //Largura
                 Ladrilho.LAD_HEIGHT, //Comprimento
@@ -26,12 +26,15 @@ public class EstadoMenu extends Estado {
                 new ClickListener(){
                     @Override
                     public void onClick() {
+                        handler.getGame().getMusica().paraMusica(); //Para a musca do Menu
+                        handler.getGame().getMusica().wavMusic("res/musicas/TPnTD.wav", -28.0f, true); //Começa a musica do Jogo
+
                         handler.getMouseManager().setGerenciadorUI(null);
-                       Estado.setEstadoAtual(handler.getGame().estadoJogo);
+                        Estado.setEstadoAtual(handler.getGame().estadoJogo);
                     }
                 }));
 
-        gerenciadorUI.addObjeto(new BotaoUI(
+        gerenciadorUI.addObjeto(new BotaoUI( //Botão de Sair
                 200, 300,
                 Ladrilho.LAD_WIDTH * 2,
                 Ladrilho.LAD_HEIGHT,

@@ -17,7 +17,7 @@ public class Mundo {
     private int spawnX, spawnY;
     private int[][] lad;
     private long startTimer, stopTimer;
-    private long duracao = 60;
+    private long duracao = 0;
     private Info info;
 
     //Entidades
@@ -27,21 +27,24 @@ public class Mundo {
         carregador(caminho);
         gerenciadorDeEntidades = new GerenciadorDeEntidades(handler, new Jogador(handler,100,100));
         info = new Info(handler);
-
         this.handler = handler;
 
+        //Posição inicial do jogador
         gerenciadorDeEntidades.getPlayer().setX(spawnX * Ladrilho.LAD_WIDTH);
         gerenciadorDeEntidades.getPlayer().setY(spawnY * Ladrilho.LAD_HEIGHT);
 
+
+        //Instância entidades e objetos
         gerenciadorDeEntidades.adicionaEntidade(new Arvore(handler, 2, 2));
         gerenciadorDeEntidades.adicionaEntidade(new ArvoreGrande(handler, 5, 10));
-
         gerenciadorDeEntidades.adicionaEntidade(new Papel(handler, 3, 8));
 
-        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 9,11));
+
+        //Instância os inimigos
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 9, 11));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 12, 16));
 
         start();
-
     }
 
     public void atualiza() {
@@ -74,6 +77,7 @@ public class Mundo {
         //Entidades
         gerenciadorDeEntidades.render(g);
 
+        //Barra de informações
         info.render(g);
 
     }
@@ -91,12 +95,14 @@ public class Mundo {
 
     }
 
+
+    //Carrega o Mapa
     private void carregador(String caminho){
         String arquivo = Utilidades.loadFile(caminho);
         String[] tokens = arquivo.split("\\s+");
-        width = Utilidades.parseInt(tokens[0]);
+        width = Utilidades.parseInt(tokens[0]); //Tamanho
         height = Utilidades.parseInt(tokens[1]);
-        spawnX = Utilidades.parseInt(tokens[2]);
+        spawnX = Utilidades.parseInt(tokens[2]); //Spawn Jogador
         spawnY = Utilidades.parseInt(tokens[3]);
 
         lad = new int[width][height];

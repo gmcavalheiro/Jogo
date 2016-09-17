@@ -23,6 +23,7 @@ public class KeyManager implements KeyListener{
         attk = teclas[KeyEvent.VK_E];
         exit = teclas[KeyEvent.VK_ESCAPE];
 
+
         if(exit) System.exit(0);
 
 

@@ -14,7 +14,7 @@ public class Camera {
         this.xOffset = xOffset;
         this.yOffset = yOffset;
     }
-
+    //Elimina os espaços brancos fora do mapa
     public void espacoBranco(){
         if(xOffset < 0){
             xOffset = 0;
@@ -29,6 +29,7 @@ public class Camera {
         }
     }
 
+    //Centraliza o jogo no personagem
     public void centralizar(Entidade e){
         xOffset = e.getX() - handler.getWidth() / 2 + e.getWidth()/2;
         yOffset = e.getY() - handler.getHeight() / 2 + e.getHeight()/2;

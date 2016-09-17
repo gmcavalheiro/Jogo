@@ -1,7 +1,6 @@
 package jogo.Entidades;
 
 import jogo.Assets.Assets;
-import jogo.Estado;
 import jogo.Utilidades.Handler;
 import jogo.Utilidades.Musica;
 
@@ -16,8 +15,6 @@ public class Jogador extends Criatura {
     int animVel = 300;
 
     private Musica musica = new Musica();
-
-
 
     //Ataque
     private long lastAttk, attkEspera = 500, attkTimer = attkEspera;
@@ -118,7 +115,7 @@ public class Jogador extends Criatura {
     }
 
     @Override
-    public void morre() {
+    public void morre() { //Quando o personagem morre
         handler.getMundo().stop();
         handler.getGame().getMusica().paraMusica();
         handler.getGame().getMusica().wavMusic("res/musicas/Out.wav", -20.0f, false);
@@ -130,16 +127,17 @@ public class Jogador extends Criatura {
         System.exit(0);
     }
 
-    public void fim() {
+    public void fim() { //Quando acaba o tempo
         handler.getMundo().stop();
         handler.getGame().getMusica().paraMusica();
         handler.getGame().getMusica().wavMusic("res/musicas/Out.wav", -20.0f, false);
-        JOptionPane.showMessageDialog(null,"Acabou!" + "\n" + "Tempo: " + (String.format("%.1f", handler.getMundo().getTempo())) + " segundos",
+        JOptionPane.showMessageDialog(null,"Acabou o Tempo!" + "\n" + "Tempo: " + (String.format("%.1f", handler.getMundo().getTempo())) + " segundos",
                 "Aps", JOptionPane.DEFAULT_OPTION);
         JOptionPane.showMessageDialog(null,"Pontos: " + handler.getGame().getPontos() + "\n"
                         + "Kills: " + handler.getGame().getKills(),
                 "Aps", JOptionPane.DEFAULT_OPTION);
         System.exit(0);
+
     }
 
 

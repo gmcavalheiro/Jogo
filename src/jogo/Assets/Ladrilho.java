@@ -63,10 +63,6 @@ public class Ladrilho {
     public static Ladrilho agua_i = new Agua_i(67);
     public static Ladrilho agua_cid = new Agua_cid(68);
 
-    
-
-
-
     public static final int LAD_WIDTH = 64, LAD_HEIGHT = 64;
 
     protected BufferedImage textura;

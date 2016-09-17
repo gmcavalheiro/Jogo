@@ -24,6 +24,7 @@ public class Jogo implements Runnable{
     public Estado estadoMenu; //estado de menu
 
 
+
     private KeyManager keyManager; //Leitor do teclado
     private MouseManager mouseManager; //Leitor do mouse
     private Handler handler;
@@ -53,14 +54,13 @@ public class Jogo implements Runnable{
         handler = new Handler(this);
         camera = new Camera(handler, 0, 0);
 
-
+        //Musica
         musica = new Musica();
-        musica.wavMusic("res/musicas/TPnTD.wav", -28.0f, true);
+        musica.wavMusic("res/musicas/Young_Love.wav", -28.0f, true);
 
 
         estadoJogo = new EstadoJogo(handler);
         estadoMenu = new EstadoMenu(handler);
-
         Estado.setEstadoAtual(estadoMenu);
 
 
@@ -96,7 +96,6 @@ public class Jogo implements Runnable{
 
     public void run(){
         init();
-
 
         //codigo necessario para manter a consistencia na execução do jogo,
         //assim ele roda na mesma "velocidade" independente do computador.

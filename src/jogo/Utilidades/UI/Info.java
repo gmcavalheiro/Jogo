@@ -41,7 +41,7 @@ public class Info {
         g.drawRect(50,y + 11,201,10);
 
         if(life < 3){
-            g.setColor(new Color(160, 40, 27));
+            g.setColor(new Color(190, 39, 30));
         }else if(life < 5){
             g.setColor(new Color(200, 128, 57));
         }else if(life < 7){
