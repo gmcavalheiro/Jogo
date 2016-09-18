@@ -31,7 +31,7 @@ public class Ladrilho {
 
     public static Ladrilho bloco_1 = new Bloco_1(30);
     public static Ladrilho bloco_2 = new Bloco_2(31);
-    public static Ladrilho bloco_3 = new Bloco_3(32);
+    public static Ladrilho calcada = new Calcada(33);
 
     public static Ladrilho terra_ces = new Terra_cse(41);
     public static Ladrilho terra_s = new Terra_s(42);

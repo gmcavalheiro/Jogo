@@ -16,7 +16,7 @@ public class Assets {
     public static BufferedImage agua_cse, agua_s, agua_csd, agua_e, agua, agua_d, agua_cie, agua_i, agua_cid;
     public static BufferedImage tijolo_cse, tijolo_s, tijolo_csd, tijolo_e, tijolo, tijolo_d, tijolo_cie, tijolo_i, tijolo_cid;
     public static BufferedImage asfalto, asfalto_ver, asfalto_hor;
-    public static BufferedImage bloco_1, bloco_2, bloco_3;
+    public static BufferedImage bloco_1, bloco_2, calcada;
 
     //Entidades
     public static BufferedImage arvore, arvore_grande, arbusto, arbusto_grande;
@@ -114,7 +114,7 @@ public class Assets {
         agua_d = textura.corta(tam*2,tam*4,tam,tam);
         agua_cie = textura.corta(0,tam*5,tam,tam);
         agua_i = textura.corta(tam,tam*5,tam,tam);
-        agua_cid = textura.corta(tam*5,tam*2,tam,tam);
+        agua_cid = textura.corta(tam*2,tam*5,tam,tam);
 
         tijolo_cse = textura.corta(tam*3,tam*3,tam,tam);
         tijolo_s = textura.corta(tam*4,tam*3,tam,tam);
@@ -124,7 +124,7 @@ public class Assets {
         tijolo_d = textura.corta(tam*5,tam*4,tam,tam);
         tijolo_cie = textura.corta(tam*3,tam*5,tam,tam);
         tijolo_i = textura.corta(tam*4,tam*5,tam,tam);
-        tijolo_cid = textura.corta(tam*5,tam*2,tam,tam);
+        tijolo_cid = textura.corta(tam*5,tam*5,tam,tam);
 
         asfalto = textura.corta(0,tam*6,tam,tam);
         asfalto_hor = textura.corta(tam,tam*6,tam,tam);
@@ -132,7 +132,7 @@ public class Assets {
 
         bloco_1 = textura.corta(tam*3,tam*6,tam,tam);
         bloco_2 = textura.corta(tam*4,tam*6,tam,tam);
-        bloco_3 = textura.corta(tam*5,tam*6,tam,tam);
+        calcada = textura.corta(tam*5,tam*6,tam,tam);
 
 
         /*  ------ Objetos ------*/
