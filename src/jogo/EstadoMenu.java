@@ -26,11 +26,7 @@ public class EstadoMenu extends Estado {
                 new ClickListener(){
                     @Override
                     public void onClick() {
-                        handler.getGame().getMusica().paraMusica(); //Para a musca do Menu
-                        handler.getGame().getMusica().wavMusic("/musicas/TPnTD.wav", -28.0f, true); //Começa a musica do Jogo
-
-                        handler.getMouseManager().setGerenciadorUI(null);
-                        Estado.setEstadoAtual(handler.getGame().estadoJogo);
+                        iniciaJogo();
                     }
                 }));
 
@@ -51,10 +47,18 @@ public class EstadoMenu extends Estado {
     @Override
     public void atualiza() {
         gerenciadorUI.atualiza();
+        if(handler.getJoystickManager().start) iniciaJogo();
     }
 
     @Override
     public void render(Graphics g) {
         gerenciadorUI.render(g);
+    }
+
+    private void iniciaJogo(){
+        handler.getGame().getMusica().paraMusica(); //Para a musca do Menu
+        handler.getGame().getMusica().wavMusic("/musicas/TPnTD.wav", -28.0f, true); //Começa a musica do Jogo
+        handler.getMouseManager().setGerenciadorUI(null);
+        Estado.setEstadoAtual(handler.getGame().estadoJogo);
     }
 }

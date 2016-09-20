@@ -1,6 +1,5 @@
 package jogo.Utilidades;
 
-import net.java.games.input.ControllerEnvironment;
 import org.lwjgl.LWJGLException;
 import org.lwjgl.input.Controller;
 import org.lwjgl.input.Controllers;
@@ -114,5 +113,4 @@ MAPA DE BOTOES
 9: Botão 9: Start
 10: Botão 10: L3
 11: Botão 11: R3
-
  */
