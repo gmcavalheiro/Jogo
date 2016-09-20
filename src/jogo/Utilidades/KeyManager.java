@@ -20,7 +20,7 @@ public class KeyManager implements KeyListener{
         direita = teclas[KeyEvent.VK_A];
         esquerda = teclas[KeyEvent.VK_D];
 
-        attk = teclas[KeyEvent.VK_E];
+        attk = teclas[KeyEvent.VK_P];
         exit = teclas[KeyEvent.VK_ESCAPE];
 
 

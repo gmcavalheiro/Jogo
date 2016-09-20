@@ -30,6 +30,8 @@ public class Handler {
 
     public MouseManager getMouseManager(){ return game.getMouseManager(); }
 
+    public JoystickManager getJoystickManager(){ return game.getJoystickManager(); }
+
     public Camera getCamera(){
         return game.getCamera();
     }

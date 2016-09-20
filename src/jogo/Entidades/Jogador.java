@@ -66,7 +66,7 @@ public class Jogador extends Criatura {
         ra.width = raTamanho;
         ra.height = raTamanho;
 
-        if(handler.getKeyManager().attk) {
+        if(handler.getKeyManager().attk || handler.getJoystickManager().attk) {
             if (xMove < 0) { //Esquerda
                 ra.x = cb.x - raTamanho;
                 ra.y = cb.y  + cb.height /2 - raTamanho/2;
@@ -102,10 +102,10 @@ public class Jogador extends Criatura {
         xMove = 0;
         yMove = 0;
 
-        if(handler.getKeyManager().cima) yMove = -velocidade;
-        if(handler.getKeyManager().baixo) yMove = velocidade;
-        if(handler.getKeyManager().direita) xMove = -velocidade;
-        if(handler.getKeyManager().esquerda) xMove = velocidade;
+        if(handler.getKeyManager().cima || handler.getJoystickManager().cima) yMove = -velocidade;
+        if(handler.getKeyManager().baixo || handler.getJoystickManager().baixo) yMove = velocidade;
+        if(handler.getKeyManager().direita || handler.getJoystickManager().direita) xMove = -velocidade;
+        if(handler.getKeyManager().esquerda || handler.getJoystickManager().esquerda) xMove = velocidade;
     }
 
     @Override

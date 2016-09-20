@@ -25,6 +25,7 @@ public class Utilidades {
         return construtor.toString();
     }
 
+    //converte String em integer - utilizado para carregar o mapa.
     public static int parseInt(String num){
         try {
             return Integer.parseInt(num);

@@ -27,6 +27,7 @@ public class Jogo implements Runnable{
 
     private KeyManager keyManager; //Leitor do teclado
     private MouseManager mouseManager; //Leitor do mouse
+    private JoystickManager joystickManager; //Leitor do Joystick
     private Handler handler;
     private Camera camera;
     private Musica musica;
@@ -39,6 +40,7 @@ public class Jogo implements Runnable{
         this.titulo = titulo;
         keyManager = new KeyManager();
         mouseManager = new MouseManager();
+        joystickManager = new JoystickManager();
     }
 
     public void init (){
@@ -68,6 +70,8 @@ public class Jogo implements Runnable{
     }
 
     private void atualiza(){
+
+        joystickManager.atualiza();
         keyManager.atualiza();
        if(Estado.getEstadoAtual() != null){
            Estado.getEstadoAtual().atualiza();
@@ -128,6 +132,8 @@ public class Jogo implements Runnable{
     public MouseManager getMouseManager() {
         return mouseManager;
     }
+
+    public JoystickManager getJoystickManager(){ return joystickManager; }
 
     public Camera getCamera(){ return camera; }
 
