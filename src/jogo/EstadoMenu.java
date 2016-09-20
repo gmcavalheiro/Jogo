@@ -27,7 +27,7 @@ public class EstadoMenu extends Estado {
                     @Override
                     public void onClick() {
                         handler.getGame().getMusica().paraMusica(); //Para a musca do Menu
-                        handler.getGame().getMusica().wavMusic("res/musicas/TPnTD.wav", -28.0f, true); //Começa a musica do Jogo
+                        handler.getGame().getMusica().wavMusic("/musicas/TPnTD.wav", -28.0f, true); //Começa a musica do Jogo
 
                         handler.getMouseManager().setGerenciadorUI(null);
                         Estado.setEstadoAtual(handler.getGame().estadoJogo);

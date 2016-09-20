@@ -9,6 +9,7 @@ public abstract class Iten extends Entidade {
     public Iten(Handler handler, float x, float y, int width, int height){
         super(handler, x, y, width, height);
         saude = 3;
+        npc = true;
     }
 
 }

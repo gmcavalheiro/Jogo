@@ -53,6 +53,16 @@ public class GerenciadorDeEntidades {
         }
     }
 
+    public int entidadesRestantes(){
+        int r = 0;
+        for(Entidade e: entidades){
+            if(e.npc){
+                r++;
+            }
+        }
+        return r;
+    }
+
     public void adicionaEntidade(Entidade e){
         entidades.add(e);
     }

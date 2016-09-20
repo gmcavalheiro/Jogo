@@ -23,6 +23,10 @@ public class Mundo {
     //Entidades
     private GerenciadorDeEntidades gerenciadorDeEntidades;
 
+    public void setDuracao(long duracao) {
+        this.duracao = duracao;
+    }
+
     public Mundo(Handler handler, String caminho){
         carregador(caminho);
         gerenciadorDeEntidades = new GerenciadorDeEntidades(handler, new Jogador(handler,100,100));
@@ -52,7 +56,11 @@ public class Mundo {
         info.atualiza();
 
         if(getTempoReal() > duracao && duracao != 0){
-            gerenciadorDeEntidades.getPlayer().fim();
+            gerenciadorDeEntidades.getPlayer().fim("Acabou o Tempo!");
+        }
+
+        if(gerenciadorDeEntidades.entidadesRestantes() == 0){
+            gerenciadorDeEntidades.getPlayer().fim("Fim de Jogo!");
         }
 
     }

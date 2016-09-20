@@ -23,6 +23,7 @@ public class Inimigo extends Criatura{
     public Inimigo(Handler handler, float x, float y) {
         super(handler, x * CP_WIDTH, y * CP_HEIGHT, CP_WIDTH, CP_HEIGHT);
         velocidade = 20.0f;
+        npc = true;
 
         bounds.x = 0;
         bounds.y = 0;
@@ -66,12 +67,12 @@ public class Inimigo extends Criatura{
         attkTimer = 0;
 
         for(Entidade e: handler.getMundo().getGerenciadorDeEntidades().getEntidades()){
-            if(e.equals(this)){
+            if(e.equals(this) || e.npc){
                 continue;
             }
             if(e.getCBounds(0,0).intersects(ra) && e.atacavel){
                 e.dano(1);
-                musica.wavMusic("res/musicas/Punch.wav", -5f, false);
+                musica.wavMusic("/musicas/Punch.wav", -5f, false);
                 return;
             }
         }

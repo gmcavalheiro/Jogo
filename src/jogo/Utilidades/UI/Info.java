@@ -14,6 +14,7 @@ public class Info {
     protected Handler handler;
     protected int height, width, y;
     protected int life;
+    protected float tempo;
 
     SpriteSheet infoBarSprite = new SpriteSheet(ImageLoader.loadImage("/texturas/InfoBar.png"));
     private BufferedImage infoBar;
@@ -28,6 +29,9 @@ public class Info {
     }
 
     public void atualiza() {
+        tempo = handler.getMundo().getTempoRestante();
+
+        if(tempo < 0) tempo = tempo * -1;
 
     }
 
@@ -54,7 +58,8 @@ public class Info {
         g.setColor(Color.black);
         g.drawString("Pontos: " + handler.getGame().getPontos(), 260, y+20);
         g.drawString("Kills: " + handler.getGame().getKills(), 330, y+20);
-        g.drawString("Tempo: "+ (String.format("%.1f", handler.getMundo().getTempoRestante())), 720, y+20);
+        g.drawString("Restantes: " + handler.getMundo().getGerenciadorDeEntidades().entidadesRestantes(), 380, y+20);
+        g.drawString("Tempo: "+ (String.format("%.1f", tempo )), 720, y+20);
     }
 
 }

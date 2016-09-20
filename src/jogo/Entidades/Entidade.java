@@ -15,6 +15,7 @@ public abstract class Entidade {
     protected boolean ativo = true;
     protected Rectangle bounds;
     protected boolean atacavel = true;
+    protected boolean npc = false;
 
     public Entidade(Handler handler, float x, float y, int width, int height){
         this.handler = handler;

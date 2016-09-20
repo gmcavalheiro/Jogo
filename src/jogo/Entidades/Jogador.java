@@ -50,6 +50,8 @@ public class Jogador extends Criatura {
 
         //Ataques
         ataques();
+
+        if(saude > 10) saude = 10;
     }
 
     private void ataques() {
@@ -89,8 +91,8 @@ public class Jogador extends Criatura {
                 continue;
             }
             if(e.getCBounds(0,0).intersects(ra) && e.atacavel){
-                e.dano(1);
-                musica.wavMusic("res/musicas/Punch.wav", -5f, false);
+                e.dano(5);
+                musica.wavMusic("/musicas/Punch.wav", -5f, false);
                 return;
             }
         }
@@ -118,7 +120,7 @@ public class Jogador extends Criatura {
     public void morre() { //Quando o personagem morre
         handler.getMundo().stop();
         handler.getGame().getMusica().paraMusica();
-        handler.getGame().getMusica().wavMusic("res/musicas/Out.wav", -20.0f, false);
+        handler.getGame().getMusica().wavMusic("/musicas/Out.wav", -20.0f, false);
         JOptionPane.showMessageDialog(null,"Morreu!" + "\n" + "Tempo: " + (String.format("%.1f", handler.getMundo().getTempo())) + " segundos",
                 "Aps", JOptionPane.DEFAULT_OPTION);
         JOptionPane.showMessageDialog(null,"Pontos: " + handler.getGame().getPontos() + "\n"
@@ -127,11 +129,11 @@ public class Jogador extends Criatura {
         System.exit(0);
     }
 
-    public void fim() { //Quando acaba o tempo
+    public void fim(String Texto) { //Quando acaba o tempo
         handler.getMundo().stop();
         handler.getGame().getMusica().paraMusica();
-        handler.getGame().getMusica().wavMusic("res/musicas/Out.wav", -20.0f, false);
-        JOptionPane.showMessageDialog(null,"Acabou o Tempo!" + "\n" + "Tempo: " + (String.format("%.1f", handler.getMundo().getTempo())) + " segundos",
+        handler.getGame().getMusica().wavMusic("/musicas/Out.wav", -20.0f, false);
+        JOptionPane.showMessageDialog(null, Texto + "\n" + "Tempo: " + (String.format("%.1f", handler.getMundo().getTempo())) + " segundos",
                 "Aps", JOptionPane.DEFAULT_OPTION);
         JOptionPane.showMessageDialog(null,"Pontos: " + handler.getGame().getPontos() + "\n"
                         + "Kills: " + handler.getGame().getKills(),

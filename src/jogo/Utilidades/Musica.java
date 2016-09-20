@@ -3,6 +3,7 @@ package jogo.Utilidades;
 
 
 import com.sun.media.sound.WaveFileReader;
+import com.sun.org.apache.bcel.internal.util.ClassLoader;
 
 import javax.sound.midi.MidiSystem;
 import javax.sound.midi.Sequence;
@@ -13,6 +14,8 @@ import javax.sound.sampled.Clip;
 import javax.sound.sampled.FloatControl;
 
 import java.io.*;
+import java.net.URL;
+import java.util.stream.Stream;
 
 public class Musica {
 
@@ -33,9 +36,12 @@ public class Musica {
     }
 
     public void wavMusic(String caminho, float vol, boolean rep){
+
         try {
+            URL teste = Musica.class.getResource(caminho);
             clip = AudioSystem.getClip();
-            AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File(caminho));
+            //AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File(caminho));
+            AudioInputStream inputStream = AudioSystem.getAudioInputStream(teste);
             clip.open(inputStream);
             if(rep == true){
                 clip.loop(Clip.LOOP_CONTINUOUSLY);
@@ -45,6 +51,7 @@ public class Musica {
             clip.start();
         }catch (Exception e){
             System.out.println(e);
+            e.printStackTrace();
         }
     }
 

@@ -10,7 +10,7 @@ public class EstadoJogo extends Estado {
 
     public EstadoJogo(Handler handler){
         super(handler);
-        mundo = new Mundo(handler, "res/mundos/mundo1.txt");
+        mundo = new Mundo(handler, "/mundos/mundo1.txt");
         handler.setMundo(mundo);
 
     }
