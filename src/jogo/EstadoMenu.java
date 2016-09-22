@@ -47,7 +47,7 @@ public class EstadoMenu extends Estado {
     @Override
     public void atualiza() {
         gerenciadorUI.atualiza();
-        if(handler.getJoystickManager().start) iniciaJogo();
+        //if(handler.getJoystickManager().start) iniciaJogo();
     }
 
     @Override

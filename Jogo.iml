@@ -15,5 +15,6 @@
     <orderEntry type="library" name="LWJGL" level="project" />
     <orderEntry type="library" name="lwjgl_util" level="project" />
     <orderEntry type="library" name="jinput" level="project" />
+    <orderEntry type="library" name="jinput (2)" level="project" />
   </component>
 </module>

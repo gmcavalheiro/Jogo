@@ -24,6 +24,7 @@ public class JoystickManager {
             Controllers.create();
         } catch (LWJGLException e) {
             e.printStackTrace();
+            JOptionPane.showMessageDialog(null,e,"Aps", JOptionPane.DEFAULT_OPTION);
         }
 
         controles = new ArrayList<>();
@@ -36,13 +37,14 @@ public class JoystickManager {
             controles.add(controller);
         }
 
-        String[] listaDeControles = new String[controles.size()];
+        String[] listaDeControles = new String[controles.size() + 1];
 
         for(int i = 0; i < controles.size(); i++){
             listaDeControles[i] = controles.get(i).getIndex() + " - " + controles.get(i).getName();
             //System.out.println(listaDeControles[i]);
         }
 
+        listaDeControles[controles.size()] = "0 - NENHUM";
 
         //Mensagem para escolher o controle.
         String input = (String) JOptionPane.showInputDialog(null, "APS",
@@ -51,6 +53,7 @@ public class JoystickManager {
                 listaDeControles[0]);
 
         //corta a string do controle escolhido e converte em Integer
+        if(input == null) input = "0";
         idx = Integer.parseInt(input.substring(0,1));
         System.out.println(idx);
 
