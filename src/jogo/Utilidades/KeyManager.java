@@ -8,7 +8,7 @@ public class KeyManager implements KeyListener{
 
     private boolean[] teclas;
     public boolean cima, baixo, direita, esquerda;
-    public boolean attk, exit;
+    public boolean attk, exit, espaco;
 
     public KeyManager(){
         teclas = new boolean[256];
@@ -22,6 +22,7 @@ public class KeyManager implements KeyListener{
 
         attk = teclas[KeyEvent.VK_P];
         exit = teclas[KeyEvent.VK_ESCAPE];
+        espaco = teclas[KeyEvent.VK_SPACE];
 
 
         if(exit) System.exit(0);

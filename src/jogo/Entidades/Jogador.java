@@ -1,6 +1,7 @@
 package jogo.Entidades;
 
 import jogo.Assets.Assets;
+import jogo.Estado;
 import jogo.Utilidades.Handler;
 import jogo.Utilidades.Musica;
 
@@ -10,6 +11,7 @@ import java.awt.image.BufferedImage;
 
 public class Jogador extends Criatura {
 
+    public Estado estadoCreditos;
     //Animação
     private Animacao animBaixo, animCima, animEsquerda, animDireita;
     int animVel = 300;
@@ -121,24 +123,45 @@ public class Jogador extends Criatura {
         handler.getMundo().stop();
         handler.getGame().getMusica().paraMusica();
         handler.getGame().getMusica().wavMusic("/musicas/Out.wav", -20.0f, false);
+
+        JOptionPane.showMessageDialog(null, "Morreu", "APS", JOptionPane.DEFAULT_OPTION);
+        String nome = JOptionPane.showInputDialog(null, "Jogador?", "APS", JOptionPane.DEFAULT_OPTION);
+        handler.getGame().setNome(nome);
+
+
+        /*
         JOptionPane.showMessageDialog(null,"Morreu!" + "\n" + "Tempo: " + (String.format("%.1f", handler.getMundo().getTempo())) + " segundos",
                 "Aps", JOptionPane.DEFAULT_OPTION);
+
         JOptionPane.showMessageDialog(null,"Pontos: " + handler.getGame().getPontos() + "\n"
                 + "Kills: " + handler.getGame().getKills(),
                 "Aps", JOptionPane.DEFAULT_OPTION);
-        System.exit(0);
+        */
+
+        //handler.getMundo().setComeco();
+        handler.getEstado().setEstadoAtual(handler.getGame().estadoCreditos);
     }
 
     public void fim(String Texto) { //Quando acaba o tempo
         handler.getMundo().stop();
         handler.getGame().getMusica().paraMusica();
         handler.getGame().getMusica().wavMusic("/musicas/Out.wav", -20.0f, false);
+
+        JOptionPane.showMessageDialog(null, Texto, "APS", JOptionPane.DEFAULT_OPTION);
+        String nome = JOptionPane.showInputDialog(null, "Jogador?", "APS", JOptionPane.DEFAULT_OPTION);
+        handler.getGame().setNome(nome);
+
+
+        /*
         JOptionPane.showMessageDialog(null, Texto + "\n" + "Tempo: " + (String.format("%.1f", handler.getMundo().getTempo())) + " segundos",
                 "Aps", JOptionPane.DEFAULT_OPTION);
         JOptionPane.showMessageDialog(null,"Pontos: " + handler.getGame().getPontos() + "\n"
                         + "Kills: " + handler.getGame().getKills(),
                 "Aps", JOptionPane.DEFAULT_OPTION);
-        System.exit(0);
+        */
+
+        //handler.getMundo().setComeco();
+        handler.getEstado().setEstadoAtual(handler.getGame().estadoCreditos);
 
     }
 

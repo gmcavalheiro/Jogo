@@ -18,6 +18,7 @@ public class EstadoMenu extends Estado {
         gerenciadorUI = new GerenciadorUI(handler);
         handler.getMouseManager().setGerenciadorUI(gerenciadorUI);
 
+
         gerenciadorUI.addObjeto(new BotaoUI( //Botão de começar
                 200, 200, //Posição
                 Ladrilho.LAD_WIDTH*2, //Largura
@@ -26,7 +27,9 @@ public class EstadoMenu extends Estado {
                 new ClickListener(){
                     @Override
                     public void onClick() {
-                        iniciaJogo();
+                        if(handler.getGame().mouseAtivo) {
+                            iniciaJogo();
+                        }
                     }
                 }));
 
@@ -38,7 +41,9 @@ public class EstadoMenu extends Estado {
                 new ClickListener() {
                     @Override
                     public void onClick() {
-                        System.exit(0);
+                        if(handler.getGame().mouseAtivo) {
+                            System.exit(0);
+                        }
                     }
                 }
         ));
@@ -47,7 +52,8 @@ public class EstadoMenu extends Estado {
     @Override
     public void atualiza() {
         gerenciadorUI.atualiza();
-        //if(handler.getJoystickManager().start) iniciaJogo();
+        menu();
+
     }
 
     @Override
@@ -58,7 +64,19 @@ public class EstadoMenu extends Estado {
     private void iniciaJogo(){
         handler.getGame().getMusica().paraMusica(); //Para a musca do Menu
         handler.getGame().getMusica().wavMusic("/musicas/TPnTD.wav", -28.0f, true); //Começa a musica do Jogo
-        handler.getMouseManager().setGerenciadorUI(null);
+        handler.getGame().setMouseAtivo(false);
+        handler.getMundo().setComeco();
         Estado.setEstadoAtual(handler.getGame().estadoJogo);
     }
+
+    private void menu(){
+        if(Estado.getEstadoAtual().equals(this)){
+            //Inicia o Jogo com Start
+            if(handler.getJoystickManager().start) iniciaJogo();
+
+        }
+
+
+    }
 }
+

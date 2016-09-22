@@ -12,6 +12,7 @@ public class Jogo implements Runnable{
     public String titulo;
 
     private int kills = 0, pontos = 0;
+    private String nome;
 
     private boolean executando = false;
     private Thread processo;
@@ -22,6 +23,8 @@ public class Jogo implements Runnable{
     //estados do programa
     public Estado estadoJogo; //estado de jogo
     public Estado estadoMenu; //estado de menu
+    public Estado estadoCreditos;
+    public boolean mouseAtivo = true;
 
 
 
@@ -58,11 +61,12 @@ public class Jogo implements Runnable{
 
         //Musica
         musica = new Musica();
-        musica.wavMusic("/musicas/Young_Love.wav", -28.0f, true);
+        musica.wavMusic("/musicas/Young_Love.wav", -28.0f, true); //mudar também em EstadoCredito.java
 
 
         estadoJogo = new EstadoJogo(handler);
         estadoMenu = new EstadoMenu(handler);
+        estadoCreditos = new EstadoCreditos(handler);
         Estado.setEstadoAtual(estadoMenu);
 
 
@@ -158,6 +162,18 @@ public class Jogo implements Runnable{
     public void addKill(){ kills++; }
 
     public Musica getMusica(){ return musica; }
+
+    public void setMouseAtivo(boolean mouseAtivo) {
+        this.mouseAtivo = mouseAtivo;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
     public synchronized void start(){
         if(executando){
