@@ -29,7 +29,7 @@ public class KeyManager implements KeyListener{
             }
         }
 
-        if(keyJustPressed(KeyEvent.VK_D)) System.out.println("AE");
+
 
         cima = teclas[KeyEvent.VK_W];
         baixo = teclas[KeyEvent.VK_S];

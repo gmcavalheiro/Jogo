@@ -22,6 +22,10 @@ public class EstadoMenu extends Estado {
     private String op1, op2, op0;
     private boolean cima, baixo;
     private boolean[] joy, apertado, nao;
+    private float h = 0f;
+    int hsb;
+    Color cor;
+    public boolean trava = true;
 
     InputStream istream = getClass().getResourceAsStream("/font/PressStart.ttf");
     Font font = null;
@@ -30,6 +34,7 @@ public class EstadoMenu extends Estado {
 
     public EstadoMenu(Handler handler){
         super(handler);
+        trava = true;
 
         try {
             font = Font.createFont(Font.TRUETYPE_FONT, istream);
@@ -59,14 +64,24 @@ public class EstadoMenu extends Estado {
         menu();
         opcoesMenu();
 
+        if(h >= 0 && h < 1){
+            h += 0.01f;
+        }else if( h >=1){
+            h = 0;
+        }
+        hsb = Color.HSBtoRGB(h, 1f, 0.8f);
+        cor = new Color(hsb);
 
     }
 
     @Override
     public void render(Graphics g) {
         gerenciadorUI.render(g);
-
         g.setFont(font);
+        g.setColor(cor);
+        g.drawString("Titulo!", 200, 30);
+
+        g.setColor(Color.BLACK);
         g.drawString("Contra o Tempo " + op0, 50, 200);
         g.drawString("Jogo Infinito " + op1, 50, 250);
         g.drawString("Sair " + op2, 50, 300);
@@ -76,10 +91,13 @@ public class EstadoMenu extends Estado {
     }
 
     private void iniciaJogo(){
+        if(trava) return;
+
         handler.getGame().getMusica().paraMusica(); //Para a musca do Menu
-        handler.getGame().getMusica().wavMusic("/musicas/TPnTD.wav", -28.0f, true); //Começa a musica do Jogo
+        handler.getGame().getMusica().wavMusic("/musicas/jogo1.wav", -40.0f, true); //Começa a musica do Jogo
         handler.getGame().setMouseAtivo(false);
         handler.getMundo().setComeco();
+        trava = true;
         Estado.setEstadoAtual(handler.getGame().estadoJogo);
     }
 
@@ -112,15 +130,21 @@ public class EstadoMenu extends Estado {
         if(opcaoSelecionada > 2) opcaoSelecionada = 0;
         if(opcaoSelecionada < 0) opcaoSelecionada = 2;
 
-        if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_S) || validaJoy(0)) opcaoSelecionada++; //desce
-        if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_W) || validaJoy(1)) opcaoSelecionada--;//sobe
+        if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_S) || validaJoy(0)) {
+            opcaoSelecionada++; //desce
+            trava = false;
+        }
+        if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_W) || validaJoy(1)) {
+            opcaoSelecionada--;//sobe
+            trava = false;
+        }
 
         switch (opcaoSelecionada){
             case 0: //Jogo com tempo
                 op0 = "*";
                 op1 = op2 = "";
                 if(handler.getJoystickManager().start || handler.getKeyManager().espaco){
-                    handler.getMundo().setDuracao(30);
+                    handler.getMundo().setDuracao(5);
                     iniciaJogo();
                 }
                 break;

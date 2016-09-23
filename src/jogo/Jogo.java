@@ -62,7 +62,7 @@ public class Jogo implements Runnable{
 
         //Musica
         musica = new Musica();
-        musica.wavMusic("/musicas/Young_Love.wav", -28.0f, true); //mudar também em EstadoCredito.java
+        musica.wavMusic("/musicas/menu.wav", -28.0f, true); //mudar também em EstadoCredito.java
 
 
         estadoJogo = new EstadoJogo(handler);
