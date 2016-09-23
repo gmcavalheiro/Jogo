@@ -11,7 +11,6 @@ import java.awt.*;
 
 public class EstadoCreditos extends Estado {
 
-    private long lastTimer, espera = 2000, timer = espera;
 
     private int pontos, kills;
     private float tempo;
@@ -33,11 +32,18 @@ public class EstadoCreditos extends Estado {
         g.setColor(Color.BLACK);
         g.fillRect(0, 0, 800, 600);
 
-        g.setColor(Color.WHITE);
+        Graphics2D g2 = (Graphics2D)g;
+        GradientPaint gp = new GradientPaint(50, 90, Color.white, 50, 130, Color.black);
+
+        g.setColor(Color.white);
         g.drawString("Jogador: " + nome, 50, 90);
         g.drawString("Tempo: " + (String.format("%.1f", tempo)), 50, 105);
         g.drawString("Pontos: " + pontos, 50, 120);
         g.drawString("Kills: " + kills, 50, 135);
+
+        g2.setPaint(gp);
+        g2.drawString("teste", 50, 200);
+
 
         g.setColor(Color.BLACK);
     }
@@ -66,5 +72,11 @@ public class EstadoCreditos extends Estado {
         handler.getMundo().setComeco();
         Estado.setEstadoAtual(handler.getGame().estadoMenu);
     }
+
+
+
+
+
+
 
 }

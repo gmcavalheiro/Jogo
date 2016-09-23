@@ -77,6 +77,7 @@ public class JoystickManager {
 
         controller.poll();
 
+
         if(controller.getPovX() > 0 || controller.getXAxisValue() > 0){
             esquerda = true;
         }else if(controller.getPovX() < 0 || controller.getXAxisValue() < 0){
@@ -99,6 +100,14 @@ public class JoystickManager {
 //        if(direita) System.out.println("Dir.");
 //        if(cima) System.out.println("Cima");
 //        if(baixo) System.out.println("Baixo");
+    }
+
+    public int getDpadY(){
+        return (int) controller.getPovY();
+    }
+
+    public int getStickY(){
+        return (int) controller.getYAxisValue();
     }
 }
 

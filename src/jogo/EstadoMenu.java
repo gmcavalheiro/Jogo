@@ -7,58 +7,72 @@ import jogo.Utilidades.Handler;
 import jogo.Utilidades.UI.BotaoUI;
 import jogo.Utilidades.UI.GerenciadorUI;
 
+import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.io.IOException;
+import java.io.InputStream;
 
 public class EstadoMenu extends Estado {
 
     private GerenciadorUI gerenciadorUI;
 
+    private int[] opcoesLista = {0,1,2}; //opções do jogo.
+    private int opcaoSelecionada = 0;
+    private String op1, op2, op0;
+    private boolean cima, baixo;
+    private boolean[] joy, apertado, nao;
+
+    InputStream istream = getClass().getResourceAsStream("/font/PressStart.ttf");
+    Font font = null;
+
+
+
     public EstadoMenu(Handler handler){
         super(handler);
+
+        try {
+            font = Font.createFont(Font.TRUETYPE_FONT, istream);
+        } catch (FontFormatException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        font = font.deriveFont(20f);
+
+
+        joy = new boolean[2];
+        nao = new boolean[joy.length];
+        apertado = new boolean[joy.length];
         gerenciadorUI = new GerenciadorUI(handler);
         handler.getMouseManager().setGerenciadorUI(gerenciadorUI);
 
 
-        gerenciadorUI.addObjeto(new BotaoUI( //Botão de começar
-                200, 200, //Posição
-                Ladrilho.LAD_WIDTH*2, //Largura
-                Ladrilho.LAD_HEIGHT, //Comprimento
-                Assets.btn_inico,  //Imagem
-                new ClickListener(){
-                    @Override
-                    public void onClick() {
-                        if(handler.getGame().mouseAtivo) {
-                            iniciaJogo();
-                        }
-                    }
-                }));
 
-        gerenciadorUI.addObjeto(new BotaoUI( //Botão de Sair
-                200, 300,
-                Ladrilho.LAD_WIDTH * 2,
-                Ladrilho.LAD_HEIGHT,
-                Assets.btn_sair,
-                new ClickListener() {
-                    @Override
-                    public void onClick() {
-                        if(handler.getGame().mouseAtivo) {
-                            System.exit(0);
-                        }
-                    }
-                }
-        ));
+
     }
 
     @Override
     public void atualiza() {
         gerenciadorUI.atualiza();
         menu();
+        opcoesMenu();
+
 
     }
 
     @Override
     public void render(Graphics g) {
         gerenciadorUI.render(g);
+
+        g.setFont(font);
+        g.drawString("Contra o Tempo " + op0, 50, 200);
+        g.drawString("Jogo Infinito " + op1, 50, 250);
+        g.drawString("Sair " + op2, 50, 300);
+
+
+
     }
 
     private void iniciaJogo(){
@@ -71,12 +85,85 @@ public class EstadoMenu extends Estado {
 
     private void menu(){
         if(Estado.getEstadoAtual().equals(this)){
-            //Inicia o Jogo com Start
-            if(handler.getJoystickManager().start) iniciaJogo();
+            //Inicia o Jogo com Start e espaço
+            //if(handler.getJoystickManager().start || handler.getKeyManager().espaco) iniciaJogo();
 
         }
-
-
     }
+
+    public void opcoesMenu(){
+
+        joystick();
+
+        for(int i = 0; i < joy.length; i++){
+            if(nao[i] && !joy[i]){
+                nao[i] = false;
+            }else if(apertado[i]){
+                nao[i] = true;
+                apertado[i] = false;
+            }
+            if(!nao[i] && joy[i]){
+                apertado[i] = true;
+            }
+        }
+
+        //if(validaJoy(0)) System.out.println("Baixo");
+
+        if(opcaoSelecionada > 2) opcaoSelecionada = 0;
+        if(opcaoSelecionada < 0) opcaoSelecionada = 2;
+
+        if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_S) || validaJoy(0)) opcaoSelecionada++; //desce
+        if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_W) || validaJoy(1)) opcaoSelecionada--;//sobe
+
+        switch (opcaoSelecionada){
+            case 0: //Jogo com tempo
+                op0 = "*";
+                op1 = op2 = "";
+                if(handler.getJoystickManager().start || handler.getKeyManager().espaco){
+                    handler.getMundo().setDuracao(30);
+                    iniciaJogo();
+                }
+                break;
+            case 1: //Jogo normal
+                op1 = "*";
+                op0 = op2 = "";
+                if(handler.getJoystickManager().start || handler.getKeyManager().espaco){
+                    handler.getMundo().setDuracao(0);
+                    iniciaJogo();
+                }
+                break;
+            case 2: //Jogo Sair
+                op2 = "*";
+                op1 = op0 = "";
+                if(handler.getJoystickManager().start || handler.getKeyManager().espaco){
+                    handler.getKeyManager().sair();
+                }
+                break;
+
+        }
+    }
+
+    public void joystick(){
+        if(handler.getJoystickManager().getDpadY() == 1 || handler.getJoystickManager().getStickY() == 1){
+            joy[0] = true;
+        }else if(handler.getJoystickManager().getDpadY() == -1 || handler.getJoystickManager().getStickY() == -1){
+            joy[1] = true;
+        }else{
+            joy[0] = joy[1] = false;
+        }
+
+        /*
+        0 = baixo
+        1 = cima
+         */
+    }
+
+
+    public boolean validaJoy(int keyCode){
+        if(keyCode < 0 || keyCode >= joy.length)
+            return false;
+        return apertado[keyCode];
+    }
+
 }
 

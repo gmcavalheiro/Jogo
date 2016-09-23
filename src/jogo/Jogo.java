@@ -3,6 +3,7 @@ package jogo;
 import jogo.Assets.Assets;
 import jogo.Utilidades.*;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferStrategy;
 
@@ -174,6 +175,7 @@ public class Jogo implements Runnable{
     public void setNome(String nome) {
         this.nome = nome;
     }
+
 
     public synchronized void start(){
         if(executando){
