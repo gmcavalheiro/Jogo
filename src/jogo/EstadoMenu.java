@@ -85,7 +85,7 @@ public class EstadoMenu extends Estado {
         int x, y;
         x = 210;
         y = 480;
-        g.setColor(Color.GRAY);
+        g.setColor(new Color(150,150,150,200));
         g.fillRect(x-10, y-30, 380, 100);
 
 
