@@ -17,6 +17,7 @@ public class Assets {
     public static BufferedImage tijolo_cse, tijolo_s, tijolo_csd, tijolo_e, tijolo, tijolo_d, tijolo_cie, tijolo_i, tijolo_cid;
     public static BufferedImage asfalto, asfalto_ver, asfalto_hor;
     public static BufferedImage bloco_1, bloco_2, calcada;
+    public static BufferedImage menuBG;
 
     //Entidades
     public static BufferedImage arvore, arvore_grande, arbusto, arbusto_grande;
@@ -41,6 +42,7 @@ public class Assets {
         SpriteSheet botoes = new SpriteSheet(ImageLoader.loadImage("/texturas/botoes.png"));
         SpriteSheet inimigo = new SpriteSheet(ImageLoader.loadImage("/texturas/inimigo.png"));
         SpriteSheet objetos = new SpriteSheet(ImageLoader.loadImage("/texturas/objetos.png"));
+        SpriteSheet menu = new SpriteSheet(ImageLoader.loadImage("/texturas/Untitled-1.png"));
 
 
         /*  ------ Personagens ------*/
@@ -161,5 +163,8 @@ public class Assets {
 
         btn_sair[0] = botoes.corta(0,height,width*2,height);
         btn_sair[1] = botoes.corta(width*2, height, width*2, height);
+
+        /*  ------ Backgounds------*/
+        menuBG = menu.corta(0,0,800,600);
     }
 }

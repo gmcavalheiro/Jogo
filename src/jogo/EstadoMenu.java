@@ -77,14 +77,22 @@ public class EstadoMenu extends Estado {
     @Override
     public void render(Graphics g) {
         gerenciadorUI.render(g);
+        g.drawImage(Assets.menuBG,0,0,null);
         g.setFont(font);
-        g.setColor(cor);
-        g.drawString("Titulo!", 200, 30);
+        //g.setColor(cor);
+        //g.drawString("Titulo!", 200, 30);
+
+        int x, y;
+        x = 210;
+        y = 480;
+        g.setColor(Color.GRAY);
+        g.fillRect(x-10, y-30, 380, 100);
+
 
         g.setColor(Color.BLACK);
-        g.drawString("Contra o Tempo " + op0, 50, 200);
-        g.drawString("Jogo Infinito " + op1, 50, 250);
-        g.drawString("Sair " + op2, 50, 300);
+        g.drawString("[" + op0 + "] Contra o Tempo", x, y);
+        g.drawString("[" + op1 + "] Jogo Infinito", x, y+30);
+        g.drawString("[" + op2 + "] Sair", x, y+60);
 
 
 
@@ -141,24 +149,24 @@ public class EstadoMenu extends Estado {
 
         switch (opcaoSelecionada){
             case 0: //Jogo com tempo
-                op0 = "*";
-                op1 = op2 = "";
+                op0 = ">";
+                op1 = op2 = " ";
                 if(handler.getJoystickManager().start || handler.getKeyManager().espaco){
                     handler.getMundo().setDuracao(5);
                     iniciaJogo();
                 }
                 break;
             case 1: //Jogo normal
-                op1 = "*";
-                op0 = op2 = "";
+                op1 = ">";
+                op0 = op2 = " ";
                 if(handler.getJoystickManager().start || handler.getKeyManager().espaco){
                     handler.getMundo().setDuracao(0);
                     iniciaJogo();
                 }
                 break;
             case 2: //Jogo Sair
-                op2 = "*";
-                op1 = op0 = "";
+                op2 = ">";
+                op1 = op0 = " ";
                 if(handler.getJoystickManager().start || handler.getKeyManager().espaco){
                     handler.getKeyManager().sair();
                 }
