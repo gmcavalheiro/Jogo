@@ -94,7 +94,7 @@ public class EstadoMenu extends Estado {
         if(trava) return;
 
         handler.getGame().getMusica().paraMusica(); //Para a musca do Menu
-        handler.getGame().getMusica().wavMusic("/musicas/jogo1.wav", -40.0f, true); //Começa a musica do Jogo
+        handler.getGame().getMusica().wavMusic("/musicas/jogo1.wav", -30.0f, true); //Começa a musica do Jogo
         handler.getGame().setMouseAtivo(false);
         handler.getMundo().setComeco();
         trava = true;
