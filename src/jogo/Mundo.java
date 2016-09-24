@@ -56,7 +56,7 @@ public class Mundo {
             gerenciadorDeEntidades.getPlayer().fim("Fim de Jogo!");
         }
 
-        //indicador de pouco tempo
+
 
 
 
@@ -86,6 +86,36 @@ public class Mundo {
 
         //Barra de informações
         info.render(g);
+
+        //indicador de pouco tempo
+        if(getTempoRestante() < 10 && getTempoRestante() > 5){
+            g.setColor(Color.BLACK);
+            g.fillRect(10,10,780,10);
+            g.fillRect(10,550,780,10);
+            g.fillRect(10,10,10,550);
+            g.fillRect(780,10,10,550);
+        }else if(getTempoRestante() < 5 && getTempoRestante() > 3){
+            g.setColor(Color.RED);
+            g.fillRect(10,10,780,10);
+            g.fillRect(10,550,780,10);
+            g.fillRect(10,10,10,550);
+            g.fillRect(780,10,10,550);
+        }else if(getTempoRestante() < 3){
+            g.setColor(Color.RED);
+            g.fillRect(10,10,780,20);
+            g.fillRect(10,540,780,20);
+            g.fillRect(10,10,20,550);
+            g.fillRect(770,10,20,550);
+        }
+
+        if(getTempoRestante() < 3){
+            g.setColor(Color.BLACK);
+            g.drawString("Acabando o tempo!!", 335, 25);
+        }
+
+
+
+        g.setColor(Color.BLACK);
 
     }
 
