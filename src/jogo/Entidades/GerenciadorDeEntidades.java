@@ -90,4 +90,8 @@ public class GerenciadorDeEntidades {
     public void setEntidades(ArrayList<Entidade> entidades) {
         this.entidades = entidades;
     }
+
+    public void limpaArrayEntidades(){
+        entidades.clear();
+    }
 }

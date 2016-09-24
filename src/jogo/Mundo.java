@@ -30,24 +30,16 @@ public class Mundo {
 
     public Mundo(Handler handler, String caminho){
         carregador(caminho);
-        gerenciadorDeEntidades = new GerenciadorDeEntidades(handler, new Jogador(handler,100,100));
+
         info = new Info(handler);
         this.handler = handler;
 
-        //Posição inicial do jogador
-        gerenciadorDeEntidades.getPlayer().setX(spawnX * Ladrilho.LAD_WIDTH);
-        gerenciadorDeEntidades.getPlayer().setY(spawnY * Ladrilho.LAD_HEIGHT);
 
 
-        //Instância entidades e objetos
-        gerenciadorDeEntidades.adicionaEntidade(new Arvore(handler, 2, 2));
-        gerenciadorDeEntidades.adicionaEntidade(new ArvoreGrande(handler, 5, 10));
-        gerenciadorDeEntidades.adicionaEntidade(new Papel(handler, 3, 8));
+        criaEntidades();
 
 
-        //Instância os inimigos
-        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 9, 11));
-        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 12, 16));
+
 
         start();
     }
@@ -63,6 +55,12 @@ public class Mundo {
         if(gerenciadorDeEntidades.entidadesRestantes() == 0){
             gerenciadorDeEntidades.getPlayer().fim("Fim de Jogo!");
         }
+
+        //indicador de pouco tempo
+
+
+
+
 
     }
 
@@ -168,5 +166,37 @@ public class Mundo {
         startTimer = System.currentTimeMillis();
     }
 
+    public void reset(){
+        gerenciadorDeEntidades.limpaArrayEntidades();
+        criaEntidades();
+
+    }
+
+    public void criaEntidades(){
+        //Jogador
+        gerenciadorDeEntidades = new GerenciadorDeEntidades(handler, new Jogador(handler,100,100));
+        gerenciadorDeEntidades.getPlayer().setX(spawnX * Ladrilho.LAD_WIDTH);
+        gerenciadorDeEntidades.getPlayer().setY(spawnY * Ladrilho.LAD_HEIGHT);
+
+        objetos();
+
+        inimigos();
+
+    }
+
+
+    public void inimigos(){
+        //Instância os inimigos
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 9, 11));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 12, 16));
+
+    }
+
+    public void objetos(){
+        //Instância entidades e objetos
+        gerenciadorDeEntidades.adicionaEntidade(new Arvore(handler, 2, 2));
+        gerenciadorDeEntidades.adicionaEntidade(new ArvoreGrande(handler, 5, 10));
+        gerenciadorDeEntidades.adicionaEntidade(new Papel(handler, 3, 8));
+    }
 
 }

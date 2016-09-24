@@ -137,6 +137,7 @@ public class Jogador extends Criatura {
         //handler.getGame().setNome(nome);
         handler.getGame().getMusica().wavMusic("/musicas/creditos1.wav", -20.0f, false);
         handler.getEstado().setEstadoAtual(handler.getGame().estadoCreditos);
+
     }
 
 

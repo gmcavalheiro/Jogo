@@ -102,11 +102,11 @@ public class JoystickManager {
 //        if(baixo) System.out.println("Baixo");
     }
 
-    public int getDpadY(){
+    public int getYDpad(){
         return (int) controller.getPovY();
     }
 
-    public int getStickY(){
+    public int getYJoystick(){
         return (int) controller.getYAxisValue();
     }
 }

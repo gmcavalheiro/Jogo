@@ -77,7 +77,7 @@ public class EstadoMenu extends Estado {
     @Override
     public void render(Graphics g) {
         gerenciadorUI.render(g);
-        g.drawImage(Assets.menuBG,0,0,null);
+        g.drawImage(Assets.menuFundo,0,0,null);
         g.setFont(font);
         //g.setColor(cor);
         //g.drawString("Titulo!", 200, 30);
@@ -176,9 +176,9 @@ public class EstadoMenu extends Estado {
     }
 
     public void joystick(){
-        if(handler.getJoystickManager().getDpadY() == 1 || handler.getJoystickManager().getStickY() == 1){
+        if(handler.getJoystickManager().getYDpad() == 1 || handler.getJoystickManager().getYJoystick() == 1){
             joy[0] = true;
-        }else if(handler.getJoystickManager().getDpadY() == -1 || handler.getJoystickManager().getStickY() == -1){
+        }else if(handler.getJoystickManager().getYDpad() == -1 || handler.getJoystickManager().getYJoystick() == -1){
             joy[1] = true;
         }else{
             joy[0] = joy[1] = false;

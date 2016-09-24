@@ -36,9 +36,9 @@ public class KeyManager implements KeyListener{
         direita = teclas[KeyEvent.VK_A];
         esquerda = teclas[KeyEvent.VK_D];
 
-        attk = teclas[KeyEvent.VK_P];
+        espaco = attk = teclas[KeyEvent.VK_P];
         exit = teclas[KeyEvent.VK_ESCAPE];
-        espaco = teclas[KeyEvent.VK_SPACE];
+        //espaco = teclas[KeyEvent.VK_SPACE];
 
 
         if(exit) sair();

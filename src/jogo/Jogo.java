@@ -197,4 +197,9 @@ public class Jogo implements Runnable{
             e.printStackTrace();
         }
     }
+
+    public void zerarPontos(){
+        pontos = 0;
+        kills = 0;
+    }
 }
