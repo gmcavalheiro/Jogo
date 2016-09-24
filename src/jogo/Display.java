@@ -45,4 +45,6 @@ public class Display {
     public JFrame getFrame() {
         return frame;
     }
+
+    public String getTitulo(){ return titulo; }
 }

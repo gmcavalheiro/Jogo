@@ -17,7 +17,8 @@ public class Mundo {
     private int spawnX, spawnY;
     private int[][] lad;
     private long startTimer, stopTimer;
-    private long duracao = 0;
+    private float tempoReal;
+    private long duracao = 10;
     private Info info;
 
     //Entidades
@@ -154,11 +155,17 @@ public class Mundo {
     }
 
     public float getTempoReal(){
-        return  (System.currentTimeMillis() - startTimer)/1000.0f;
+        tempoReal = (System.currentTimeMillis() - startTimer)/1000.0f;
+        return  tempoReal;
     }
 
     public float getTempoRestante(){
         return duracao - getTempoReal();
+    }
+
+    public void setComeco(){
+        tempoReal = 0;
+        startTimer = System.currentTimeMillis();
     }
 
 
