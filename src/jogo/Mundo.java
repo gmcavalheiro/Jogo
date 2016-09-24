@@ -196,6 +196,7 @@ public class Mundo {
         startTimer = System.currentTimeMillis();
     }
 
+
     public void reset(){
         gerenciadorDeEntidades.limpaArrayEntidades();
         criaEntidades();
@@ -228,5 +229,6 @@ public class Mundo {
         gerenciadorDeEntidades.adicionaEntidade(new ArvoreGrande(handler, 5, 10));
         gerenciadorDeEntidades.adicionaEntidade(new Papel(handler, 3, 8));
     }
+
 
 }

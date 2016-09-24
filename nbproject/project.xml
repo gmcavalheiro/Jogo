@@ -6,7 +6,10 @@
             <name>Jogo</name>
             <source-roots>
                 <root id="src.res.dir"/>
+<<<<<<< HEAD
                 <root id="src.lib.dir"/>
+=======
+>>>>>>> 4034dfe5a90d732094a06b6c752225c6ebe21c9b
                 <root id="src.dir"/>
             </source-roots>
             <test-roots>

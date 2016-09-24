@@ -19,6 +19,7 @@ public class Assets {
     public static BufferedImage bloco_1, bloco_2, calcada;
     public static BufferedImage menuFundo;
 
+
     //Entidades
     public static BufferedImage arvore, arvore_grande, arbusto, arbusto_grande;
     public static BufferedImage casa;
@@ -166,5 +167,6 @@ public class Assets {
 
         /*  ------ Backgounds------*/
         menuFundo = menu.corta(0,0,800,600);
+
     }
 }

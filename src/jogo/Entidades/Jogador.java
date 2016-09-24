@@ -121,16 +121,17 @@ public class Jogador extends Criatura {
     @Override
     public void morre() { //Quando o personagem morre
         chamaCreditos("Fim");
+
     }
 
     public void fim(String texto) { //Quando acaba o tempo
         chamaCreditos(texto);
     }
-
     public void chamaCreditos(String texto){
         handler.getMundo().stop();
         handler.getGame().getMusica().paraMusica();
         handler.getGame().getMusica().wavMusic("/musicas/Out.wav", -20.0f, false);
+
 
         //JOptionPane.showMessageDialog(null, texto, "APS", JOptionPane.DEFAULT_OPTION);
         //String nome = JOptionPane.showInputDialog(null, "Jogador?", "APS", JOptionPane.DEFAULT_OPTION);
@@ -138,6 +139,11 @@ public class Jogador extends Criatura {
         handler.getGame().getMusica().wavMusic("/musicas/creditos1.wav", -20.0f, false);
         handler.getEstado().setEstadoAtual(handler.getGame().estadoCreditos);
 
+        //JOptionPane.showMessageDialog(null, texto, "APS", JOptionPane.DEFAULT_OPTION);
+        //String nome = JOptionPane.showInputDialog(null, "Jogador?", "APS", JOptionPane.DEFAULT_OPTION);
+        //handler.getGame().setNome(nome);
+        handler.getGame().getMusica().wavMusic("/musicas/creditos1.wav", -20.0f, false);
+        handler.getEstado().setEstadoAtual(handler.getGame().estadoCreditos);
     }
 
 

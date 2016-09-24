@@ -41,6 +41,7 @@ public class KeyManager implements KeyListener{
         //espaco = teclas[KeyEvent.VK_SPACE];
 
 
+
         if(exit) sair();
 
 
