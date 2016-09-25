@@ -2,7 +2,6 @@ package jogo.Entidades.Itens;
 
 import jogo.Assets.Assets;
 import jogo.Assets.Ladrilho;
-import jogo.Entidades.EntidadeEstatica;
 import jogo.Utilidades.Handler;
 
 import java.awt.*;

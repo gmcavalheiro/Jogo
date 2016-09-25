@@ -5,7 +5,6 @@ import jogo.Estado;
 import jogo.Utilidades.Handler;
 import jogo.Utilidades.Musica;
 
-import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
@@ -132,12 +131,6 @@ public class Jogador extends Criatura {
         handler.getGame().getMusica().paraMusica();
         handler.getGame().getMusica().wavMusic("/musicas/Out.wav", -20.0f, false);
 
-
-        //JOptionPane.showMessageDialog(null, texto, "APS", JOptionPane.DEFAULT_OPTION);
-        //String nome = JOptionPane.showInputDialog(null, "Jogador?", "APS", JOptionPane.DEFAULT_OPTION);
-        //handler.getGame().setNome(nome);
-        handler.getGame().getMusica().wavMusic("/musicas/creditos1.wav", -20.0f, false);
-        handler.getEstado().setEstadoAtual(handler.getGame().estadoCreditos);
 
         //JOptionPane.showMessageDialog(null, texto, "APS", JOptionPane.DEFAULT_OPTION);
         //String nome = JOptionPane.showInputDialog(null, "Jogador?", "APS", JOptionPane.DEFAULT_OPTION);

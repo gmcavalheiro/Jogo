@@ -2,20 +2,15 @@ package jogo.Utilidades;
 
 
 
-import com.sun.media.sound.WaveFileReader;
-import com.sun.org.apache.bcel.internal.util.ClassLoader;
-
 import javax.sound.midi.MidiSystem;
 import javax.sound.midi.Sequence;
 import javax.sound.midi.Sequencer;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
-import javax.sound.sampled.FloatControl;
 
 import java.io.*;
 import java.net.URL;
-import java.util.stream.Stream;
 
 public class Musica {
 

@@ -1,11 +1,6 @@
 package jogo;
 
-import jogo.Assets.Assets;
-import jogo.Assets.Ladrilho;
-import jogo.Utilidades.ClickListener;
 import jogo.Utilidades.Handler;
-import jogo.Utilidades.UI.BotaoUI;
-import jogo.Utilidades.UI.GerenciadorUI;
 
 import java.awt.*;
 import java.io.IOException;
@@ -20,7 +15,7 @@ public class EstadoCreditos extends Estado {
     private float h = 0f;
     int hsb;
     Color cor;
-    InputStream istream = getClass().getResourceAsStream("/font/PressStart.ttf");
+    InputStream istream = getClass().getResourceAsStream("/fonts/PressStart.ttf");
     Font font = null;
 
     public EstadoCreditos(Handler handler){
@@ -92,7 +87,7 @@ public class EstadoCreditos extends Estado {
 
     private void iniciaMenu(){
         handler.getGame().getMusica().paraMusica(); //Para a musca do Menu
-        handler.getGame().getMusica().wavMusic("/musicas/menu.wav", -28.0f, true); //Começa a musica do Jogo (mudar também em Jogo.java)
+        handler.getGame().getMusica().wavMusic("/musicas/menu.wav", -28.0f, true); //Começa a musicas do Jogo (mudar também em Jogo.java)
         handler.getGame().setMouseAtivo(true);
         handler.getMundo().setComeco();
         handler.getMundo().reset();

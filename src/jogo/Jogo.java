@@ -3,7 +3,6 @@ package jogo;
 import jogo.Assets.Assets;
 import jogo.Utilidades.*;
 
-import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferStrategy;
 

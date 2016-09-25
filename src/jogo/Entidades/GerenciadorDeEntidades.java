@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Iterator;
 
-//player = new Jogador(handler,mundo.getSpawnX(),mundo.getSpawnY());
+//player = new Jogador(handler,mundos.getSpawnX(),mundos.getSpawnY());
 
 public class GerenciadorDeEntidades {
 

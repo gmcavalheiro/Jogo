@@ -1,13 +1,9 @@
 package jogo;
 
 import jogo.Assets.Assets;
-import jogo.Assets.Ladrilho;
-import jogo.Utilidades.ClickListener;
 import jogo.Utilidades.Handler;
-import jogo.Utilidades.UI.BotaoUI;
 import jogo.Utilidades.UI.GerenciadorUI;
 
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
@@ -27,7 +23,7 @@ public class EstadoMenu extends Estado {
     Color cor;
     public boolean trava = true;
 
-    InputStream istream = getClass().getResourceAsStream("/font/PressStart.ttf");
+    InputStream istream = getClass().getResourceAsStream("/fonts/PressStart.ttf");
     Font font = null;
 
 
@@ -102,7 +98,7 @@ public class EstadoMenu extends Estado {
         if(trava) return;
 
         handler.getGame().getMusica().paraMusica(); //Para a musca do Menu
-        handler.getGame().getMusica().wavMusic("/musicas/jogo1.wav", -30.0f, true); //Começa a musica do Jogo
+        handler.getGame().getMusica().wavMusic("/musicas/jogo1.wav", -30.0f, true); //Começa a musicas do Jogo
         handler.getGame().setMouseAtivo(false);
         handler.getMundo().setComeco();
         trava = true;
@@ -152,7 +148,7 @@ public class EstadoMenu extends Estado {
                 op0 = ">";
                 op1 = op2 = " ";
                 if(handler.getJoystickManager().start || handler.getKeyManager().espaco){
-                    handler.getMundo().setDuracao(30);
+                    handler.getMundo().setDuracao(3);
                     iniciaJogo();
                 }
                 break;
