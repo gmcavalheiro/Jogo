@@ -7,23 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f497d39-3640-409d-9951-f42a7a99125f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jogo.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Jogo_jar/Jogo.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Jogo_jar/lib/jinput.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Jogo_jar/lib/lwjgl.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Jogo_jar/lib/lwjgl_util.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Jogo_jar/lib/natives/OpenAL32.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Jogo_jar/lib/natives/OpenAL64.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Jogo_jar/lib/natives/jinput-dx8.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Jogo_jar/lib/natives/jinput-dx8_64.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Jogo_jar/lib/natives/jinput-raw.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Jogo_jar/lib/natives/jinput-raw_64.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Jogo_jar/lib/natives/lwjgl.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Jogo_jar/lib/natives/lwjgl64.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Jogo/jogo/EstadoMenu$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Jogo/jogo/EstadoMenu$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Jogo/musicas/TPnTD.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Jogo/musicas/Young_Love.wav" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Jogo.iws" />
@@ -63,8 +46,8 @@
       <file leaf-file-name="Jogador.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Jogador.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+            <state relative-caret-position="368">
+              <caret line="127" column="29" selection-start-line="127" selection-start-column="29" selection-end-line="127" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3808#3809#0" expanded="true" />
@@ -977,7 +960,7 @@
       <workItem from="1474396532773" duration="1426000" />
       <workItem from="1474400327063" duration="733000" />
       <workItem from="1474754250926" duration="317000" />
-      <workItem from="1474754587884" duration="5546000" />
+      <workItem from="1474754587884" duration="5650000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1473084863229</created>
@@ -1280,11 +1263,18 @@
       <option name="project" value="LOCAL" />
       <updated>1474756719102</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Merge branch 'master' of https://github.com/gmcavalheiro/Jogo&#10;&#10;# Conflicts:&#10;#&#9;nbproject/build-impl.xml&#10;#&#9;nbproject/genfiles.properties&#10;#&#9;nbproject/private/private.xml&#10;#&#9;nbproject/project.xml&#10;#&#9;res/musicas/creditos1.wav&#10;#&#9;res/musicas/jogo1.wav&#10;#&#9;res/musicas/menu.wav&#10;#&#9;src/jogo/Assets/Assets.java&#10;#&#9;src/jogo/Entidades/Jogador.java&#10;#&#9;src/jogo/EstadoCreditos.java&#10;#&#9;src/jogo/EstadoMenu.java&#10;#&#9;src/jogo/Mundo.java&#10;#&#9;src/jogo/Utilidades/JoystickManager.java&#10;#&#9;src/jogo/Utilidades/KeyManager.java&#10;#&#9;src/jogo/Utilidades/Musica.java&#10;">
+      <created>1474762123597</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1474762123597</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126983000" />
+    <option name="totallyTimeSpent" value="127087000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1767,8 +1757,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Jogador.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+        <state relative-caret-position="368">
+          <caret line="127" column="29" selection-start-line="127" selection-start-column="29" selection-end-line="127" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3808#3809#0" expanded="true" />
