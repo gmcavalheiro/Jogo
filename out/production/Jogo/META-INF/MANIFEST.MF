@@ -1,5 +1,0 @@
-Manifest-Version: 1.0
-Main-Class: jogo.Inicio
-Class-Path: lib/lwjgl.jar lib/lwjgl_util.jar lib/jinput.jar
-
-
