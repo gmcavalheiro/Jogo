@@ -148,7 +148,7 @@ public class EstadoMenu extends Estado {
                 op0 = ">";
                 op1 = op2 = " ";
                 if(handler.getJoystickManager().start || handler.getKeyManager().espaco){
-                    handler.getMundo().setDuracao(3);
+                    handler.getMundo().setDuracao(15);
                     iniciaJogo();
                 }
                 break;

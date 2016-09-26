@@ -1,21 +1,21 @@
-package jogo.Entidades.Itens;
+package jogo.Entidades.Objetos;
 
 import jogo.Assets.Assets;
 import jogo.Assets.Ladrilho;
+import jogo.Entidades.EntidadeEstatica;
 import jogo.Utilidades.Handler;
-
 
 import java.awt.*;
 
-public class Papel extends Iten {
+public class Carro_d2 extends EntidadeEstatica {
 
-    public Papel(Handler handler, float x, float y){
-        super(handler, x* Ladrilho.LAD_WIDTH, y*Ladrilho.LAD_HEIGHT, Ladrilho.LAD_WIDTH, Ladrilho.LAD_HEIGHT);
+    public Carro_d2(Handler handler, float x, float y){
+        super(handler, x* Ladrilho.LAD_WIDTH, y*Ladrilho.LAD_HEIGHT, Ladrilho.LAD_WIDTH*2, Ladrilho.LAD_HEIGHT);
 
-        bounds.x = 24;
-        bounds.y = 49;
-        bounds.width = 15;
-        bounds.height = 15;
+        bounds.x = 0;
+        bounds.y = 11;
+        bounds.width = 120;
+        bounds.height = 53;
     }
 
     @Override
@@ -25,7 +25,7 @@ public class Papel extends Iten {
 
     @Override
     public void render(Graphics g) {
-        g.drawImage(Assets.papel,
+        g.drawImage(Assets.carro_d2,
                 (int) (x - handler.getCamera().getxOffset()),
                 (int) (y - handler.getCamera().getyOffset()),
                 width, height, null);
@@ -40,12 +40,6 @@ public class Papel extends Iten {
 
     @Override
     public void morre() {
-        try {
-            handler.getGame().addPonto();
-            //handler.getMundo().getGerenciadorDeEntidades().getPlayer().setSaude(10);
-        }catch (Exception e){
-            System.out.println(e);
-        }
 
     }
 }

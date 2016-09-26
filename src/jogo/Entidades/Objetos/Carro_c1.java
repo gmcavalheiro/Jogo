@@ -1,20 +1,21 @@
-package jogo.Entidades.Itens;
+package jogo.Entidades.Objetos;
 
 import jogo.Assets.Assets;
 import jogo.Assets.Ladrilho;
+import jogo.Entidades.EntidadeEstatica;
 import jogo.Utilidades.Handler;
 
 import java.awt.*;
 
-public class Garrafa extends Iten {
+public class Carro_c1 extends EntidadeEstatica {
 
-    public Garrafa(Handler handler, float x, float y){
-        super(handler, x* Ladrilho.LAD_WIDTH, y*Ladrilho.LAD_HEIGHT, Ladrilho.LAD_WIDTH, Ladrilho.LAD_HEIGHT);
+    public Carro_c1(Handler handler, float x, float y){
+        super(handler, x* Ladrilho.LAD_WIDTH, y*Ladrilho.LAD_HEIGHT, Ladrilho.LAD_WIDTH, Ladrilho.LAD_HEIGHT*2);
 
-        bounds.x = 23;
-        bounds.y = 49;
-        bounds.width = 21;
-        bounds.height = 16;
+        bounds.x = 7;
+        bounds.y = 11;
+        bounds.width = 51;
+        bounds.height = 112;
     }
 
     @Override
@@ -24,7 +25,7 @@ public class Garrafa extends Iten {
 
     @Override
     public void render(Graphics g) {
-        g.drawImage(Assets.garrafa,
+        g.drawImage(Assets.carro_c1,
                 (int) (x - handler.getCamera().getxOffset()),
                 (int) (y - handler.getCamera().getyOffset()),
                 width, height, null);

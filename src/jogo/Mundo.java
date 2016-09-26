@@ -1,10 +1,11 @@
 package jogo;
 
 import jogo.Assets.*;
+import jogo.Entidades.Itens.GerenciadorDeItens;
+import jogo.Entidades.Itens.Item;
 import jogo.Entidades.Objetos.Arvore;
 import jogo.Entidades.Objetos.ArvoreGrande;
 import jogo.Entidades.*;
-import jogo.Entidades.Itens.Papel;
 import jogo.Utilidades.*;
 import jogo.Utilidades.UI.Info;
 
@@ -23,6 +24,7 @@ public class Mundo {
 
     //Entidades
     private GerenciadorDeEntidades gerenciadorDeEntidades;
+    private GerenciadorDeItens gerenciadorDeItens;
 
     public void setDuracao(long duracao) {
         this.duracao = duracao;
@@ -33,35 +35,22 @@ public class Mundo {
 
         info = new Info(handler);
         this.handler = handler;
-
-
-
         criaEntidades();
-
-
-
-
         start();
     }
 
     public void atualiza() {
         gerenciadorDeEntidades.atualiza();
+        gerenciadorDeItens.atualiza();
         info.atualiza();
 
         if(getTempoReal() > duracao && duracao != 0){
             gerenciadorDeEntidades.getPlayer().fim("Acabou o Tempo!");
         }
 
-        if(gerenciadorDeEntidades.entidadesRestantes() == 0){
+        if(restantes() == 0){
             gerenciadorDeEntidades.getPlayer().fim("Fim de Jogo!");
         }
-
-
-
-
-
-
-
     }
 
     public void render(Graphics g) {
@@ -82,37 +71,39 @@ public class Mundo {
         }
 
         //Entidades
+        gerenciadorDeItens.render(g);
         gerenciadorDeEntidades.render(g);
 
         //Barra de informações
         info.render(g);
 
         //indicador de pouco tempo
-        if(getTempoRestante() < 10 && getTempoRestante() > 5){
-            g.setColor(Color.BLACK);
-            g.fillRect(10,10,780,10);
-            g.fillRect(10,550,780,10);
-            g.fillRect(10,10,10,550);
-            g.fillRect(780,10,10,550);
-        }else if(getTempoRestante() < 5 && getTempoRestante() > 3){
-            g.setColor(Color.RED);
-            g.fillRect(10,10,780,10);
-            g.fillRect(10,550,780,10);
-            g.fillRect(10,10,10,550);
-            g.fillRect(780,10,10,550);
-        }else if(getTempoRestante() < 3){
-            g.setColor(Color.RED);
-            g.fillRect(10,10,780,20);
-            g.fillRect(10,540,780,20);
-            g.fillRect(10,10,20,550);
-            g.fillRect(770,10,20,550);
-        }
+        if(duracao != 0) {
+            if (getTempoRestante() < 10 && getTempoRestante() > 5) {
+                g.setColor(Color.BLACK);
+                g.fillRect(10, 10, 780, 10);
+                g.fillRect(10, 550, 780, 10);
+                g.fillRect(10, 10, 10, 550);
+                g.fillRect(780, 10, 10, 550);
+            } else if (getTempoRestante() < 5 && getTempoRestante() > 3) {
+                g.setColor(Color.RED);
+                g.fillRect(10, 10, 780, 10);
+                g.fillRect(10, 550, 780, 10);
+                g.fillRect(10, 10, 10, 550);
+                g.fillRect(780, 10, 10, 550);
+            } else if (getTempoRestante() < 3) {
+                g.setColor(Color.RED);
+                g.fillRect(10, 10, 780, 20);
+                g.fillRect(10, 540, 780, 20);
+                g.fillRect(10, 10, 20, 550);
+                g.fillRect(770, 10, 20, 550);
+            }
 
-        if(getTempoRestante() < 3){
-            g.setColor(Color.BLACK);
-            g.drawString("Acabando o tempo!!", 335, 25);
+            if (getTempoRestante() < 3) {
+                g.setColor(Color.BLACK);
+                g.drawString("Acabando o tempo!!", 335, 25);
+            }
         }
-
 
 
         g.setColor(Color.BLACK);
@@ -162,6 +153,22 @@ public class Mundo {
         return gerenciadorDeEntidades;
     }
 
+    public GerenciadorDeItens getGerenciadorDeItens() {
+        return gerenciadorDeItens;
+    }
+
+    public void setGerenciadorDeItens(GerenciadorDeItens gerenciadorDeItens) {
+        this.gerenciadorDeItens = gerenciadorDeItens;
+    }
+
+    public Handler getHandler() {
+        return handler;
+    }
+
+    public void setHandler(Handler handler) {
+        this.handler = handler;
+    }
+
     public int getSpawnX() {
         return spawnX;
     }
@@ -199,8 +206,8 @@ public class Mundo {
 
     public void reset(){
         gerenciadorDeEntidades.limpaArrayEntidades();
+        gerenciadorDeItens.limpaArrayItens();
         criaEntidades();
-
     }
 
     public void criaEntidades(){
@@ -209,10 +216,10 @@ public class Mundo {
         gerenciadorDeEntidades.getPlayer().setX(spawnX * Ladrilho.LAD_WIDTH);
         gerenciadorDeEntidades.getPlayer().setY(spawnY * Ladrilho.LAD_HEIGHT);
 
+        gerenciadorDeItens = new GerenciadorDeItens(handler);
+        itens();
         objetos();
-
         inimigos();
-
     }
 
 
@@ -227,7 +234,14 @@ public class Mundo {
         //Instância entidades e objetos
         gerenciadorDeEntidades.adicionaEntidade(new Arvore(handler, 2, 2));
         gerenciadorDeEntidades.adicionaEntidade(new ArvoreGrande(handler, 5, 10));
-        gerenciadorDeEntidades.adicionaEntidade(new Papel(handler, 3, 8));
+    }
+
+    public void itens(){
+        gerenciadorDeItens.adicionaItenm(Item.papel.criarNovo(5,10));
+    }
+
+    public int restantes(){
+        return gerenciadorDeEntidades.entidadesRestantes() + gerenciadorDeItens.itensRestantes();
     }
 
 

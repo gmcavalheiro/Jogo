@@ -6,6 +6,7 @@ import java.awt.image.BufferedImage;
 import java.util.Random;
 
 import jogo.Assets.Assets;
+import jogo.Entidades.Itens.Item;
 import jogo.Utilidades.Handler;
 import jogo.Utilidades.Musica;
 
@@ -16,7 +17,7 @@ public class Inimigo extends Criatura{
     private Musica musica = new Musica();
     private long lastAttk, attkEspera = 10, attkTimer = attkEspera;
     private long lastMov, movEspera = 200, movTimer = movEspera;
-    private long lastEnt, entEspera = 200, entTimer = entEspera;
+    private long lastDrop, dropEspera = 8000, dropTimer = dropEspera;
     private int mov = 0;
 
     public Inimigo(Handler handler, float x, float y) {
@@ -24,10 +25,15 @@ public class Inimigo extends Criatura{
         velocidade = 20.0f;
         npc = true;
 
+        saude = 5;
+
         bounds.x = 0;
         bounds.y = 0;
         bounds.width = 64;
         bounds.height = 64;
+
+
+
 
         //Animação
         animBaixo = new Animacao(animVel, Assets.inimigo_baixo);
@@ -135,6 +141,7 @@ public class Inimigo extends Criatura{
         entrada();
         movimento();
         ataques();
+        dropItem();
     }
 
     @Override
@@ -153,6 +160,7 @@ public class Inimigo extends Criatura{
     @Override
     public void morre() {
             handler.getGame().addKill();
+            handler.getMundo().getGerenciadorDeItens().adicionaItenm(Item.papel.dropNovo((int)x, (int) y));
     }
 
     private BufferedImage getCAFrame(){
@@ -190,5 +198,37 @@ public class Inimigo extends Criatura{
         */
     }
 
+    public void dropItem(){
+        dropTimer += System.currentTimeMillis() - lastDrop;
+        lastDrop = System.currentTimeMillis();
 
+        if(dropTimer < dropEspera) return;
+        int iID, prob;
+        Random rnd = new Random();
+        prob = rnd.nextInt(100);
+        if(prob != 0) return;
+
+        iID = rnd.nextInt(6);
+        switch (iID){
+            case 0:
+                handler.getMundo().getGerenciadorDeItens().adicionaItenm(Item.salgadinho.dropNovo((int)x, (int) y));
+                break;
+            case 1:
+                handler.getMundo().getGerenciadorDeItens().adicionaItenm(Item.garrafa.dropNovo((int)x, (int) y));
+                break;
+            case 2:
+                handler.getMundo().getGerenciadorDeItens().adicionaItenm(Item.lata.dropNovo((int)x, (int) y));
+                break;
+            case 3:
+                handler.getMundo().getGerenciadorDeItens().adicionaItenm(Item.papel.dropNovo((int)x, (int) y));
+                break;
+            case 4:
+                handler.getMundo().getGerenciadorDeItens().adicionaItenm(Item.saco.dropNovo((int)x, (int) y));
+                break;
+            case 5:
+                handler.getMundo().getGerenciadorDeItens().adicionaItenm(Item.sacola.dropNovo((int)x, (int) y));
+                break;
+        }
+        dropTimer = 0;
+    }
 }

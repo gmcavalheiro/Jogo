@@ -8,6 +8,7 @@ public class Assets {
 
     private static final int width = 64, height = 64;
     private static final int tam = 64;
+    private static final int tLixo = 32;
     public static BufferedImage player;
     public static BufferedImage inimigo_parado;
     //Ladrilhos
@@ -23,9 +24,10 @@ public class Assets {
     //Entidades
     public static BufferedImage arvore, arvore_grande, arbusto, arbusto_grande;
     public static BufferedImage casa;
+    public static BufferedImage carro_d1, carro_d2, carro_e1, carro_e2, carro_c1, carro_c2, carro_b1, carro_b2;
 
-    //objetos
-    public static BufferedImage papel, pizza, garrafa;
+    //lixo
+    public static BufferedImage papel, lata, garrafa, saco, sacola, salgadinho;
 
     //Personagens
     public static BufferedImage[] jogador_baixo, jogador_cima, jogador_dir, jogador_esq;
@@ -42,8 +44,9 @@ public class Assets {
         SpriteSheet predio = new SpriteSheet(ImageLoader.loadImage("/texturas/predios.png"));
         SpriteSheet botoes = new SpriteSheet(ImageLoader.loadImage("/texturas/botoes.png"));
         SpriteSheet inimigo = new SpriteSheet(ImageLoader.loadImage("/texturas/inimigo.png"));
-        SpriteSheet objetos = new SpriteSheet(ImageLoader.loadImage("/texturas/objetos.png"));
         SpriteSheet menu = new SpriteSheet(ImageLoader.loadImage("/texturas/Untitled-1.png"));
+        SpriteSheet lixo = new SpriteSheet(ImageLoader.loadImage("/texturas/Lixo.png"));
+        SpriteSheet carro = new SpriteSheet(ImageLoader.loadImage("/texturas/Carros.png"));
 
 
         /*  ------ Personagens ------*/
@@ -149,9 +152,23 @@ public class Assets {
         casa = predio.corta(0,0,width,height);
 
         //lixo
-        papel = objetos.corta(0,0,width,height);
-        pizza = objetos.corta(width,0,width,height);
-        garrafa = objetos.corta(width*2,0,width,height);
+        salgadinho = lixo.corta(0,0,tLixo, tLixo);
+        garrafa = lixo.corta(tLixo,0,tLixo,tLixo);
+        lata = lixo.corta(tLixo*2, 0, tLixo, tLixo);
+        papel = lixo.corta(tLixo*3 , 0, tLixo, tLixo);
+        saco = lixo.corta(tLixo*4, 0, tLixo, tLixo);
+        sacola = lixo.corta(tLixo*5, 0, tLixo, tLixo);
+
+        //Carros
+        carro_d1 = carro.corta(0, 0, tam*2, tam);
+        carro_d2 = carro.corta(0, tam*2, tam*2, tam);
+        carro_e1 = carro.corta(0, tam, tam*2, tam);
+        carro_e2 = carro.corta(0, tam*3, tam*2, tam);
+        carro_c1 = carro.corta(tam*2, 0, tam, tam*2);
+        carro_c2 = carro.corta(tam*2, tam*2, tam, tam*2);
+        carro_b1 = carro.corta(tam*3, 0, tam, tam*2);
+        carro_b2 = carro.corta(tam*3, tam*2, tam, tam*2);
+
 
 
         /*  ------ UI ------*/
