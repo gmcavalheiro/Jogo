@@ -1,6 +1,7 @@
 package jogo;
 
 import jogo.Assets.*;
+import jogo.Entidades.Comida.GerenciadorDeComidas;
 import jogo.Entidades.Itens.GerenciadorDeItens;
 import jogo.Entidades.Itens.Item;
 import jogo.Entidades.*;
@@ -24,6 +25,7 @@ public class Mundo {
     //Entidades
     private GerenciadorDeEntidades gerenciadorDeEntidades;
     private GerenciadorDeItens gerenciadorDeItens;
+    private GerenciadorDeComidas gerenciadorDeComidas;
 
     public void setDuracao(long duracao) {
         this.duracao = duracao;
@@ -41,6 +43,7 @@ public class Mundo {
     public void atualiza() {
         gerenciadorDeEntidades.atualiza();
         gerenciadorDeItens.atualiza();
+        gerenciadorDeComidas.atualiza();
         info.atualiza();
 
         if(getTempoReal() > duracao && duracao != 0){
@@ -71,6 +74,7 @@ public class Mundo {
         //Entidades
         gerenciadorDeItens.render(g);
         gerenciadorDeEntidades.render(g);
+        gerenciadorDeComidas.render(g);
 
         //Barra de informações
         info.render(g);
@@ -204,6 +208,7 @@ public class Mundo {
     public void reset(){
         gerenciadorDeEntidades.limpaArrayEntidades();
         gerenciadorDeItens.limpaArrayItens();
+        gerenciadorDeComidas.limpaArrayComidas();
         criaEntidades();
     }
 
@@ -215,9 +220,11 @@ public class Mundo {
         gerenciadorDeEntidades.getPlayer().setY(spawnY * Ladrilho.LAD_HEIGHT);
 
         gerenciadorDeItens = new GerenciadorDeItens(handler);
+        gerenciadorDeComidas = new GerenciadorDeComidas(handler);
         itens();
         objetos();
         inimigos();
+        comidas();
     }
 
 
@@ -259,6 +266,10 @@ public class Mundo {
     public void itens(){
         //Instancia os itens
         gerenciadorDeItens.adicionaItenm(Item.papel.criarNovo(5,10));
+    }
+
+    public void comidas(){
+        //Instancia as Comidas
     }
 
     public int restantes(){
