@@ -1,24 +1,18 @@
-package jogo.Entidades.Itens;
+package jogo.Entidades.Comida;
 
 
 import jogo.Assets.Assets;
 import jogo.Assets.Ladrilho;
-import jogo.Entidades.Entidade;
 import jogo.Utilidades.Handler;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-public class Item {
+public class Comida {
 
     //Handler
-    public static Item[] itens = new Item[256];
-    public static Item salgadinho = new Item(Assets.salgadinho, "Salgadinho", 0);
-    public static Item garrafa = new Item(Assets.garrafa, "Garrafa", 1);
-    public static Item lata = new Item(Assets.lata, "Lata", 2);
-    public static Item papel = new Item(Assets.papel, "Papel", 3);
-    public static Item saco = new Item(Assets.saco, "Saco", 4);
-    public static Item sacola = new Item(Assets.sacola, "Sacola", 5);
+    public static Comida[] comidas = new Comida[256];
+
 
 
 
@@ -33,26 +27,25 @@ public class Item {
 
     protected Rectangle bounds;
 
-    protected int x, y, count;
+    protected int x, y, hp;
 
 
-    public Item(BufferedImage textura, String nome, int id){
+    public Comida(BufferedImage textura, String nome, int id, int hp){
         this.textura = textura;
         this.nome = nome;
         this.id = id;
-        count = 1;
+        this.hp = hp;
 
         bounds = new Rectangle(x, y, tLixo, tLixo);
 
-        itens[id] = this;
+        comidas[id] = this;
     }
 
 
     public void atualiza() {
         if(handler.getMundo().getGerenciadorDeEntidades().getPlayer().getCBounds(0f,0f).intersects(bounds)){
             pegado = true;
-            handler.getGame().addPonto();
-            //handler.getMundo().getGerenciadorDeEntidades().getPlayer().addSaude(1);
+            handler.getMundo().getGerenciadorDeEntidades().getPlayer().addSaude(hp);
         }
 
     }
@@ -67,16 +60,16 @@ public class Item {
         g.drawImage(textura, x, y, tLixo, tLixo, null);
     }
 
-    public Item criarNovo(int x, int y){
-        Item i = new Item(textura, nome, id);
-        i.setPosicao(x * Ladrilho.LAD_WIDTH, y * Ladrilho.LAD_HEIGHT);
-        return i;
+    public Comida criarNovo(int x, int y){
+        Comida c = new Comida(textura, nome, id, hp);
+        c.setPosicao(x * Ladrilho.LAD_WIDTH, y * Ladrilho.LAD_HEIGHT);
+        return c;
     }
 
-    public Item dropNovo(int x, int y){
-        Item i = new Item(textura, nome, id);
-        i.setPosicao(x,y);
-        return i;
+    public Comida dropNovo(int x, int y){
+        Comida c = new Comida(textura, nome, id, hp);
+        c.setPosicao(x,y);
+        return c;
     }
 
     public void setPosicao(int x, int y){
@@ -86,16 +79,9 @@ public class Item {
         bounds.y = y;
     }
 
-    public int getCount() {
-        return count;
-    }
 
     public boolean isPegado() {
         return pegado;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
     }
 
     public int getY() {
