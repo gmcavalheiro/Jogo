@@ -22,7 +22,7 @@ public class GerenciadorDeItens {
         while (it.hasNext()){
             Item i = it.next();
             i.atualiza();
-            if(i.getCount() == Item.pegado){
+            if(i.isPegado()){
                 it.remove();
             }
         }

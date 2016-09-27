@@ -8,6 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8f497d39-3640-409d-9951-f42a7a99125f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/Entidades/Itens/GerenciadorDeItens.java" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Itens/GerenciadorDeItens.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/Entidades/Itens/Item.java" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Itens/Item.java" />
     </list>
     <ignored path="Jogo.iws" />
@@ -61,8 +62,18 @@
       <file leaf-file-name="Item.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Itens/Item.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="53" column="41" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
+            <state relative-caret-position="307">
+              <caret line="92" column="8" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GerenciadorDeItens.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Itens/GerenciadorDeItens.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="251">
+              <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -181,7 +192,6 @@
         <option value="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
         <option value="$PROJECT_DIR$/src/jogo/Entidades/GerenciadorDeEntidades.java" />
         <option value="$PROJECT_DIR$/src/jogo/Utilidades/KeyManager.java" />
-        <option value="$PROJECT_DIR$/src/jogo/Utilidades/JoystickManager.java" />
         <option value="$PROJECT_DIR$/src/jogo/Inicio.java" />
         <option value="$PROJECT_DIR$/src/jogo/Camera.java" />
         <option value="$PROJECT_DIR$/src/jogo/Utilidade/Handler.java" />
@@ -197,7 +207,6 @@
         <option value="$PROJECT_DIR$/src/jogo/Entidades/Itens/Papel.java" />
         <option value="$PROJECT_DIR$/src/jogo/EstadoMenu.java" />
         <option value="$PROJECT_DIR$/src/jogo/Entidades/Itens/Iten.java" />
-        <option value="$PROJECT_DIR$/src/jogo/Entidades/Itens/GerenciadorDeItens.java" />
         <option value="$PROJECT_DIR$/src/jogo/Utilidades/UI/Info.java" />
         <option value="$PROJECT_DIR$/src/jogo/Entidades/Inimigo.java" />
         <option value="$PROJECT_DIR$/src/jogo/Entidades/EntidadeEstatica.java" />
@@ -214,7 +223,9 @@
         <option value="$PROJECT_DIR$/src/jogo/Entidades/Objetos/ArvoreGrande.java" />
         <option value="$PROJECT_DIR$/nbproject/project.xml" />
         <option value="$PROJECT_DIR$/src/jogo/Mundo.java" />
+        <option value="$PROJECT_DIR$/src/jogo/Utilidades/JoystickManager.java" />
         <option value="$PROJECT_DIR$/src/jogo/Entidades/Itens/Item.java" />
+        <option value="$PROJECT_DIR$/src/jogo/Entidades/Itens/GerenciadorDeItens.java" />
       </list>
     </option>
   </component>
@@ -390,6 +401,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Entidades" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Jogo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Jogo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jogo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entidades" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Itens" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -978,14 +1015,7 @@
       <workItem from="1474855960192" duration="7586000" />
       <workItem from="1474905360459" duration="1876000" />
       <workItem from="1474944381714" duration="2216000" />
-      <workItem from="1474948542113" duration="1784000" />
-    </task>
-    <task id="LOCAL-00002" summary=".">
-      <created>1473088424741</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1473088424741</updated>
+      <workItem from="1474948542113" duration="2502000" />
     </task>
     <task id="LOCAL-00003" summary=".">
       <created>1473105293824</created>
@@ -1323,12 +1353,19 @@
       <option name="project" value="LOCAL" />
       <updated>1474946164939</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Recolhimento do Lixo">
+      <created>1474950345461</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1474950345461</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
     <option name="enabled" value="true" />
-    <option name="totallyTimeSpent" value="144686000" />
+    <option name="totallyTimeSpent" value="145404000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1351,7 +1388,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719395" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25273523" sideWeight="0.48933902" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24835886" sideWeight="0.48933902" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1414,7 +1451,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="Animação do personagem" />
     <MESSAGE value="Musica" />
     <MESSAGE value="Novas entidades estáticas e colisão" />
     <MESSAGE value="packages e novas entidades" />
@@ -1439,7 +1475,8 @@
     <MESSAGE value="correções" />
     <MESSAGE value="Nova lógica para itens, drop temporizado dos inimigos, novas imagens, novos objetos" />
     <MESSAGE value="NetBeans" />
-    <option name="LAST_COMMIT_MESSAGE" value="NetBeans" />
+    <MESSAGE value="Recolhimento do Lixo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Recolhimento do Lixo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1452,13 +1489,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/lib/jinput.jar!/net/java/games/util/Version.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/jogo/Utilidades/MouseManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1470,16 +1500,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="900" column="0" selection-start-line="900" selection-start-column="0" selection-end-line="900" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jogo/Utilidades/JoystickManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1674,18 +1694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Itens/GerenciadorDeItens.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#871#872#0" expanded="false" />
-            <element signature="e#901#902#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/mundos/mundo1.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -1854,16 +1862,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jogo/Utilidades/KeyManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
+        <state relative-caret-position="148">
           <caret line="39" column="42" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/lwjgl.jar!/org/lwjgl/input/Controllers.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jogo/Utilidades/JoystickManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Itens/GerenciadorDeItens.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Itens/Item.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="53" column="41" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
+        <state relative-caret-position="307">
+          <caret line="92" column="8" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="22" />
           <folding />
         </state>
       </provider>

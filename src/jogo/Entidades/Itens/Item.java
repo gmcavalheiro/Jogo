@@ -29,7 +29,7 @@ public class Item {
     protected BufferedImage textura;
     protected String nome;
     protected final int id;
-    public static final int pegado =-1;
+    protected boolean pegado = false;
 
     protected Rectangle bounds;
 
@@ -50,7 +50,7 @@ public class Item {
 
     public void atualiza() {
         if(handler.getMundo().getGerenciadorDeEntidades().getPlayer().getCBounds(0f,0f).intersects(bounds)){
-            count = pegado;
+            pegado = true;
             handler.getGame().addPonto();
         }
 
@@ -87,6 +87,10 @@ public class Item {
 
     public int getCount() {
         return count;
+    }
+
+    public boolean isPegado() {
+        return pegado;
     }
 
     public void setCount(int count) {
