@@ -14,6 +14,7 @@ public class Jogador extends Criatura {
     //Animação
     private Animacao animBaixo, animCima, animEsquerda, animDireita;
     int animVel = 300;
+    private int dano = 1, danoCount = 0;
 
     private Musica musica = new Musica();
 
@@ -52,7 +53,17 @@ public class Jogador extends Criatura {
         //Ataques
         ataques();
 
-        if(saude > 10) saude = 10;
+        if(saude > 10) {
+            saude = 10;
+            danoCount++;
+        }
+
+        if(danoCount > 3){
+            danoCount = 0;
+            dano++;
+        }
+
+        System.out.println(dano);
     }
 
     private void ataques() {
@@ -92,7 +103,7 @@ public class Jogador extends Criatura {
                 continue;
             }
             if(e.getCBounds(0,0).intersects(ra) && e.atacavel){
-                e.dano(1);
+                e.dano(dano);
                 musica.wavMusic("/musicas/Punch.wav", -5f, false);
                 return;
             }

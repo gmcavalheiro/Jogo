@@ -45,6 +45,7 @@ public class Comida {
     public void atualiza() {
         if(handler.getMundo().getGerenciadorDeEntidades().getPlayer().getCBounds(0f,0f).intersects(bounds)){
             pegado = true;
+            handler.getGame().addPonto(hp);
             handler.getMundo().getGerenciadorDeEntidades().getPlayer().addSaude(hp);
         }
 
