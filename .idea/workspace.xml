@@ -8,17 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8f497d39-3640-409d-9951-f42a7a99125f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/Assets/Assets.java" afterPath="$PROJECT_DIR$/src/jogo/Assets/Assets.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Arvore.java" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Arvore.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/ArvoreGrande.java" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/ArvoreGrande.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carro_b1.java" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carro_b1.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carro_b2.java" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carro_b2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carro_c1.java" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carro_c1.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carro_c2.java" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carro_c2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carro_d1.java" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carro_d1.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carro_d2.java" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carro_d2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carro_e1.java" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carro_e1.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carro_e2.java" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carro_e2.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/Mundo.java" afterPath="$PROJECT_DIR$/src/jogo/Mundo.java" />
     </list>
     <ignored path="Jogo.iws" />
@@ -59,15 +48,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Mundo.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Mundo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/jogo/Mundo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="244" column="74" selection-start-line="244" selection-start-column="74" selection-end-line="244" selection-end-column="74" />
+            <state relative-caret-position="198">
+              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#setGerenciadorDeItens#0;class#Mundo#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EstadoCreditos.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/jogo/EstadoCreditos.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1167">
+              <caret line="92" column="35" selection-start-line="92" selection-start-column="35" selection-end-line="92" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Item.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Itens/Item.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-567">
+              <caret line="20" column="29" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -117,26 +126,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
               <caret line="12" column="74" selection-start-line="12" selection-start-column="74" selection-end-line="12" selection-end-column="74" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Carro_d1.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carro_d1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="12" column="75" selection-start-line="12" selection-start-column="75" selection-end-line="12" selection-end-column="75" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Carro_d2.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carro_d2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="12" column="75" selection-start-line="12" selection-start-column="75" selection-end-line="12" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -417,58 +406,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Entidades" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jogo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jogo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jogo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entidades" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Objetos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jogo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jogo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jogo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entidades" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Itens" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1054,7 +991,7 @@
       <workItem from="1474771913668" duration="1543000" />
       <workItem from="1474855960192" duration="7586000" />
       <workItem from="1474905360459" duration="1876000" />
-      <workItem from="1474944381714" duration="7000" />
+      <workItem from="1474944381714" duration="1685000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1473084863229</created>
@@ -1392,12 +1329,19 @@
       <option name="project" value="LOCAL" />
       <updated>1474862958369</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Nova lógica para itens, drop temporizado dos inimigos, novas imagens, novos objetos">
+      <created>1474944409845</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1474944409845</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
     <option name="enabled" value="true" />
-    <option name="totallyTimeSpent" value="140693000" />
+    <option name="totallyTimeSpent" value="142371000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1586,6 +1530,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-11322">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1683,6 +1628,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1767,14 +1713,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jogo/EstadoCreditos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="92" column="35" selection-start-line="92" selection-start-column="35" selection-end-line="92" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Itens/GerenciadorDeItens.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="799">
@@ -1784,14 +1722,6 @@
             <element signature="e#871#872#0" expanded="true" />
             <element signature="e#901#902#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Itens/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="61" column="45" selection-start-line="61" selection-start-column="45" selection-end-line="61" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1806,6 +1736,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1908,14 +1839,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Itens/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-567">
+          <caret line="20" column="29" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/jogo/Mundo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="244" column="74" selection-start-line="244" selection-start-column="74" selection-end-line="244" selection-end-column="74" />
+        <state relative-caret-position="198">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#setGerenciadorDeItens#0;class#Mundo#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jogo/EstadoCreditos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1167">
+          <caret line="92" column="35" selection-start-line="92" selection-start-column="35" selection-end-line="92" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
