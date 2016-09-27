@@ -49,15 +49,10 @@ public class Item {
 
 
     public void atualiza() {
-        if(handler.getMundo().getGerenciadorDeEntidades().getPlayer().getCBounds(0f,0f).intersects(bounds)){
+        if(handler.getMundo().getGerenciadorDeEntidades().getPlayer().getCBounds().intersects(bounds)){
             pegado = true;
             handler.getGame().addPonto();
         }
-
-        if(handler.getMundo().getTile(x,y).solido()){
-            pegado = true;
-        }
-
     }
 
     public void render(Graphics g){

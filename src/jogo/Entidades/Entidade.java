@@ -1,5 +1,6 @@
 package jogo.Entidades;
 
+import jogo.Assets.Ladrilho;
 import jogo.Utilidades.Handler;
 
 import java.awt.*;
@@ -56,6 +57,12 @@ public abstract class Entidade {
         return new Rectangle((int)(x + bounds.x + xOffset),
                 (int)(y + bounds.y + yOffset),
                 bounds.width, bounds.height);
+    }
+
+    public Rectangle getCBounds(){
+        return new Rectangle((int)(x),
+                (int)(y),
+                Ladrilho.LAD_WIDTH, Ladrilho.LAD_HEIGHT);
     }
 
     public float getX() {

@@ -88,6 +88,10 @@ public class Ladrilho {
         return false;
     }
 
+    public Rectangle gerLad(int x, int y){
+        return new Rectangle(x, y, LAD_WIDTH, LAD_HEIGHT);
+    }
+
 
     public int getId(){
         return id;

@@ -32,6 +32,8 @@ public abstract class Criatura extends Entidade {
         if(!colisaoEntidade(0f, yMove)){
             movY();
         }
+
+        //System.out.println("C: " + x + ", " + y);
     }
 
     public void movX(){//Movimenta e Colisão horizontal
@@ -81,6 +83,7 @@ public abstract class Criatura extends Entidade {
 
     protected boolean colisao(int x, int y){
         return handler.getMundo().getTile(x,y).solido();
+
     }
 
 
