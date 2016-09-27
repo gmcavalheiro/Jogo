@@ -8,9 +8,11 @@
   <component name="ChangeListManager">
     <list default="true" id="8f497d39-3640-409d-9951-f42a7a99125f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/Assets/Ladrilho.java" afterPath="$PROJECT_DIR$/src/jogo/Assets/Ladrilho.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/Entidades/Comida/Comida.java" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Comida/Comida.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/Entidades/Itens/Item.java" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Itens/Item.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/Entidades/Jogador.java" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Jogador.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/Mundo.java" afterPath="$PROJECT_DIR$/src/jogo/Mundo.java" />
     </list>
     <ignored path="Jogo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,11 +52,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Mundo.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Mundo.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/jogo/Mundo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="39">
-              <caret line="247" column="77" selection-start-line="247" selection-start-column="77" selection-end-line="247" selection-end-column="77" />
+            <state relative-caret-position="477">
+              <caret line="261" column="78" selection-start-line="261" selection-start-column="78" selection-end-line="261" selection-end-column="78" />
               <folding />
             </state>
           </provider>
@@ -72,31 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EstadoCreditos.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jogo/EstadoCreditos.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="74" column="35" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KeyManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jogo/Utilidades/KeyManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Item.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Itens/Item.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="54" column="12" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
+            <state relative-caret-position="289">
+              <caret line="53" column="41" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -114,44 +96,57 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GerenciadorDeItens.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Itens/GerenciadorDeItens.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GerenciadorDeComidas.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Comida/GerenciadorDeComidas.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="37" column="41" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Comida.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Comida/Comida.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="46" column="26" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+            <state relative-caret-position="413">
+              <caret line="49" column="86" selection-start-line="49" selection-start-column="86" selection-end-line="49" selection-end-column="86" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Jogador.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Jogador.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Jogador.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
+            <state relative-caret-position="498">
+              <caret line="171" column="29" selection-start-line="171" selection-start-column="29" selection-end-line="171" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#ataques#0;class#Jogador#0" expanded="false" />
+                <element signature="e#5116#5117#0" expanded="true" />
+                <element signature="e#5143#5144#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Criatura.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Criatura.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-289">
+              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Entidade.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Entidade.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="57" column="45" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ladrilho.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jogo/Assets/Ladrilho.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="549">
+              <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -187,7 +182,6 @@
         <option value="$PROJECT_DIR$/src/jogo/EstadoFim.java" />
         <option value="$PROJECT_DIR$/src/jogo/Assets/Ladrilhos/Bloco_3.java" />
         <option value="$PROJECT_DIR$/src/jogo/Assets/Ladrilhos/Calcada.java" />
-        <option value="$PROJECT_DIR$/src/jogo/Assets/Ladrilho.java" />
         <option value="$PROJECT_DIR$/src/jogo/Entidades/Entidade.java" />
         <option value="$PROJECT_DIR$/src/jogo/EstadoJogo.java" />
         <option value="$PROJECT_DIR$/src/jogo/Utilidades/Utilidades.java" />
@@ -227,12 +221,13 @@
         <option value="$PROJECT_DIR$/src/jogo/Utilidades/KeyManager.java" />
         <option value="$PROJECT_DIR$/src/jogo/Entidades/Itens/Comida.java" />
         <option value="$PROJECT_DIR$/src/jogo/Entidades/Comida/GerenciadorDeComidas.java" />
-        <option value="$PROJECT_DIR$/src/jogo/Mundo.java" />
         <option value="$PROJECT_DIR$/src/jogo/Entidades/Inimigo.java" />
         <option value="$PROJECT_DIR$/src/jogo/Jogo.java" />
-        <option value="$PROJECT_DIR$/src/jogo/Entidades/Comida/Comida.java" />
+        <option value="$PROJECT_DIR$/src/jogo/Assets/Ladrilho.java" />
         <option value="$PROJECT_DIR$/src/jogo/Entidades/Itens/Item.java" />
         <option value="$PROJECT_DIR$/src/jogo/Entidades/Jogador.java" />
+        <option value="$PROJECT_DIR$/src/jogo/Entidades/Comida/Comida.java" />
+        <option value="$PROJECT_DIR$/src/jogo/Mundo.java" />
       </list>
     </option>
   </component>
@@ -483,6 +478,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Jogo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Jogo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jogo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ladrilhos" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1031,14 +1052,7 @@
       <workItem from="1474855960192" duration="7586000" />
       <workItem from="1474905360459" duration="1876000" />
       <workItem from="1474944381714" duration="2216000" />
-      <workItem from="1474948542113" duration="4686000" />
-    </task>
-    <task id="LOCAL-00008" summary="Animação do personagem">
-      <created>1473289110975</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1473289110975</updated>
+      <workItem from="1474948542113" duration="6062000" />
     </task>
     <task id="LOCAL-00009" summary="Musica">
       <created>1473296471393</created>
@@ -1376,12 +1390,19 @@
       <option name="project" value="LOCAL" />
       <updated>1474952734441</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Comidas e HP">
+      <created>1474953235338</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1474953235338</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
     <option name="enabled" value="true" />
-    <option name="totallyTimeSpent" value="147588000" />
+    <option name="totallyTimeSpent" value="148964000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1505,24 +1526,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11322">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jogo/Camera.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/jogo/Utilidades/Handler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1786,14 +1789,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Entidade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/lwjgl.jar!/org/lwjgl/input/Controllers.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1806,14 +1801,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Criatura.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1066">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -1883,37 +1870,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Comida/Comida.java">
+    <entry file="file://$PROJECT_DIR$/src/jogo/Assets/Ladrilhos/Bloco_1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="46" column="26" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+        <state relative-caret-position="68">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jogo/Mundo.java">
+    <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Criatura.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="247" column="77" selection-start-line="247" selection-start-column="77" selection-end-line="247" selection-end-column="77" />
+        <state relative-caret-position="-289">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Entidade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="57" column="45" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jogo/Assets/Ladrilho.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Itens/Item.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="54" column="12" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
+        <state relative-caret-position="289">
+          <caret line="53" column="41" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Jogador.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
+        <state relative-caret-position="498">
+          <caret line="171" column="29" selection-start-line="171" selection-start-column="29" selection-end-line="171" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#ataques#0;class#Jogador#0" expanded="false" />
+            <element signature="e#5116#5117#0" expanded="true" />
+            <element signature="e#5143#5144#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Comida/Comida.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="49" column="86" selection-start-line="49" selection-start-column="86" selection-end-line="49" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jogo/Mundo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="261" column="78" selection-start-line="261" selection-start-column="78" selection-end-line="261" selection-end-column="78" />
+          <folding />
         </state>
       </provider>
     </entry>

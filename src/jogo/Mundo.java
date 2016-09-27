@@ -231,8 +231,35 @@ public class Mundo {
     public void inimigos(){
         //Instância os inimigos
         gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 9 , 11));
-        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 12, 16));
         gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 2 , 2 ));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 2 , 13));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 31, 23));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 9 , 27));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 13, 28));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 35, 21));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 27, 27));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 3 , 23));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 10, 4 ));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 23, 3 ));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 31, 8 ));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 20, 28));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 15, 12));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 32, 27));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 29, 15));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 29, 25));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 27, 22));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 12, 16));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 27, 6 ));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 23, 16));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 34, 4 ));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 17, 28));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 11, 24));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 15, 20));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 19, 24));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 7 , 18));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 16, 5 ));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 27, 13));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 3 , 28));
     }
 
     public void objetos(){

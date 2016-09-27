@@ -55,15 +55,14 @@ public class Jogador extends Criatura {
 
         if(saude > 10) {
             saude = 10;
-            danoCount++;
         }
 
-        if(danoCount > 3){
+        if(danoCount > 10){
             danoCount = 0;
             dano++;
         }
 
-        System.out.println(dano);
+
     }
 
     private void ataques() {
@@ -168,5 +167,9 @@ public class Jogador extends Criatura {
 
     public void addSaude(int amt){
         saude += amt;
+    }
+
+    public void addDanoCount(){
+        danoCount++;
     }
 }

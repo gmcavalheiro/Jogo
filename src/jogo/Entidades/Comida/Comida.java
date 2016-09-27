@@ -47,6 +47,7 @@ public class Comida {
             pegado = true;
             handler.getGame().addPonto(hp);
             handler.getMundo().getGerenciadorDeEntidades().getPlayer().addSaude(hp);
+            handler.getMundo().getGerenciadorDeEntidades().getPlayer().addDanoCount();
         }
 
     }
