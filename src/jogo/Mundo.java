@@ -223,8 +223,9 @@ public class Mundo {
 
     public void inimigos(){
         //Instância os inimigos
-        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 9, 11));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 9 , 11));
         gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 12, 16));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 2 , 2 ));
     }
 
     public void objetos(){
