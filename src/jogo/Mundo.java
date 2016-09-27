@@ -46,7 +46,6 @@ public class Mundo {
         if(getTempoReal() > duracao && duracao != 0){
             gerenciadorDeEntidades.getPlayer().fim("Acabou o Tempo!");
         }
-
         if(restantes() == 0){
             gerenciadorDeEntidades.getPlayer().fim("Fim de Jogo!");
         }
@@ -119,7 +118,6 @@ public class Mundo {
             return Ladrilho.grama;
         }
             return t;
-
     }
 
 
@@ -227,7 +225,6 @@ public class Mundo {
         //Instância os inimigos
         gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 9, 11));
         gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 12, 16));
-
     }
 
     public void objetos(){
