@@ -31,6 +31,8 @@ public class Item {
     protected final int id;
     public static final int pegado =-1;
 
+    protected Rectangle bounds;
+
     protected int x, y, count;
 
 
@@ -40,11 +42,17 @@ public class Item {
         this.id = id;
         count = 1;
 
+        bounds = new Rectangle(x, y, tLixo, tLixo);
+
         itens[id] = this;
     }
 
 
     public void atualiza() {
+        if(handler.getMundo().getGerenciadorDeEntidades().getPlayer().getCBounds(0f,0f).intersects(bounds)){
+            count = pegado;
+            handler.getGame().addPonto();
+        }
 
     }
 
@@ -73,6 +81,8 @@ public class Item {
     public void setPosicao(int x, int y){
         this.x = x;
         this.y = y;
+        bounds.x = x;
+        bounds.y = y;
     }
 
     public int getCount() {
