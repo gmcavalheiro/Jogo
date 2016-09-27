@@ -10,7 +10,7 @@ import java.awt.*;
 public class Carro_e2 extends EntidadeEstatica {
 
     public Carro_e2(Handler handler, float x, float y){
-        super(handler, x* Ladrilho.LAD_WIDTH, y*Ladrilho.LAD_HEIGHT, Ladrilho.LAD_WIDTH*2, Ladrilho.LAD_HEIGHT);
+        super(handler, (x-1)* Ladrilho.LAD_WIDTH, (y-1)*Ladrilho.LAD_HEIGHT, Ladrilho.LAD_WIDTH*2, Ladrilho.LAD_HEIGHT);
 
         bounds.x = 0;
         bounds.y = 11;

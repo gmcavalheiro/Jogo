@@ -10,7 +10,7 @@ import java.awt.*;
 public class ArvoreGrande extends EntidadeEstatica {
 
     public ArvoreGrande(Handler handler, float x, float y){
-        super(handler, x* Ladrilho.LAD_WIDTH, y*Ladrilho.LAD_HEIGHT, Ladrilho.LAD_WIDTH*2, Ladrilho.LAD_HEIGHT*2);
+        super(handler, (x-1)* Ladrilho.LAD_WIDTH, (y-1)*Ladrilho.LAD_HEIGHT, Ladrilho.LAD_WIDTH*2, Ladrilho.LAD_HEIGHT*2);
 
         bounds.x = 55;
         bounds.y = 83;

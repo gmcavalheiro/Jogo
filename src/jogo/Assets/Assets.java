@@ -160,14 +160,14 @@ public class Assets {
         sacola = lixo.corta(tLixo*5, 0, tLixo, tLixo);
 
         //Carros
-        carro_d1 = carro.corta(0, 0, tam*2, tam);
-        carro_d2 = carro.corta(0, tam*2, tam*2, tam);
-        carro_e1 = carro.corta(0, tam, tam*2, tam);
-        carro_e2 = carro.corta(0, tam*3, tam*2, tam);
-        carro_c1 = carro.corta(tam*2, 0, tam, tam*2);
-        carro_c2 = carro.corta(tam*2, tam*2, tam, tam*2);
-        carro_b1 = carro.corta(tam*3, 0, tam, tam*2);
-        carro_b2 = carro.corta(tam*3, tam*2, tam, tam*2);
+        carro_e1 = carro.corta(0, 0, tam*2, tam);
+        carro_e2 = carro.corta(0, tam*2, tam*2, tam);
+        carro_d1 = carro.corta(0, tam, tam*2, tam);
+        carro_d2 = carro.corta(0, tam*3, tam*2, tam);
+        carro_b1 = carro.corta(tam*2, 0, tam, tam*2);
+        carro_b2 = carro.corta(tam*2, tam*2, tam, tam*2);
+        carro_c1 = carro.corta(tam*3, 0, tam, tam*2);
+        carro_c2 = carro.corta(tam*3, tam*2, tam, tam*2);
 
 
 

@@ -3,9 +3,8 @@ package jogo;
 import jogo.Assets.*;
 import jogo.Entidades.Itens.GerenciadorDeItens;
 import jogo.Entidades.Itens.Item;
-import jogo.Entidades.Objetos.Arvore;
-import jogo.Entidades.Objetos.ArvoreGrande;
 import jogo.Entidades.*;
+import jogo.Entidades.Objetos.*;
 import jogo.Utilidades.*;
 import jogo.Utilidades.UI.Info;
 
@@ -213,6 +212,7 @@ public class Mundo {
     public void criaEntidades(){
         //Jogador
         gerenciadorDeEntidades = new GerenciadorDeEntidades(handler, new Jogador(handler,100,100));
+        //Coloca o jogador na posição inicial
         gerenciadorDeEntidades.getPlayer().setX(spawnX * Ladrilho.LAD_WIDTH);
         gerenciadorDeEntidades.getPlayer().setY(spawnY * Ladrilho.LAD_HEIGHT);
 
@@ -231,12 +231,35 @@ public class Mundo {
     }
 
     public void objetos(){
-        //Instância entidades e objetos
-        gerenciadorDeEntidades.adicionaEntidade(new Arvore(handler, 2, 2));
-        gerenciadorDeEntidades.adicionaEntidade(new ArvoreGrande(handler, 5, 10));
+        //Instância as entidades e objetos
+
+        //Arvores
+        gerenciadorDeEntidades.adicionaEntidade(new Arvore(handler, 2 , 4 ));
+        gerenciadorDeEntidades.adicionaEntidade(new Arvore(handler, 2 , 22));
+        gerenciadorDeEntidades.adicionaEntidade(new Arvore(handler, 37, 5 ));
+        gerenciadorDeEntidades.adicionaEntidade(new Arvore(handler, 34, 6 ));
+        gerenciadorDeEntidades.adicionaEntidade(new Arvore(handler, 29, 11));
+        gerenciadorDeEntidades.adicionaEntidade(new Arvore(handler, 32, 20));
+        gerenciadorDeEntidades.adicionaEntidade(new Arvore(handler, 39, 21));
+        gerenciadorDeEntidades.adicionaEntidade(new Arvore(handler, 37, 28));
+        gerenciadorDeEntidades.adicionaEntidade(new Arvore(handler, 33, 10));
+        gerenciadorDeEntidades.adicionaEntidade(new ArvoreGrande(handler, 2 , 11));
+        gerenciadorDeEntidades.adicionaEntidade(new ArvoreGrande(handler, 29, 4 ));
+        gerenciadorDeEntidades.adicionaEntidade(new ArvoreGrande(handler, 38, 8 ));
+        gerenciadorDeEntidades.adicionaEntidade(new ArvoreGrande(handler, 36, 23));
+        gerenciadorDeEntidades.adicionaEntidade(new ArvoreGrande(handler, 31, 26));
+
+        //Carros
+        gerenciadorDeEntidades.adicionaEntidade(new Carro_c1(handler, 6 ,2 ));
+        gerenciadorDeEntidades.adicionaEntidade(new Carro_b2(handler, 24,8 ));
+        gerenciadorDeEntidades.adicionaEntidade(new Carro_e1(handler, 22,13));
+        gerenciadorDeEntidades.adicionaEntidade(new Carro_b1(handler, 4 ,15));
+        gerenciadorDeEntidades.adicionaEntidade(new Carro_d2(handler, 17,23));
+        gerenciadorDeEntidades.adicionaEntidade(new Carro_c2(handler, 26,24));
     }
 
     public void itens(){
+        //Instancia os itens
         gerenciadorDeItens.adicionaItenm(Item.papel.criarNovo(5,10));
     }
 
