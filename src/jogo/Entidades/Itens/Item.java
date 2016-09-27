@@ -52,6 +52,7 @@ public class Item {
         if(handler.getMundo().getGerenciadorDeEntidades().getPlayer().getCBounds(0f,0f).intersects(bounds)){
             pegado = true;
             handler.getGame().addPonto();
+            handler.getMundo().getGerenciadorDeEntidades().getPlayer().addSaude(1);
         }
 
     }

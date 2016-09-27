@@ -25,7 +25,7 @@ public class Inimigo extends Criatura{
         velocidade = 20.0f;
         npc = true;
 
-        saude = 5;
+        saude = 10;
 
         bounds.x = 0;
         bounds.y = 0;

@@ -154,4 +154,8 @@ public class Jogador extends Criatura {
             return Assets.player;
         }
     }
+
+    public void addSaude(int amt){
+        saude += amt;
+    }
 }
