@@ -17,7 +17,7 @@ public class Inimigo extends Criatura{
     private Musica musica = new Musica();
     private long lastAttk, attkEspera = 10, attkTimer = attkEspera;
     private long lastMov, movEspera = 200, movTimer = movEspera;
-    private long lastDrop, dropEspera = 8000, dropTimer = dropEspera;
+    private long lastDrop, dropEspera = 5000, dropTimer = dropEspera;
     private int mov = 0;
 
     public Inimigo(Handler handler, float x, float y) {
@@ -205,7 +205,7 @@ public class Inimigo extends Criatura{
         if(dropTimer < dropEspera) return;
         int iID, prob;
         Random rnd = new Random();
-        prob = rnd.nextInt(100);
+        prob = rnd.nextInt(10);
         if(prob != 0) return;
 
         iID = rnd.nextInt(6);

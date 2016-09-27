@@ -159,6 +159,10 @@ public class Jogo implements Runnable{
 
     public void addPonto(){ pontos++; }
 
+    public void addPonto(int pt){
+        pontos += pt;
+    }
+
     public void addKill(){ kills++; }
 
     public Musica getMusica(){ return musica; }
