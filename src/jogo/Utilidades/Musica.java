@@ -16,6 +16,9 @@ public class Musica {
 
     Sequencer player;
     Clip clip;
+    Clip selectClip;
+    Clip itemClip;
+    Clip moveClip;
 
     public void MidiMusic(String caminho, int rep){
         try{
@@ -52,6 +55,49 @@ public class Musica {
 
     public void paraMusica(){
         clip.stop();
+    }
+
+
+    public void SelectSound(){
+        try {
+            URL selectSrc = Musica.class.getResource("/musicas/MenuSelect.wav");
+            selectClip = AudioSystem.getClip();
+            //AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File(caminho));
+            AudioInputStream inputStream = AudioSystem.getAudioInputStream(selectSrc);
+            selectClip.open(inputStream);
+            selectClip.start();
+        }catch (Exception e){
+            System.out.println(e);
+            e.printStackTrace();
+        }
+    }
+
+    public void MoveSound(){
+        try {
+            URL moveSrc = Musica.class.getResource("/musicas/MenuMove.wav");
+            moveClip = AudioSystem.getClip();
+            //AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File(caminho));
+            AudioInputStream inputStream = AudioSystem.getAudioInputStream(moveSrc);
+            moveClip.open(inputStream);
+            moveClip.start();
+        }catch (Exception e){
+            System.out.println(e);
+            e.printStackTrace();
+        }
+    }
+
+    public void ItemSound(){
+        try {
+            URL itemSrc = Musica.class.getResource("/musicas/Item.wav");
+            itemClip = AudioSystem.getClip();
+            //AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File(caminho));
+            AudioInputStream inputStream = AudioSystem.getAudioInputStream(itemSrc);
+            itemClip.open(inputStream);
+            itemClip.start();
+        }catch (Exception e){
+            System.out.println(e);
+            e.printStackTrace();
+        }
     }
 
 

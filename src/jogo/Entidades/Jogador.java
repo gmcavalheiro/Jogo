@@ -60,6 +60,7 @@ public class Jogador extends Criatura {
         if(danoCount > 10){
             danoCount = 0;
             dano++;
+            musica.wavMusic("/musicas/Birl.wav", -5f, false);
         }
 
 
@@ -103,7 +104,7 @@ public class Jogador extends Criatura {
             }
             if(e.getCBounds(0,0).intersects(ra) && e.atacavel){
                 e.dano(dano);
-                musica.wavMusic("/musicas/Punch.wav", -5f, false);
+                musica.wavMusic("/musicas/Soco.wav", -5f, false);
                 return;
             }
         }

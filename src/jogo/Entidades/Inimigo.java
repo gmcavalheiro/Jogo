@@ -77,7 +77,7 @@ public class Inimigo extends Criatura{
             }
             if(e.getCBounds(0,0).intersects(ra) && e.atacavel){
                 e.dano(1);
-                musica.wavMusic("/musicas/Punch.wav", -5f, false);
+                musica.wavMusic("/musicas/Soco.wav", -5f, false);
                 return;
             }
         }

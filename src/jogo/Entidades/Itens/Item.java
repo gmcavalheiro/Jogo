@@ -52,6 +52,7 @@ public class Item {
         if(handler.getMundo().getGerenciadorDeEntidades().getPlayer().getCBounds().intersects(bounds)){
             pegado = true;
             handler.getGame().addPonto();
+            handler.getGame().getMusica().ItemSound();
         }
     }
 

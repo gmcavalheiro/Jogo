@@ -98,6 +98,8 @@ public class EstadoMenu extends Estado {
         if(trava) return;
 
         handler.getGame().getMusica().paraMusica(); //Para a musca do Menu
+        //handler.getGame().getMusica().wavMusic("/musicas/MenuSelect.wav", -30.0f, false);
+        handler.getGame().getMusica().SelectSound();
         handler.getGame().getMusica().wavMusic("/musicas/jogo1.wav", -30.0f, true); //Começa a musicas do Jogo
         handler.getGame().setMouseAtivo(false);
         handler.getMundo().setComeco();
@@ -137,10 +139,12 @@ public class EstadoMenu extends Estado {
         if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_S) || validaJoy(0)) {
             opcaoSelecionada++; //desce
             trava = false;
+            handler.getGame().getMusica().MoveSound();
         }
         if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_W) || validaJoy(1)) {
             opcaoSelecionada--;//sobe
             trava = false;
+            handler.getGame().getMusica().MoveSound();
         }
 
         switch (opcaoSelecionada){
@@ -150,6 +154,7 @@ public class EstadoMenu extends Estado {
                 if(handler.getJoystickManager().start || handler.getKeyManager().espaco){
                     handler.getMundo().setDuracao(15);
                     iniciaJogo();
+
                 }
                 break;
             case 1: //Jogo normal
@@ -158,6 +163,7 @@ public class EstadoMenu extends Estado {
                 if(handler.getJoystickManager().start || handler.getKeyManager().espaco){
                     handler.getMundo().setDuracao(0);
                     iniciaJogo();
+
                 }
                 break;
             case 2: //Jogo Sair
@@ -165,6 +171,7 @@ public class EstadoMenu extends Estado {
                 op1 = op0 = " ";
                 if(handler.getJoystickManager().start || handler.getKeyManager().espaco){
                     handler.getKeyManager().sair();
+                    handler.getGame().getMusica().wavMusic("/musicas/MenuSelect.wav", -30.0f, false);
                 }
                 break;
 
