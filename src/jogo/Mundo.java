@@ -292,7 +292,36 @@ public class Mundo {
 
     public void itens(){
         //Instancia os itens
-        gerenciadorDeItens.adicionaItenm(Item.papel.criarNovo(5,10));
+        gerenciadorDeItens.adicionaItenm(Item.papel.criarNovo(5 ,10));
+        gerenciadorDeItens.adicionaItenm(Item.papel.criarNovo(20,2 ));
+        gerenciadorDeItens.adicionaItenm(Item.papel.criarNovo(23,32));
+        gerenciadorDeItens.adicionaItenm(Item.papel.criarNovo(7 ,31));
+        gerenciadorDeItens.adicionaItenm(Item.papel.criarNovo(16,35));
+        gerenciadorDeItens.adicionaItenm(Item.salgadinho.criarNovo(18,35));
+        gerenciadorDeItens.adicionaItenm(Item.salgadinho.criarNovo(23,15));
+        gerenciadorDeItens.adicionaItenm(Item.salgadinho.criarNovo(12,35));
+        gerenciadorDeItens.adicionaItenm(Item.salgadinho.criarNovo(15,38));
+        gerenciadorDeItens.adicionaItenm(Item.salgadinho.criarNovo(8 ,23));
+        gerenciadorDeItens.adicionaItenm(Item.garrafa.criarNovo(2 ,13));
+        gerenciadorDeItens.adicionaItenm(Item.garrafa.criarNovo(2 ,20));
+        gerenciadorDeItens.adicionaItenm(Item.garrafa.criarNovo(11,6 ));
+        gerenciadorDeItens.adicionaItenm(Item.garrafa.criarNovo(19,24));
+        gerenciadorDeItens.adicionaItenm(Item.garrafa.criarNovo(29,39));
+        gerenciadorDeItens.adicionaItenm(Item.lata.criarNovo(20,33));
+        gerenciadorDeItens.adicionaItenm(Item.lata.criarNovo(25,3 ));
+        gerenciadorDeItens.adicionaItenm(Item.lata.criarNovo(12,38));
+        gerenciadorDeItens.adicionaItenm(Item.lata.criarNovo(15,23));
+        gerenciadorDeItens.adicionaItenm(Item.lata.criarNovo(29,5 ));
+        gerenciadorDeItens.adicionaItenm(Item.saco.criarNovo(29,38));
+        gerenciadorDeItens.adicionaItenm(Item.saco.criarNovo(21,23));
+        gerenciadorDeItens.adicionaItenm(Item.saco.criarNovo(29,26));
+        gerenciadorDeItens.adicionaItenm(Item.saco.criarNovo(21,20));
+        gerenciadorDeItens.adicionaItenm(Item.saco.criarNovo(15,7 ));
+        gerenciadorDeItens.adicionaItenm(Item.sacola.criarNovo(22,38));
+        gerenciadorDeItens.adicionaItenm(Item.sacola.criarNovo(18,37));
+        gerenciadorDeItens.adicionaItenm(Item.sacola.criarNovo(23,29));
+        gerenciadorDeItens.adicionaItenm(Item.sacola.criarNovo(6 ,33));
+        gerenciadorDeItens.adicionaItenm(Item.sacola.criarNovo(21,38));
     }
 
     public void comidas(){

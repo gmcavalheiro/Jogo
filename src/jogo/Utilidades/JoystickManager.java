@@ -36,6 +36,7 @@ public class JoystickManager {
             controller = Controllers.getController(i);
             controles.add(controller);
         }
+        if(controles.size() == 0) return;
 
         String[] listaDeControles = new String[controles.size() + 1];
 
@@ -67,7 +68,7 @@ public class JoystickManager {
     }
 
     public void atualiza(){
-
+        if(controles.size() == 0) return;
         if(controller.getButtonCount() != 12) return;
 
         cima = false;
