@@ -77,7 +77,7 @@ public class Inimigo extends Criatura{
             }
             if(e.getCBounds(0,0).intersects(ra) && e.atacavel){
                 e.dano(1);
-                musica.wavMusic("/musicas/Soco.wav", -5f, false);
+                handler.getGame().getMusica().SocoSound();
                 return;
             }
         }
@@ -159,8 +159,9 @@ public class Inimigo extends Criatura{
 
     @Override
     public void morre() {
-            handler.getGame().addKill();
-            handler.getMundo().getGerenciadorDeItens().adicionaItenm(Item.papel.dropNovo((int)x, (int) y));
+        handler.getGame().addKill();
+        handler.getGame().getMusica().wavMusic("/musicas/Death.wav", -30.0f, false);
+        handler.getMundo().getGerenciadorDeItens().adicionaItenm(Item.papel.dropNovo((int)x, (int) y));
     }
 
     private BufferedImage getCAFrame(){

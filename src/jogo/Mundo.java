@@ -6,6 +6,8 @@ import jogo.Entidades.Itens.GerenciadorDeItens;
 import jogo.Entidades.Itens.Item;
 import jogo.Entidades.*;
 import jogo.Entidades.Objetos.*;
+import jogo.Entidades.Objetos.Carros.*;
+import jogo.Entidades.Objetos.Predios.*;
 import jogo.Utilidades.*;
 import jogo.Utilidades.UI.Info;
 
@@ -158,6 +160,10 @@ public class Mundo {
         return gerenciadorDeItens;
     }
 
+    public GerenciadorDeComidas getGerenciadorDeComidas() {
+        return gerenciadorDeComidas;
+    }
+
     public void setGerenciadorDeItens(GerenciadorDeItens gerenciadorDeItens) {
         this.gerenciadorDeItens = gerenciadorDeItens;
     }
@@ -224,7 +230,7 @@ public class Mundo {
         itens();
         objetos();
         inimigos();
-        comidas();
+
     }
 
 
@@ -288,6 +294,20 @@ public class Mundo {
         gerenciadorDeEntidades.adicionaEntidade(new Carro_b1(handler, 4 ,15));
         gerenciadorDeEntidades.adicionaEntidade(new Carro_d2(handler, 17,23));
         gerenciadorDeEntidades.adicionaEntidade(new Carro_c2(handler, 26,24));
+
+        //Predios
+        gerenciadorDeEntidades.adicionaEntidade(new Predio1(handler, 8 ,2 ));
+        gerenciadorDeEntidades.adicionaEntidade(new Predio2(handler, 8 ,9 ));
+        gerenciadorDeEntidades.adicionaEntidade(new Hamburg(handler, 16,9 ));
+        gerenciadorDeEntidades.adicionaEntidade(new Predio4(handler, 8 ,17));
+        gerenciadorDeEntidades.adicionaEntidade(new Predio5(handler, 13,17));
+        gerenciadorDeEntidades.adicionaEntidade(new Starbucks(handler, 19,17));
+        gerenciadorDeEntidades.adicionaEntidade(new Predio7(handler, 2 ,25));
+        gerenciadorDeEntidades.adicionaEntidade(new Italiano(handler, 8 ,25));
+        gerenciadorDeEntidades.adicionaEntidade(new Predio9(handler, 16,25));
+        gerenciadorDeEntidades.adicionaEntidade(new HotDog(handler, 34,25));
+
+
     }
 
     public void itens(){
@@ -324,9 +344,7 @@ public class Mundo {
         gerenciadorDeItens.adicionaItenm(Item.sacola.criarNovo(21,38));
     }
 
-    public void comidas(){
-        //Instancia as Comidas
-    }
+
 
     public int restantes(){
         return gerenciadorDeEntidades.entidadesRestantes() + gerenciadorDeItens.itensRestantes();

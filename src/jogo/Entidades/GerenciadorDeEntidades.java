@@ -94,4 +94,5 @@ public class GerenciadorDeEntidades {
     public void limpaArrayEntidades(){
         entidades.clear();
     }
+
 }

@@ -19,6 +19,8 @@ public class Musica {
     Clip selectClip;
     Clip itemClip;
     Clip moveClip;
+    Clip comeClip;
+    Clip socoClip;
 
     public void MidiMusic(String caminho, int rep){
         try{
@@ -94,6 +96,34 @@ public class Musica {
             AudioInputStream inputStream = AudioSystem.getAudioInputStream(itemSrc);
             itemClip.open(inputStream);
             itemClip.start();
+        }catch (Exception e){
+            System.out.println(e);
+            e.printStackTrace();
+        }
+    }
+
+    public void ComeSound(){
+        try {
+            URL comeSrc = Musica.class.getResource("/musicas/Come.wav");
+            comeClip = AudioSystem.getClip();
+            //AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File(caminho));
+            AudioInputStream inputStream = AudioSystem.getAudioInputStream(comeSrc);
+            comeClip.open(inputStream);
+            comeClip.start();
+        }catch (Exception e){
+            System.out.println(e);
+            e.printStackTrace();
+        }
+    }
+
+    public void SocoSound(){
+        try {
+            URL socoSrc = Musica.class.getResource("/musicas/Soco.wav");
+            socoClip = AudioSystem.getClip();
+            //AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File(caminho));
+            AudioInputStream inputStream = AudioSystem.getAudioInputStream(socoSrc);
+            socoClip.open(inputStream);
+            socoClip.start();
         }catch (Exception e){
             System.out.println(e);
             e.printStackTrace();

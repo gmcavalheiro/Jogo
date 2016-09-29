@@ -104,7 +104,7 @@ public class Jogador extends Criatura {
             }
             if(e.getCBounds(0,0).intersects(ra) && e.atacavel){
                 e.dano(dano);
-                musica.wavMusic("/musicas/Soco.wav", -5f, false);
+                handler.getGame().getMusica().SocoSound();
                 return;
             }
         }
@@ -140,12 +140,10 @@ public class Jogador extends Criatura {
     public void chamaCreditos(String texto){
         handler.getMundo().stop();
         handler.getGame().getMusica().paraMusica();
-        handler.getGame().getMusica().wavMusic("/musicas/Out.wav", -20.0f, false);
-
-
-        //JOptionPane.showMessageDialog(null, texto, "APS", JOptionPane.DEFAULT_OPTION);
-        //String nome = JOptionPane.showInputDialog(null, "Jogador?", "APS", JOptionPane.DEFAULT_OPTION);
-        //handler.getGame().setNome(nome);
+        handler.getGame().getMusica().paraMusica();
+        handler.getGame().getMusica().paraMusica();
+        handler.getGame().getMusica().paraMusica();
+        handler.getGame().getMusica().wavMusic("/musicas/YouLose.wav", -20.0f, false);
         handler.getGame().getMusica().wavMusic("/musicas/creditos1.wav", -20.0f, false);
         handler.getEstado().setEstadoAtual(handler.getGame().estadoCreditos);
     }

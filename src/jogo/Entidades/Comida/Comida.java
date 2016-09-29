@@ -12,6 +12,12 @@ public class Comida {
 
     //Handler
     public static Comida[] comidas = new Comida[256];
+    public static Comida bigbill = new Comida(Assets.bigbill, "BigBill", 0, 3);
+    public static Comida pizza = new Comida(Assets.pizza, "Pizza", 1, 1);
+    public static Comida turkeyleg = new Comida(Assets.turkeyleg, "Pizza", 2, 2);
+    public static Comida dogao = new Comida(Assets.dogao, "Dogão", 3, 2);
+    public static Comida latte = new Comida(Assets.latte, "Latte", 4, 1);
+    public static Comida pasta = new Comida(Assets.pasta, "Pasta", 5, 10);
 
 
 
@@ -48,6 +54,7 @@ public class Comida {
             handler.getGame().addPonto(hp);
             handler.getMundo().getGerenciadorDeEntidades().getPlayer().addSaude(hp);
             handler.getMundo().getGerenciadorDeEntidades().getPlayer().addDanoCount();
+            handler.getGame().getMusica().ComeSound();
         }
 
     }

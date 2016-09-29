@@ -23,11 +23,14 @@ public class Assets {
 
     //Entidades
     public static BufferedImage arvore, arvore_grande, arbusto, arbusto_grande;
-    public static BufferedImage casa;
+    public static BufferedImage predio1, predio2, hamburg, predio4, predio5, starbucks, predio7, italiano, predio9, hotdog;
     public static BufferedImage carro_d1, carro_d2, carro_e1, carro_e2, carro_c1, carro_c2, carro_b1, carro_b2;
 
-    //lixo
+    //Lixo
     public static BufferedImage papel, lata, garrafa, saco, sacola, salgadinho;
+
+    //Comidas
+    public static BufferedImage bigbill, pizza, turkeyleg, dogao, latte, pasta;
 
     //Personagens
     public static BufferedImage[] jogador_baixo, jogador_cima, jogador_dir, jogador_esq;
@@ -41,12 +44,13 @@ public class Assets {
         SpriteSheet textura = new SpriteSheet(ImageLoader.loadImage("/texturas/texturas.png"));
         SpriteSheet jogador = new SpriteSheet(ImageLoader.loadImage("/texturas/player.png"));
         SpriteSheet folhas = new SpriteSheet(ImageLoader.loadImage("/texturas/arvores.png"));
-        SpriteSheet predio = new SpriteSheet(ImageLoader.loadImage("/texturas/predios.png"));
+        SpriteSheet predio = new SpriteSheet(ImageLoader.loadImage("/texturas/Predios.png"));
         SpriteSheet botoes = new SpriteSheet(ImageLoader.loadImage("/texturas/botoes.png"));
         SpriteSheet inimigo = new SpriteSheet(ImageLoader.loadImage("/texturas/inimigo.png"));
         SpriteSheet menu = new SpriteSheet(ImageLoader.loadImage("/texturas/Untitled-1.png"));
         SpriteSheet lixo = new SpriteSheet(ImageLoader.loadImage("/texturas/Lixo.png"));
         SpriteSheet carro = new SpriteSheet(ImageLoader.loadImage("/texturas/Carros.png"));
+        SpriteSheet comida = new SpriteSheet(ImageLoader.loadImage("/texturas/Comida.png"));
 
 
         /*  ------ Personagens ------*/
@@ -149,15 +153,33 @@ public class Assets {
         arvore_grande = folhas.corta(width*2,0,width*2,height*2);
 
         //predios
-        casa = predio.corta(0,0,width,height);
+        predio1 = predio.corta(0,0,960,128);
+        predio2 = predio.corta(0,128,448,192);
+        hotdog = predio.corta(448,128,64,192);
+        hamburg = predio.corta(512,128,448,192);
+        predio4 = predio.corta(0,320, 256, 192);
+        predio5 = predio.corta(256, 320, 320, 192);
+        starbucks = predio.corta(576, 320, 256, 192);
+        predio7 = predio.corta(832, 320, 128, 192);
+        italiano = predio.corta(0, 512, 448, 192);
+        predio9 = predio.corta(512, 512, 448, 192);
 
-        //lixo
+
+        //Lixo
         salgadinho = lixo.corta(0,0,tLixo, tLixo);
         garrafa = lixo.corta(tLixo,0,tLixo,tLixo);
         lata = lixo.corta(tLixo*2, 0, tLixo, tLixo);
         papel = lixo.corta(tLixo*3 , 0, tLixo, tLixo);
         saco = lixo.corta(tLixo*4, 0, tLixo, tLixo);
         sacola = lixo.corta(tLixo*5, 0, tLixo, tLixo);
+
+        //Comidas
+        bigbill = comida.corta(0,0,tLixo, tLixo);
+        pizza = comida.corta(tLixo, 0, tLixo, tLixo);
+        turkeyleg = comida.corta(tLixo*2, 0, tLixo, tLixo);
+        dogao = comida.corta(tLixo*3, 0, tLixo, tLixo);
+        latte = comida.corta(tLixo*4, 0, tLixo, tLixo);
+        pasta = comida.corta(tLixo*5, 0, tLixo, tLixo);
 
         //Carros
         carro_e1 = carro.corta(0, 0, tam*2, tam);

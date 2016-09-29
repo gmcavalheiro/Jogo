@@ -1,4 +1,4 @@
-package jogo.Entidades.Objetos;
+package jogo.Entidades.Objetos.Carros;
 
 import jogo.Assets.Assets;
 import jogo.Assets.Ladrilho;
@@ -7,9 +7,9 @@ import jogo.Utilidades.Handler;
 
 import java.awt.*;
 
-public class Carro_e2 extends EntidadeEstatica {
+public class Carro_d2 extends EntidadeEstatica {
 
-    public Carro_e2(Handler handler, float x, float y){
+    public Carro_d2(Handler handler, float x, float y){
         super(handler, (x-1)* Ladrilho.LAD_WIDTH, (y-1)*Ladrilho.LAD_HEIGHT, Ladrilho.LAD_WIDTH*2, Ladrilho.LAD_HEIGHT);
 
         bounds.x = 0;
@@ -25,7 +25,7 @@ public class Carro_e2 extends EntidadeEstatica {
 
     @Override
     public void render(Graphics g) {
-        g.drawImage(Assets.carro_e2,
+        g.drawImage(Assets.carro_d2,
                 (int) (x - handler.getCamera().getxOffset()),
                 (int) (y - handler.getCamera().getyOffset()),
                 width, height, null);
