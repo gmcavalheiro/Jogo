@@ -7,40 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f497d39-3640-409d-9951-f42a7a99125f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/musicas/Come.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/musicas/Death.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/musicas/YouLose.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/texturas/Comida.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/texturas/Predios.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Predios/Hamburg.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Predios/HotDog.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Predios/Italiano.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Predios/Predio1.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Predios/Predio2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Predios/Predio4.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Predios/Predio5.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Predios/Predio7.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Predios/Predio9.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Predios/Starbucks.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carro_b1.java" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carros/Carro_b1.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carro_b2.java" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carros/Carro_b2.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carro_c1.java" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carros/Carro_c1.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carro_c2.java" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carros/Carro_c2.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carro_d1.java" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carros/Carro_d1.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carro_d2.java" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carros/Carro_d2.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carro_e1.java" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carros/Carro_e1.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carro_e2.java" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Objetos/Carros/Carro_e2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/texturas/predios.png" afterPath="$PROJECT_DIR$/res/texturas/predios.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/texturas/texturas.png" afterPath="$PROJECT_DIR$/res/texturas/texturas.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/Assets/Assets.java" afterPath="$PROJECT_DIR$/src/jogo/Assets/Assets.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/Entidades/Comida/Comida.java" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Comida/Comida.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/Entidades/GerenciadorDeEntidades.java" afterPath="$PROJECT_DIR$/src/jogo/Entidades/GerenciadorDeEntidades.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/Entidades/Inimigo.java" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Inimigo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/Entidades/Jogador.java" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Jogador.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/EstadoMenu.java" afterPath="$PROJECT_DIR$/src/jogo/EstadoMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/Mundo.java" afterPath="$PROJECT_DIR$/src/jogo/Mundo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/Utilidades/Musica.java" afterPath="$PROJECT_DIR$/src/jogo/Utilidades/Musica.java" />
     </list>
     <ignored path="Jogo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -188,7 +156,7 @@
       <file leaf-file-name="Jogador.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Jogador.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="697">
               <caret line="157" column="28" selection-start-line="157" selection-start-column="28" selection-end-line="157" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -1223,14 +1191,7 @@
       <workItem from="1474948542113" duration="7595000" />
       <workItem from="1475086714072" duration="1930000" />
       <workItem from="1475173884951" duration="5165000" />
-      <workItem from="1475186746115" duration="601000" />
-    </task>
-    <task id="LOCAL-00013" summary="packages e novas entidades">
-      <created>1473433529346</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1473433529346</updated>
+      <workItem from="1475186746115" duration="626000" />
     </task>
     <task id="LOCAL-00014" summary="packages e novas entidades">
       <created>1473433834733</created>
@@ -1568,12 +1529,19 @@
       <option name="project" value="LOCAL" />
       <updated>1475088638998</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Comidas e Sons">
+      <created>1475187366430</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1475187366430</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
     <option name="enabled" value="true" />
-    <option name="totallyTimeSpent" value="158193000" />
+    <option name="totallyTimeSpent" value="158218000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1586,7 +1554,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1600,7 +1568,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17735043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17735043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24946696" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2489339" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1659,7 +1627,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="packages e novas entidades" />
     <MESSAGE value="Estados, Objetos UI, Proto Menu" />
     <MESSAGE value="Botões e finalização do menu" />
     <MESSAGE value="Combate" />
@@ -1684,7 +1651,8 @@
     <MESSAGE value="Recolhimento do Lixo" />
     <MESSAGE value="Comidas e HP" />
     <MESSAGE value="Sons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sons" />
+    <MESSAGE value="Comidas e Sons" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comidas e Sons" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1701,6 +1669,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1882,6 +1851,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1905,6 +1875,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2106,7 +2077,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Jogador.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
+        <state relative-caret-position="697">
           <caret line="157" column="28" selection-start-line="157" selection-start-column="28" selection-end-line="157" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
