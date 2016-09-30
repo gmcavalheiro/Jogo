@@ -139,7 +139,7 @@ public class Inimigo extends Criatura{
         animEsquerda.atualiza();
 
         entrada();
-        //movimento();
+        movimento();
         ataques();
         dropItem();
     }

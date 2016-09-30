@@ -77,6 +77,14 @@ public class EstadoCreditos extends Estado {
         g.setColor(Color.white);
         g.fillRect(25,130,750,5);
 
+        g.setFont(font_texto); //Fonte maior
+        g.drawString("Obrigado por jogar, esperamos que tenha gostado.", 50, 200);
+        g.drawString("Jogo feito pelos alunos: Gabriel Cavalheiro, Gabriel Teodoro,", 50, 250);
+        g.drawString("Vinicius Trebejo e Vitor Cardoso, do Segundo Ano(4º semestre)", 50, 300);
+        g.drawString("da UNIP, Campus de Bauru.", 50, 350);
+        g.drawString("Agradecimentos ao professor de programação orientada a objeto,", 50, 400);
+        g.drawString("Célio Castelano, e à coordenadora do curso de Ciência da Computação,", 50, 450);
+        g.drawString("Angela Rochetti.", 50, 500);
 
 
 

@@ -75,8 +75,8 @@ public class Mundo {
 
         //Entidades
         gerenciadorDeItens.render(g);
-        gerenciadorDeEntidades.render(g);
         gerenciadorDeComidas.render(g);
+        gerenciadorDeEntidades.render(g);
 
         //Barra de informações
         info.render(g);
