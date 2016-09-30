@@ -10,6 +10,7 @@ public class Jogo implements Runnable{
     private Display display;
     private int width, height;
     public String titulo;
+    private int frameW, frameH;
 
     private int kills = 0, pontos = 0;
     private String nome;
@@ -54,6 +55,9 @@ public class Jogo implements Runnable{
         display.getFrame().addMouseMotionListener(mouseManager);
         display.getCanvas().addMouseListener(mouseManager);
         display.getCanvas().addMouseMotionListener(mouseManager);
+
+        frameW = display.getFrame().getContentPane().getWidth();
+        frameH = display.getFrame().getContentPane().getHeight();
 
         Assets.init();
         handler = new Handler(this);
@@ -177,6 +181,14 @@ public class Jogo implements Runnable{
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public int getFrameW() {
+        return frameW;
+    }
+
+    public int getFrameH() {
+        return frameH;
     }
 
 

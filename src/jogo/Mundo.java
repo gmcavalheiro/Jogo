@@ -152,6 +152,7 @@ public class Mundo {
         return height;
     }
 
+
     public GerenciadorDeEntidades getGerenciadorDeEntidades() {
         return gerenciadorDeEntidades;
     }
@@ -254,18 +255,18 @@ public class Mundo {
         gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 29, 15));
         gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 29, 25));
         gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 27, 22));
-        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 12, 16));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 12, 15));
         gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 27, 6 ));
         gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 23, 16));
         gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 34, 4 ));
         gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 17, 28));
-        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 11, 24));
-        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 15, 20));
-        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 19, 24));
-        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 7 , 18));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 11, 22));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 15, 21));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 6 , 18));
         gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 16, 5 ));
         gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 27, 13));
         gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 3 , 28));
+        gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 3 , 17));
     }
 
     public void objetos(){
@@ -325,7 +326,6 @@ public class Mundo {
         gerenciadorDeItens.adicionaItenm(Item.garrafa.criarNovo(2 ,13));
         gerenciadorDeItens.adicionaItenm(Item.garrafa.criarNovo(2 ,20));
         gerenciadorDeItens.adicionaItenm(Item.garrafa.criarNovo(11,6 ));
-        gerenciadorDeItens.adicionaItenm(Item.garrafa.criarNovo(19,24));
         gerenciadorDeItens.adicionaItenm(Item.garrafa.criarNovo(29,39));
         gerenciadorDeItens.adicionaItenm(Item.lata.criarNovo(20,33));
         gerenciadorDeItens.adicionaItenm(Item.lata.criarNovo(25,3 ));
@@ -339,7 +339,6 @@ public class Mundo {
         gerenciadorDeItens.adicionaItenm(Item.saco.criarNovo(15,7 ));
         gerenciadorDeItens.adicionaItenm(Item.sacola.criarNovo(22,38));
         gerenciadorDeItens.adicionaItenm(Item.sacola.criarNovo(18,37));
-        gerenciadorDeItens.adicionaItenm(Item.sacola.criarNovo(23,29));
         gerenciadorDeItens.adicionaItenm(Item.sacola.criarNovo(6 ,33));
         gerenciadorDeItens.adicionaItenm(Item.sacola.criarNovo(21,38));
     }

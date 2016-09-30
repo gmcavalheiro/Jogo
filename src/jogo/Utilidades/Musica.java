@@ -21,6 +21,7 @@ public class Musica {
     Clip moveClip;
     Clip comeClip;
     Clip socoClip;
+    Clip youLoseClip;
 
     public void MidiMusic(String caminho, int rep){
         try{
@@ -124,6 +125,20 @@ public class Musica {
             AudioInputStream inputStream = AudioSystem.getAudioInputStream(socoSrc);
             socoClip.open(inputStream);
             socoClip.start();
+        }catch (Exception e){
+            System.out.println(e);
+            e.printStackTrace();
+        }
+    }
+
+    public void YouLoseSound(){
+        try {
+            URL youLoseSrc = Musica.class.getResource("/musicas/YouLose.wav");
+            youLoseClip = AudioSystem.getClip();
+            //AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File(caminho));
+            AudioInputStream inputStream = AudioSystem.getAudioInputStream(youLoseSrc);
+            youLoseClip.open(inputStream);
+            youLoseClip.start();
         }catch (Exception e){
             System.out.println(e);
             e.printStackTrace();

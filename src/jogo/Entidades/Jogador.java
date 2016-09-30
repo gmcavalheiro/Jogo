@@ -139,11 +139,10 @@ public class Jogador extends Criatura {
     }
     public void chamaCreditos(String texto){
         handler.getMundo().stop();
+        handler.getGame().setNome(texto);
         handler.getGame().getMusica().paraMusica();
         handler.getGame().getMusica().paraMusica();
-        handler.getGame().getMusica().paraMusica();
-        handler.getGame().getMusica().paraMusica();
-        handler.getGame().getMusica().wavMusic("/musicas/YouLose.wav", -20.0f, false);
+        handler.getGame().getMusica().YouLoseSound();
         handler.getGame().getMusica().wavMusic("/musicas/creditos1.wav", -20.0f, false);
         handler.getEstado().setEstadoAtual(handler.getGame().estadoCreditos);
     }

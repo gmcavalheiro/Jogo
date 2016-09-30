@@ -11,12 +11,14 @@ public class EstadoCreditos extends Estado {
 
     private int pontos, kills;
     private float tempo;
-    private String nome;
+    private String nome = "", textoTempo, textoPontuacao;
     private float h = 0f;
     int hsb;
     Color cor;
     InputStream istream = getClass().getResourceAsStream("/fonts/PressStart.ttf");
     Font font = null;
+    Font font_maior, font_menor, font_texto;
+    int w, x;
 
     public EstadoCreditos(Handler handler){
         super(handler);
@@ -28,7 +30,9 @@ public class EstadoCreditos extends Estado {
             e.printStackTrace();
         }
 
-        font = font.deriveFont(20f);
+        font_menor = font.deriveFont(17f);
+        font_maior = font.deriveFont(45f);
+        font_texto = font.deriveFont(10f);
 
     }
 
@@ -51,18 +55,31 @@ public class EstadoCreditos extends Estado {
         g.setColor(Color.BLACK);
         g.fillRect(0, 0, 800, 600);
 
-        Graphics2D g2 = (Graphics2D)g;
-        GradientPaint gp = new GradientPaint(50, 90, Color.white, 50, 130, Color.black);
+        g.setColor(cor); //texto Colorido
+        g.setFont(font_maior); //Fonte maior
+        w = g.getFontMetrics().stringWidth(nome); //Determina o tamanho do texto em pixels
+        x = (handler.getGame().getFrameW() - w)/2; //calcula a posição do texto
+        g.drawString(nome, x, 60); //Imprime o texto
 
-        g.setColor(cor);
-        g.setFont(font);
-        //g.drawString("Jogador: " + nome, 50, 90);
-        g.drawString("Tempo: " + (String.format("%.1f", tempo)), 50, 100);
-        g.drawString("Pontos: " + pontos, 50, 130);
-        g.drawString("Kills: " + kills, 50, 160);
+        //Exibe os pontos
+        g.setFont(font_menor);
+        textoPontuacao = "Pontos: " + pontos + " | Kills: " + kills;
+        w = g.getFontMetrics().stringWidth(textoPontuacao); //Determina o tamanho do texto em pixels
+        x = (handler.getGame().getFrameW() - w)/2; //calcula a posição do texto
+        g.drawString(textoPontuacao, x, 90);
 
-        g2.setPaint(gp);
-        g2.drawString("teste", 50, 200);
+        //Exibe o tempo
+        textoTempo = "Tempo: " + (String.format("%.1f", tempo));
+        w = g.getFontMetrics().stringWidth(textoTempo); //Determina o tamanho do texto em pixels
+        x = (handler.getGame().getFrameW() - w)/2; //calcula a posição do texto
+        g.drawString(textoTempo, x, 120);
+
+        g.setColor(Color.white);
+        g.fillRect(25,130,750,5);
+
+
+
+
 
 
         g.setColor(Color.BLACK);
