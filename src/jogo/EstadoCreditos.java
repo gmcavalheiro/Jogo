@@ -11,7 +11,7 @@ public class EstadoCreditos extends Estado {
 
     private int pontos, kills;
     private float tempo;
-    private String nome = "", textoTempo, textoPontuacao;
+    private String nome = "", textoTempo, textoPontuacao, grupo;
     private float h = 0f;
     int hsb;
     Color cor;
@@ -80,6 +80,13 @@ public class EstadoCreditos extends Estado {
 
 
 
+        g.setColor(Color.white);
+        g.fillRect(25,550,750,5);
+        g.setFont(font_texto); //Fonte maior
+        grupo = "Gabriel Cavalheiro, Gabriel Teodoro, Vinicius Trebejo e Vitor Cardoso";
+        w = g.getFontMetrics().stringWidth(grupo); //Determina o tamanho do texto em pixels
+        x = (handler.getGame().getFrameW() - w)/2; //calcula a posição do texto
+        g.drawString(grupo, x, 580);
 
 
         g.setColor(Color.BLACK);
@@ -103,8 +110,9 @@ public class EstadoCreditos extends Estado {
     }
 
     private void iniciaMenu(){
-        handler.getGame().getMusica().paraMusica(); //Para a musca do Menu
-        handler.getGame().getMusica().wavMusic("/musicas/menu.wav", -28.0f, true); //Começa a musicas do Jogo (mudar também em Jogo.java)
+        //handler.getGame().getMusica().paraMusica(); //Para a musca do Menu
+        handler.getGame().getMusica().PararCreditos();
+        handler.getGame().getMusica().MusicaMenu(); //Começa a musicas do Jogo (mudar também em Jogo.java)
         handler.getGame().setMouseAtivo(true);
         handler.getMundo().setComeco();
         handler.getMundo().reset();

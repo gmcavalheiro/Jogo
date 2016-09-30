@@ -130,20 +130,18 @@ public class Jogador extends Criatura {
 
     @Override
     public void morre() { //Quando o personagem morre
-        chamaCreditos("Fim");
-
+        chamaCreditos("Morreu!");
     }
 
     public void fim(String texto) { //Quando acaba o tempo
         chamaCreditos(texto);
     }
+
     public void chamaCreditos(String texto){
         handler.getMundo().stop();
         handler.getGame().setNome(texto);
-        handler.getGame().getMusica().paraMusica();
-        handler.getGame().getMusica().paraMusica();
-        handler.getGame().getMusica().YouLoseSound();
-        handler.getGame().getMusica().wavMusic("/musicas/creditos1.wav", -20.0f, false);
+        //handler.getGame().getMusica().paraMusica();
+        handler.getGame().getMusica().MusicaCreditos();
         handler.getEstado().setEstadoAtual(handler.getGame().estadoCreditos);
     }
 

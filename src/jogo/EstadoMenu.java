@@ -97,10 +97,10 @@ public class EstadoMenu extends Estado {
     private void iniciaJogo(){
         if(trava) return;
 
-        handler.getGame().getMusica().paraMusica(); //Para a musca do Menu
+        //handler.getGame().getMusica().paraMusica(); //Para a musca do Menu
         //handler.getGame().getMusica().wavMusic("/musicas/MenuSelect.wav", -30.0f, false);
         handler.getGame().getMusica().SelectSound();
-        handler.getGame().getMusica().wavMusic("/musicas/jogo1.wav", -30.0f, true); //Começa a musicas do Jogo
+        handler.getGame().getMusica().MusicaJogo();
         handler.getGame().setMouseAtivo(false);
         handler.getMundo().setComeco();
         trava = true;
@@ -152,7 +152,7 @@ public class EstadoMenu extends Estado {
                 op0 = ">";
                 op1 = op2 = " ";
                 if(handler.getJoystickManager().start || handler.getKeyManager().espaco){
-                    handler.getMundo().setDuracao(3);
+                    handler.getMundo().setDuracao(45);
                     iniciaJogo();
 
                 }

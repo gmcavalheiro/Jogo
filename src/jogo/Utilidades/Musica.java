@@ -22,19 +22,9 @@ public class Musica {
     Clip comeClip;
     Clip socoClip;
     Clip youLoseClip;
-
-    public void MidiMusic(String caminho, int rep){
-        try{
-            player = MidiSystem.getSequencer();
-            Sequence musica = MidiSystem.getSequence(new File(caminho));
-            player.open();
-            player.setSequence(musica);
-            player.setLoopCount(rep);
-            player.start();
-        }catch (Exception e){
-            System.out.println(e);
-        }
-    }
+    Clip musicaCreditosClip;
+    Clip musicaJogoClip;
+    Clip musicaMenuClip;
 
     public void wavMusic(String caminho, float vol, boolean rep){
 
@@ -58,6 +48,52 @@ public class Musica {
 
     public void paraMusica(){
         clip.stop();
+    }
+
+    public void MusicaCreditos(){
+        try {
+            musicaJogoClip.stop();
+            URL musicaCreditosSrc = Musica.class.getResource("/musicas/creditos1.wav");
+            musicaCreditosClip = AudioSystem.getClip();
+            AudioInputStream inputStream = AudioSystem.getAudioInputStream(musicaCreditosSrc);
+            musicaCreditosClip.open(inputStream);
+            musicaCreditosClip.start();
+        }catch (Exception e){
+            System.out.println(e);
+            e.printStackTrace();
+        }
+    }
+
+    public void PararCreditos(){
+        musicaCreditosClip.stop();
+    }
+
+    public void MusicaMenu(){
+        try {
+            URL musicaMenuSrc = Musica.class.getResource("/musicas/menu.wav");
+            musicaMenuClip = AudioSystem.getClip();
+            AudioInputStream inputStream = AudioSystem.getAudioInputStream(musicaMenuSrc);
+            musicaMenuClip.open(inputStream);
+            musicaMenuClip.start();
+        }catch (Exception e){
+            System.out.println(e);
+            e.printStackTrace();
+        }
+    }
+
+
+    public void MusicaJogo(){
+        try {
+            musicaMenuClip.stop();
+            URL musicaJogoSrc = Musica.class.getResource("/musicas/jogo1.wav");
+            musicaJogoClip = AudioSystem.getClip();
+            AudioInputStream inputStream = AudioSystem.getAudioInputStream(musicaJogoSrc);
+            musicaJogoClip.open(inputStream);
+            musicaJogoClip.start();
+        }catch (Exception e){
+            System.out.println(e);
+            e.printStackTrace();
+        }
     }
 
 
@@ -144,7 +180,5 @@ public class Musica {
             e.printStackTrace();
         }
     }
-
-
 
 }

@@ -228,8 +228,8 @@ public class Mundo {
 
         gerenciadorDeItens = new GerenciadorDeItens(handler);
         gerenciadorDeComidas = new GerenciadorDeComidas(handler);
-        itens();
         objetos();
+        itens();
         inimigos();
 
     }
@@ -314,7 +314,7 @@ public class Mundo {
     public void itens(){
         //Instancia os itens
         gerenciadorDeItens.adicionaItenm(Item.papel.criarNovo(5 ,10));
-        gerenciadorDeItens.adicionaItenm(Item.papel.criarNovo(20,2 ));
+        gerenciadorDeItens.adicionaItenm(Item.papel.criarNovo(20,5 ));
         gerenciadorDeItens.adicionaItenm(Item.papel.criarNovo(23,32));
         gerenciadorDeItens.adicionaItenm(Item.papel.criarNovo(7 ,31));
         gerenciadorDeItens.adicionaItenm(Item.papel.criarNovo(16,35));

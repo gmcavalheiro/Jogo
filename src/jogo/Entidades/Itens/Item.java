@@ -79,10 +79,18 @@ public class Item {
     }
 
     public void setPosicao(int x, int y){
+
+        if(x < 64 || x > 2496) x = 896;
+        if(y < 64 || y > 1856) y = 960;
+
         this.x = x;
         this.y = y;
         bounds.x = x;
         bounds.y = y;
+    }
+
+    public String getPosicao(){
+        return "X: " + x + ", Y: " + y;
     }
 
     public int getCount() {

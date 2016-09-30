@@ -57,9 +57,14 @@ public class Info {
 
         g.setColor(Color.black);
         g.drawString("Pontos: " + handler.getGame().getPontos(), 260, y+20);
-        g.drawString("Kills: " + handler.getGame().getKills(), 330, y+20);
-        g.drawString("Restantes: " + handler.getMundo().restantes(), 380, y+20);
-        g.drawString("Tempo: "+ (String.format("%.1f", tempo )), 720, y+20);
+        g.drawString("Kills: " + handler.getGame().getKills(), 340, y+20);
+        //g.drawString("Restantes: " + handler.getMundo().restantes(), 390, y+20);
+
+
+        g.drawString("Restantes: " + handler.getMundo().getGerenciadorDeEntidades().entidadesRestantes() + " | " + handler.getMundo().getGerenciadorDeItens().itensRestantes(), 390, y+20);
+
+
+        g.drawString("Tempo: "+ (String.format("%.1f", tempo )), 700, y+20);
     }
 
 }

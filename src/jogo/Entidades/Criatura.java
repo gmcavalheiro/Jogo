@@ -28,9 +28,11 @@ public abstract class Criatura extends Entidade {
     public void movimento(){
         if(!colisaoEntidade(xMove, 0f)){
             movX();
+
         }
         if(!colisaoEntidade(0f, yMove)){
             movY();
+
         }
 
         //System.out.println("C: " + x + ", " + y);
