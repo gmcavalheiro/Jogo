@@ -144,11 +144,11 @@
       <file leaf-file-name="Inimigo.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Inimigo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="674">
-              <caret line="147" column="9" selection-start-line="147" selection-start-column="9" selection-end-line="147" selection-end-column="9" />
+            <state relative-caret-position="557">
+              <caret line="147" column="29" selection-start-line="147" selection-start-column="29" selection-end-line="147" selection-end-column="29" />
               <folding>
                 <element signature="method#entrada#0;class#Inimigo#0" expanded="false" />
-                <marker date="1475341210646" expanded="true" signature="5771:5777" ph="{...}" />
+                <marker date="1475341285789" expanded="true" signature="5801:5807" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -1197,14 +1197,7 @@
       <workItem from="1475253998893" duration="4452000" />
       <workItem from="1475261286917" duration="1083000" />
       <workItem from="1475262877371" duration="779000" />
-      <workItem from="1475340608662" duration="604000" />
-    </task>
-    <task id="LOCAL-00020" summary="Combate">
-      <created>1473616144469</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1473616144469</updated>
+      <workItem from="1475340608662" duration="676000" />
     </task>
     <task id="LOCAL-00021" summary="Combate">
       <created>1473616168019</created>
@@ -1542,12 +1535,19 @@
       <option name="project" value="LOCAL" />
       <updated>1475341100081</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="Toques Finais">
+      <created>1475341220923</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1475341220923</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
     <option name="enabled" value="true" />
-    <option name="totallyTimeSpent" value="170464000" />
+    <option name="totallyTimeSpent" value="170536000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2078,11 +2078,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Inimigo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="674">
-          <caret line="147" column="9" selection-start-line="147" selection-start-column="9" selection-end-line="147" selection-end-column="9" />
+        <state relative-caret-position="557">
+          <caret line="147" column="29" selection-start-line="147" selection-start-column="29" selection-end-line="147" selection-end-column="29" />
           <folding>
             <element signature="method#entrada#0;class#Inimigo#0" expanded="false" />
-            <marker date="1475341210646" expanded="true" signature="5771:5777" ph="{...}" />
+            <marker date="1475341285789" expanded="true" signature="5801:5807" ph="{...}" />
           </folding>
         </state>
       </provider>

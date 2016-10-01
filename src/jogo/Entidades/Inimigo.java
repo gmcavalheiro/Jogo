@@ -145,6 +145,7 @@ public class Inimigo extends Criatura{
 
         if(handler.getMundo().getGerenciadorDeEntidades().entidadesRestantes() <= 10){
             dropEspera = 1000;
+            velocidade = 50f;
         }
     }
 
