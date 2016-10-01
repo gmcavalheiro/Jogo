@@ -42,7 +42,6 @@ public class JoystickManager {
 
         for(int i = 0; i < controles.size(); i++){
             listaDeControles[i] = controles.get(i).getIndex() + " - " + controles.get(i).getName();
-            //System.out.println(listaDeControles[i]);
         }
 
         listaDeControles[controles.size()] = "0 - NENHUM";
@@ -94,13 +93,6 @@ public class JoystickManager {
         select = controller.isButtonPressed(8);
         start = controller.isButtonPressed(9);
         attk = controller.isButtonPressed(5);
-//        if(select) System.out.println("sel");
-//        if(start) System.out.println("sts");
-//        if(attk) System.out.println("attk");
-//        if(esquerda) System.out.println("Esq.");
-//        if(direita) System.out.println("Dir.");
-//        if(cima) System.out.println("Cima");
-//        if(baixo) System.out.println("Baixo");
     }
 
 
@@ -109,7 +101,6 @@ public class JoystickManager {
     }
 
     public int getYJoystick(){
-
         return (int) controller.getYAxisValue();
     }
 }

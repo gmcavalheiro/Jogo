@@ -11,6 +11,7 @@ public class Assets {
     private static final int tLixo = 32;
     public static BufferedImage player;
     public static BufferedImage inimigo_parado;
+    public static BufferedImage boss_parado;
     //Ladrilhos
     public static BufferedImage terra_cse, terra_s, terra_csd, terra_e, terra, terra_d, terra_cie, terra_i, terra_cid;
     public static BufferedImage grama_cse, grama_s, grama_csd, grama_e, grama, grama_d, grama_cie, grama_i, grama_cid;
@@ -35,6 +36,7 @@ public class Assets {
     //Personagens
     public static BufferedImage[] jogador_baixo, jogador_cima, jogador_dir, jogador_esq;
     public static BufferedImage[] inimigo_baixo, inimigo_cima, inimigo_dir, inimigo_esq;
+    public static BufferedImage[] boss_baixo, boss_cima, boss_dir, boss_esq;
 
     //UI
     public static BufferedImage[] btn_inico, btn_sair;
@@ -47,6 +49,7 @@ public class Assets {
         SpriteSheet predio = new SpriteSheet(ImageLoader.loadImage("/texturas/Predios.png"));
         SpriteSheet botoes = new SpriteSheet(ImageLoader.loadImage("/texturas/botoes.png"));
         SpriteSheet inimigo = new SpriteSheet(ImageLoader.loadImage("/texturas/inimigo.png"));
+        SpriteSheet boss = new SpriteSheet(ImageLoader.loadImage("/texturas/Boss.png"));
         SpriteSheet menu = new SpriteSheet(ImageLoader.loadImage("/texturas/Untitled-1.png"));
         SpriteSheet lixo = new SpriteSheet(ImageLoader.loadImage("/texturas/Lixo.png"));
         SpriteSheet carro = new SpriteSheet(ImageLoader.loadImage("/texturas/Carros.png"));
@@ -93,6 +96,26 @@ public class Assets {
         //direita
         inimigo_dir[0] = inimigo.corta(width*3,height,width,height);
         inimigo_dir[1] = inimigo.corta(width*3,height*2,width,height);
+
+        //boss
+        boss_baixo = new BufferedImage[2];
+        boss_cima = new BufferedImage[2];
+        boss_dir = new BufferedImage[2];
+        boss_esq = new BufferedImage[2];
+        boss_parado = inimigo.corta(0,0,width,height);
+
+        //baixo
+        boss_baixo[0] = inimigo.corta(0,height,width,height);
+        boss_baixo[1] = inimigo.corta(0,height*2,width,height);
+        //cima
+        boss_cima[0] = inimigo.corta(width,height,width,height);
+        boss_cima[1] = inimigo.corta(width,height*2,width,height);
+        //esquerda
+        boss_esq[0] = inimigo.corta(width*2,height,width,height);
+        boss_esq[1] = inimigo.corta(width*2,height*2,width,height);
+        //direita
+        boss_dir[0] = inimigo.corta(width*3,height,width,height);
+        boss_dir[1] = inimigo.corta(width*3,height*2,width,height);
 
 
         /*  ------ texturas ------*/
