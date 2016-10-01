@@ -1,7 +1,6 @@
 package jogo.Entidades;
 
 import jogo.Assets.Assets;
-import jogo.Estado;
 import jogo.Utilidades.Handler;
 import jogo.Utilidades.Musica;
 
@@ -10,11 +9,12 @@ import java.awt.image.BufferedImage;
 
 public class Jogador extends Criatura {
 
-    public Estado estadoCreditos;
     //Animação
     private Animacao animBaixo, animCima, animEsquerda, animDireita;
     int animVel = 300;
     private int dano = 1, danoCount = 0;
+    public int saudeMax;
+    private int level = 1;
 
     private Musica musica = new Musica();
 
@@ -35,6 +35,7 @@ public class Jogador extends Criatura {
         animCima = new Animacao(animVel, Assets.jogador_cima);
         animDireita = new Animacao(animVel, Assets.jogador_dir);
         animEsquerda = new Animacao(animVel, Assets.jogador_esq);
+        saudeMax = 10;
     }
 
     @Override
@@ -53,13 +54,15 @@ public class Jogador extends Criatura {
         //Ataques
         ataques();
 
-        if(saude > 10) {
-            saude = 10;
+        if(saude > saudeMax) {
+            saude = saudeMax;
         }
 
         if(danoCount > 10){
             danoCount = 0;
             dano++;
+            level++;
+            saudeMax += 5;
             musica.wavMusic("/musicas/Birl.wav", -5f, false);
         }
 
@@ -168,4 +171,6 @@ public class Jogador extends Criatura {
     public void addDanoCount(){
         danoCount++;
     }
+
+    public int getLevel(){ return level;}
 }

@@ -85,37 +85,37 @@ public class Assets {
         inimigo_parado = inimigo.corta(0,0,width,height);
 
         //baixo
-        inimigo_baixo[0] = boss.corta(0,height,width,height);
-        inimigo_baixo[1] = boss.corta(0,height*2,width,height);
+        inimigo_baixo[0] = inimigo.corta(0,height,width,height);
+        inimigo_baixo[1] = inimigo.corta(0,height*2,width,height);
         //cima
-        inimigo_cima[0] = boss.corta(width,height,width,height);
-        inimigo_cima[1] = boss.corta(width,height*2,width,height);
+        inimigo_cima[0] = inimigo.corta(width,height,width,height);
+        inimigo_cima[1] = inimigo.corta(width,height*2,width,height);
         //esquerda
-        inimigo_esq[0] = boss.corta(width*2,height,width,height);
-        inimigo_esq[1] = boss.corta(width*2,height*2,width,height);
+        inimigo_esq[0] = inimigo.corta(width*2,height,width,height);
+        inimigo_esq[1] = inimigo.corta(width*2,height*2,width,height);
         //direita
-        inimigo_dir[0] = boss.corta(width*3,height,width,height);
-        inimigo_dir[1] = boss.corta(width*3,height*2,width,height);
+        inimigo_dir[0] = inimigo.corta(width*3,height,width,height);
+        inimigo_dir[1] = inimigo.corta(width*3,height*2,width,height);
 
         //boss
         boss_baixo = new BufferedImage[2];
         boss_cima = new BufferedImage[2];
         boss_dir = new BufferedImage[2];
         boss_esq = new BufferedImage[2];
-        boss_parado = inimigo.corta(0,0,width,height);
+        boss_parado = boss.corta(0,0,width,height);
 
         //baixo
-        boss_baixo[0] = inimigo.corta(0,height,width,height);
-        boss_baixo[1] = inimigo.corta(0,height*2,width,height);
+        boss_baixo[0] = boss.corta(0,height,width,height);
+        boss_baixo[1] = boss.corta(0,height*2,width,height);
         //cima
-        boss_cima[0] = inimigo.corta(width,height,width,height);
-        boss_cima[1] = inimigo.corta(width,height*2,width,height);
+        boss_cima[0] = boss.corta(width,height,width,height);
+        boss_cima[1] = boss.corta(width,height*2,width,height);
         //esquerda
-        boss_esq[0] = inimigo.corta(width*2,height,width,height);
-        boss_esq[1] = inimigo.corta(width*2,height*2,width,height);
+        boss_esq[0] = boss.corta(width*2,height,width,height);
+        boss_esq[1] = boss.corta(width*2,height*2,width,height);
         //direita
-        boss_dir[0] = inimigo.corta(width*3,height,width,height);
-        boss_dir[1] = inimigo.corta(width*3,height*2,width,height);
+        boss_dir[0] = boss.corta(width*3,height,width,height);
+        boss_dir[1] = boss.corta(width*3,height*2,width,height);
 
 
         /*  ------ texturas ------*/

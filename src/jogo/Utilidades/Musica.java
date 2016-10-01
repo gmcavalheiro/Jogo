@@ -57,6 +57,7 @@ public class Musica {
             musicaCreditosClip = AudioSystem.getClip();
             AudioInputStream inputStream = AudioSystem.getAudioInputStream(musicaCreditosSrc);
             musicaCreditosClip.open(inputStream);
+            musicaCreditosClip.loop(Clip.LOOP_CONTINUOUSLY);
             musicaCreditosClip.start();
         }catch (Exception e){
             System.out.println(e);
@@ -74,6 +75,7 @@ public class Musica {
             musicaMenuClip = AudioSystem.getClip();
             AudioInputStream inputStream = AudioSystem.getAudioInputStream(musicaMenuSrc);
             musicaMenuClip.open(inputStream);
+            musicaMenuClip.loop(Clip.LOOP_CONTINUOUSLY);
             musicaMenuClip.start();
         }catch (Exception e){
             System.out.println(e);
@@ -89,6 +91,7 @@ public class Musica {
             musicaJogoClip = AudioSystem.getClip();
             AudioInputStream inputStream = AudioSystem.getAudioInputStream(musicaJogoSrc);
             musicaJogoClip.open(inputStream);
+            musicaJogoClip.loop(Clip.LOOP_CONTINUOUSLY);
             musicaJogoClip.start();
         }catch (Exception e){
             System.out.println(e);

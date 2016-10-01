@@ -13,8 +13,9 @@ public class Info {
 
     protected Handler handler;
     protected int height, width, y;
-    protected int life;
+    protected int saudeMax, saude;
     protected float tempo;
+    protected float life;
 
     SpriteSheet infoBarSprite = new SpriteSheet(ImageLoader.loadImage("/texturas/InfoBar.png"));
     private BufferedImage infoBar;
@@ -36,7 +37,14 @@ public class Info {
     }
 
     public void render(Graphics g) {
-        life = handler.getMundo().getGerenciadorDeEntidades().getPlayer().getSaude();
+        saude = handler.getMundo().getGerenciadorDeEntidades().getPlayer().getSaude();
+        saudeMax = handler.getMundo().getGerenciadorDeEntidades().getPlayer().saudeMax;
+
+        //converte a saude para porcentagem
+        life = (((float)saude/(float)saudeMax) * 100);
+
+//        System.out.println(life + ", " + saude + ", " + saudeMax);
+
         //g.setColor(new Color(186, 175, 115));
         g.drawImage(infoBar,0,y,width,30, null);
        // g.fillRect(0,y,width,30);
@@ -44,24 +52,26 @@ public class Info {
         g.drawString("Saude: ", 10, y + 20);
         g.drawRect(50,y + 11,201,10);
 
-        if(life < 3){
+        //determina a cor da barra de saude
+        if(life < 30.0){
             g.setColor(new Color(190, 39, 30));
-        }else if(life < 5){
+        }else if(life < 50.0){
             g.setColor(new Color(200, 128, 57));
-        }else if(life < 7){
+        }else if(life < 70.0){
             g.setColor(new Color(200, 186, 70));
         }else {
             g.setColor(new Color(80, 200, 80));
         }
-        g.fillRect(51,y+12,life*20,9);
+        g.fillRect(51,y+12,(int)life*2,9);
 
         g.setColor(Color.black);
-        g.drawString("Pontos: " + handler.getGame().getPontos(), 260, y+20);
-        g.drawString("Kills: " + handler.getGame().getKills(), 340, y+20);
+        g.drawString("Level: " + handler.getMundo().getGerenciadorDeEntidades().getPlayer().getLevel(), 260, y+20);
+        g.drawString("Pontos: " + handler.getGame().getPontos(), 320, y+20);
+        g.drawString("Kills: " + handler.getGame().getKills(), 400, y+20);
         //g.drawString("Restantes: " + handler.getMundo().restantes(), 390, y+20);
 
 
-        g.drawString("Restantes: " + handler.getMundo().getGerenciadorDeEntidades().entidadesRestantes() + " | " + handler.getMundo().getGerenciadorDeItens().itensRestantes(), 390, y+20);
+        g.drawString("Restantes: " + handler.getMundo().getGerenciadorDeEntidades().entidadesRestantes() + " | " + handler.getMundo().getGerenciadorDeItens().itensRestantes(), 450, y+20);
 
 
         g.drawString("Tempo: "+ (String.format("%.1f", tempo )), 700, y+20);
