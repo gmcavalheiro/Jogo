@@ -267,7 +267,7 @@ public class Mundo {
         gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 27, 13));
         gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 3 , 28));
         gerenciadorDeEntidades.adicionaEntidade(new Inimigo(handler, 3 , 17));
-        gerenciadorDeEntidades.adicionaEntidade(new Boss(handler, 35, 15));
+        gerenciadorDeEntidades.adicionaEntidade(new Boss(handler, 35, 10));
         gerenciadorDeEntidades.adicionaEntidade(new Boss(handler, 32, 28));
         gerenciadorDeEntidades.adicionaEntidade(new Boss(handler, 3 , 6 ));
     }
