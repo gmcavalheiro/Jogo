@@ -142,6 +142,10 @@ public class Inimigo extends Criatura{
         movimento();
         ataques();
         dropItem();
+
+        if(handler.getMundo().getGerenciadorDeEntidades().entidadesRestantes() <= 10){
+            dropEspera = 1000;
+        }
     }
 
     @Override
