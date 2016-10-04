@@ -1,0 +1,12 @@
+Teste    4500
+Teste    4000
+Teste    3500
+Teste    3000
+Teste    2500
+Teste    2000
+Teste    1500
+Teste    1000
+Teste    500
+gabr    10
+gabriel    9
+Teste    0

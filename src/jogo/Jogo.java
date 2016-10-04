@@ -2,6 +2,7 @@ package jogo;
 
 import jogo.Assets.Assets;
 import jogo.Utilidades.*;
+import jogo.Utilidades.Score.Score;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
@@ -13,7 +14,7 @@ public class Jogo implements Runnable{
     private int frameW, frameH;
 
     private int kills = 0, pontos = 0;
-    private String nome;
+    private String nome, texto;
 
     private boolean executando = false;
     private Thread processo;
@@ -35,6 +36,7 @@ public class Jogo implements Runnable{
     private Handler handler;
     private Camera camera;
     private Musica musica;
+    private Score score;
 
 
 
@@ -45,6 +47,7 @@ public class Jogo implements Runnable{
         keyManager = new KeyManager();
         mouseManager = new MouseManager();
         joystickManager = new JoystickManager();
+        score = new Score(handler);
     }
 
     public void init (){
@@ -153,6 +156,10 @@ public class Jogo implements Runnable{
         return height;
     }
 
+    public Score getScore() {
+        return score;
+    }
+
     public int getKills() {
         return kills;
     }
@@ -181,6 +188,14 @@ public class Jogo implements Runnable{
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getTexto() {
+        return texto;
+    }
+
+    public void setTexto(String texto) {
+        this.texto = texto;
     }
 
     public int getFrameW() {

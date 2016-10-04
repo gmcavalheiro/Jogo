@@ -4,6 +4,7 @@ import jogo.Assets.Assets;
 import jogo.Utilidades.Handler;
 import jogo.Utilidades.Musica;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
@@ -15,6 +16,9 @@ public class Jogador extends Criatura {
     private int dano = 1, danoCount = 0;
     public int saudeMax;
     private int level = 1;
+    private String nome;
+    private int pontos;
+    private float tempo;
 
     private Musica musica = new Musica();
 
@@ -142,7 +146,16 @@ public class Jogador extends Criatura {
 
     public void chamaCreditos(String texto){
         handler.getMundo().stop();
-        handler.getGame().setNome(texto);
+        handler.getGame().setTexto(texto);
+
+        pontos = handler.getGame().getPontos();
+        tempo = handler.getMundo().getTempo();
+        nome= JOptionPane.showInputDialog("Nome: ");
+
+        handler.getGame().getScore().addScore(nome, pontos, tempo);
+        handler.getGame().getScore().salvaScore();
+
+
         //handler.getGame().getMusica().paraMusica();
         handler.getGame().getMusica().MusicaCreditos();
         handler.getEstado().setEstadoAtual(handler.getGame().estadoCreditos);

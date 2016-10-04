@@ -1,27 +1,33 @@
 package jogo;
 
 import jogo.Utilidades.Handler;
+import jogo.Utilidades.Score.Registros;
 
 import java.awt.*;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 
 public class EstadoCreditos extends Estado {
 
 
     private int pontos, kills;
     private float tempo;
-    private String nome = "", textoTempo, textoPontuacao, grupo;
+    private String nome = "", textoTempo, textoPontuacao, grupo, texto = "";
     private float h = 0f;
     int hsb;
     Color cor;
     InputStream istream = getClass().getResourceAsStream("/fonts/PressStart.ttf");
     Font font = null;
     Font font_maior, font_menor, font_texto;
-    int w, x;
+    int w, x, sb;
+    private ArrayList<Registros> scoreboard;
+
 
     public EstadoCreditos(Handler handler){
         super(handler);
+        scoreboard = new ArrayList<>();
+        scoreboard = handler.getGame().getScore().getScoreboard();
         try {
             font = Font.createFont(Font.TRUETYPE_FONT, istream);
         } catch (FontFormatException e) {
@@ -57,9 +63,9 @@ public class EstadoCreditos extends Estado {
 
         g.setColor(cor); //texto Colorido
         g.setFont(font_maior); //Fonte maior
-        w = g.getFontMetrics().stringWidth(nome); //Determina o tamanho do texto em pixels
+        w = g.getFontMetrics().stringWidth(texto); //Determina o tamanho do texto em pixels
         x = (handler.getGame().getFrameW() - w)/2; //calcula a posição do texto
-        g.drawString(nome, x, 60); //Imprime o texto
+        g.drawString(texto, x, 60); //Imprime o texto
 
         //Exibe os pontos
         g.setFont(font_menor);
@@ -78,13 +84,19 @@ public class EstadoCreditos extends Estado {
         g.fillRect(25,130,750,5);
 
         g.setFont(font_texto); //Fonte maior
-        g.drawString("Obrigado por jogar, esperamos que tenha gostado.", 50, 200);
-        g.drawString("Jogo feito pelos alunos: Gabriel Cavalheiro, Gabriel Teodoro,", 50, 250);
-        g.drawString("Vinicius Trebejo e Vitor Cardoso, do Segundo Ano(4º semestre)", 50, 300);
-        g.drawString("da UNIP, Campus de Bauru.", 50, 350);
-        g.drawString("Agradecimentos ao professor de programação orientada a objeto,", 50, 400);
-        g.drawString("Célio Castelano, e à coordenadora do curso de Ciência da Computação,", 50, 450);
-        g.drawString("Angela Rochetti.", 50, 500);
+        sb = 180;
+        for(Registros reg : scoreboard){
+            g.drawString(reg.getNome() + " - " + reg.getPontos(), 50, sb);
+            sb += 20;
+        }
+
+//        g.drawString("Obrigado por jogar, esperamos que tenha gostado.", 50, 200);
+//        g.drawString("Jogo feito pelos alunos: Gabriel Cavalheiro, Gabriel Teodoro,", 50, 250);
+//        g.drawString("Vinicius Trebejo e Vitor Cardoso, do Segundo Ano(4º semestre)", 50, 300);
+//        g.drawString("da UNIP, Campus de Bauru.", 50, 350);
+//        g.drawString("Agradecimentos ao professor de programação orientada a objeto,", 50, 400);
+//        g.drawString("Célio Castelano, e à coordenadora do curso de Ciência da Computação,", 50, 450);
+//        g.drawString("Angela Rochetti.", 50, 500);
 
 
 
@@ -109,6 +121,7 @@ public class EstadoCreditos extends Estado {
             kills = handler.getGame().getKills();
             tempo = handler.getMundo().getTempo();
             nome = handler.getGame().getNome();
+            texto = handler.getGame().getTexto();
 
             if(handler.getKeyManager().espaco || handler.getJoystickManager().start) iniciaMenu();
 
