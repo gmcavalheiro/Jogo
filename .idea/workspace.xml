@@ -7,16 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f497d39-3640-409d-9951-f42a7a99125f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/score/pontos.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jogo/Utilidades/Score/IO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jogo/Utilidades/Score/Registros.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jogo/Utilidades/Score/Score.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/texturas/Untitled-1.png" afterPath="$PROJECT_DIR$/res/texturas/Untitled-1.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/score/pontos.txt" afterPath="$PROJECT_DIR$/res/score/pontos.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/Entidades/Jogador.java" afterPath="$PROJECT_DIR$/src/jogo/Entidades/Jogador.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/EstadoCreditos.java" afterPath="$PROJECT_DIR$/src/jogo/EstadoCreditos.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/EstadoMenu.java" afterPath="$PROJECT_DIR$/src/jogo/EstadoMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jogo/Jogo.java" afterPath="$PROJECT_DIR$/src/jogo/Jogo.java" />
     </list>
     <ignored path="Jogo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,8 +68,8 @@
       <file leaf-file-name="Jogador.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Jogador.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="156" column="0" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+            <state relative-caret-position="374">
+              <caret line="155" column="26" selection-start-line="155" selection-start-column="26" selection-end-line="155" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -139,8 +134,8 @@
       <file leaf-file-name="EstadoCreditos.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/jogo/EstadoCreditos.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="121" column="50" selection-start-line="119" selection-start-column="12" selection-end-line="121" selection-end-column="50" />
+            <state relative-caret-position="243">
+              <caret line="89" column="15" selection-start-line="89" selection-start-column="15" selection-end-line="89" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -149,8 +144,8 @@
       <file leaf-file-name="pontos.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/score/pontos.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -236,13 +231,13 @@
         <option value="$PROJECT_DIR$/src/jogo/Entidades/Boss.java" />
         <option value="$PROJECT_DIR$/src/jogo/Utilidades/Score/Board.java" />
         <option value="$PROJECT_DIR$/src/jogo/Utilidades/Score/Registros.java" />
-        <option value="$PROJECT_DIR$/res/score/pontos.txt" />
         <option value="$PROJECT_DIR$/src/jogo/Utilidades/Score/IO.java" />
         <option value="$PROJECT_DIR$/src/jogo/EstadoMenu.java" />
-        <option value="$PROJECT_DIR$/src/jogo/EstadoCreditos.java" />
         <option value="$PROJECT_DIR$/src/jogo/Jogo.java" />
-        <option value="$PROJECT_DIR$/src/jogo/Entidades/Jogador.java" />
         <option value="$PROJECT_DIR$/src/jogo/Utilidades/Score/Score.java" />
+        <option value="$PROJECT_DIR$/src/jogo/Entidades/Jogador.java" />
+        <option value="$PROJECT_DIR$/src/jogo/EstadoCreditos.java" />
+        <option value="$PROJECT_DIR$/res/score/pontos.txt" />
       </list>
     </option>
   </component>
@@ -1002,14 +997,7 @@
       <workItem from="1475261286917" duration="1083000" />
       <workItem from="1475262877371" duration="779000" />
       <workItem from="1475340608662" duration="3585000" />
-      <workItem from="1475617082372" duration="6462000" />
-    </task>
-    <task id="LOCAL-00024" summary="Inimigo">
-      <created>1473965320400</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1473965320400</updated>
+      <workItem from="1475617082372" duration="8388000" />
     </task>
     <task id="LOCAL-00025" summary="Inimigo">
       <created>1473965475585</created>
@@ -1347,12 +1335,19 @@
       <option name="project" value="LOCAL" />
       <updated>1475343495760</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="Scoreboard">
+      <created>1475623741755</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1475623741755</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
     <option name="enabled" value="true" />
-    <option name="totallyTimeSpent" value="179907000" />
+    <option name="totallyTimeSpent" value="181833000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1375,7 +1370,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24593717" sideWeight="0.50852877" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24593717" sideWeight="0.4914712" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24593717" sideWeight="0.4914712" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1438,7 +1433,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="Botões e finalização do menu" />
     <MESSAGE value="Combate" />
     <MESSAGE value="Novas Texturas" />
     <MESSAGE value="Inimigo" />
@@ -1463,7 +1457,8 @@
     <MESSAGE value="Sons" />
     <MESSAGE value="Comidas e Sons" />
     <MESSAGE value="Toques Finais" />
-    <option name="LAST_COMMIT_MESSAGE" value="Toques Finais" />
+    <MESSAGE value="Scoreboard" />
+    <option name="LAST_COMMIT_MESSAGE" value="Scoreboard" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1821,14 +1816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/score/pontos.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Entidade.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1020">
@@ -1850,24 +1837,6 @@
         <state relative-caret-position="463">
           <caret line="192" column="28" selection-start-line="192" selection-start-column="28" selection-end-line="192" selection-end-column="28" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jogo/EstadoCreditos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="121" column="50" selection-start-line="119" selection-start-column="12" selection-end-line="121" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jogo/Utilidades/Score/Score.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1899,10 +1868,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/jogo/Utilidades/Score/Score.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/score/pontos.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jogo/EstadoCreditos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="89" column="15" selection-start-line="89" selection-start-column="15" selection-end-line="89" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/jogo/Entidades/Jogador.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="156" column="0" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+        <state relative-caret-position="374">
+          <caret line="155" column="26" selection-start-line="155" selection-start-column="26" selection-end-line="155" selection-end-column="26" />
           <folding />
         </state>
       </provider>

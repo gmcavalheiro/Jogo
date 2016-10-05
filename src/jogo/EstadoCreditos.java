@@ -13,14 +13,14 @@ public class EstadoCreditos extends Estado {
 
     private int pontos, kills;
     private float tempo;
-    private String nome = "", textoTempo, textoPontuacao, grupo, texto = "";
+    private String nome = "", textoTempo, textoPontuacao, grupo, texto = "", score;
     private float h = 0f;
     int hsb;
     Color cor;
     InputStream istream = getClass().getResourceAsStream("/fonts/PressStart.ttf");
     Font font = null;
-    Font font_maior, font_menor, font_texto;
-    int w, x, sb;
+    Font font_maior, font_menor, font_texto, font_score;
+    int w, x, sb, list = 10;
     private ArrayList<Registros> scoreboard;
 
 
@@ -39,6 +39,7 @@ public class EstadoCreditos extends Estado {
         font_menor = font.deriveFont(17f);
         font_maior = font.deriveFont(45f);
         font_texto = font.deriveFont(10f);
+        font_score = font.deriveFont(25f);
 
     }
 
@@ -83,12 +84,30 @@ public class EstadoCreditos extends Estado {
         g.setColor(Color.white);
         g.fillRect(25,130,750,5);
 
-        g.setFont(font_texto); //Fonte maior
-        sb = 180;
-        for(Registros reg : scoreboard){
-            g.drawString(reg.getNome() + " - " + reg.getPontos(), 50, sb);
-            sb += 20;
+
+        //Exibe o ScoreBoard
+        g.setFont(font_score); //Fonte texto
+        sb = 190;
+
+        if(list > scoreboard.size()){
+            list = scoreboard.size();
         }
+
+        for(int i = 0; i< list; i++){
+            score = scoreboard.get(i).getNome() + " - " + scoreboard.get(i).getPontos();
+            w = g.getFontMetrics().stringWidth(score); //Determina o tamanho do texto em pixels
+            x = (handler.getGame().getFrameW() - w)/2; //calcula a posição do texto
+            g.drawString(score, x, sb);
+            sb += 37;
+        }
+
+//        for(Registros reg : scoreboard){
+//            score = reg.getNome() + " - " + reg.getPontos();
+//            w = g.getFontMetrics().stringWidth(score); //Determina o tamanho do texto em pixels
+//            x = (handler.getGame().getFrameW() - w)/2; //calcula a posição do texto
+//            g.drawString(score, x, sb);
+//            sb += 20;
+//        }
 
 //        g.drawString("Obrigado por jogar, esperamos que tenha gostado.", 50, 200);
 //        g.drawString("Jogo feito pelos alunos: Gabriel Cavalheiro, Gabriel Teodoro,", 50, 250);

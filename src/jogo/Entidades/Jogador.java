@@ -150,7 +150,11 @@ public class Jogador extends Criatura {
 
         pontos = handler.getGame().getPontos();
         tempo = handler.getMundo().getTempo();
-        nome= JOptionPane.showInputDialog("Nome: ");
+        nome = JOptionPane.showInputDialog("Nome: ");
+
+        if(nome.equals("")){
+            nome = "NULL";
+        }
 
         handler.getGame().getScore().addScore(nome, pontos, tempo);
         handler.getGame().getScore().salvaScore();
