@@ -101,14 +101,6 @@ public class EstadoCreditos extends Estado {
             sb += 37;
         }
 
-//        for(Registros reg : scoreboard){
-//            score = reg.getNome() + " - " + reg.getPontos();
-//            w = g.getFontMetrics().stringWidth(score); //Determina o tamanho do texto em pixels
-//            x = (handler.getGame().getFrameW() - w)/2; //calcula a posição do texto
-//            g.drawString(score, x, sb);
-//            sb += 20;
-//        }
-
 //        g.drawString("Obrigado por jogar, esperamos que tenha gostado.", 50, 200);
 //        g.drawString("Jogo feito pelos alunos: Gabriel Cavalheiro, Gabriel Teodoro,", 50, 250);
 //        g.drawString("Vinicius Trebejo e Vitor Cardoso, do Segundo Ano(4º semestre)", 50, 300);
@@ -117,8 +109,6 @@ public class EstadoCreditos extends Estado {
 //        g.drawString("Célio Castelano, e à coordenadora do curso de Ciência da Computação,", 50, 450);
 //        g.drawString("Angela Rochetti.", 50, 500);
 
-
-
         g.setColor(Color.white);
         g.fillRect(25,550,750,5);
         g.setFont(font_texto); //Fonte maior
@@ -126,7 +116,6 @@ public class EstadoCreditos extends Estado {
         w = g.getFontMetrics().stringWidth(grupo); //Determina o tamanho do texto em pixels
         x = (handler.getGame().getFrameW() - w)/2; //calcula a posição do texto
         g.drawString(grupo, x, 580);
-
 
         g.setColor(Color.BLACK);
     }
