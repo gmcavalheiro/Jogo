@@ -16,7 +16,7 @@ public class Boss extends Criatura{
     private Musica musica = new Musica();
     private long lastAttk, attkEspera = 10, attkTimer = attkEspera;
     private long lastMov, movEspera = 200, movTimer = movEspera;
-    private long lastDrop, dropEspera = 1000, dropTimer = dropEspera;
+    private long lastDrop, dropEspera = 4000, dropTimer = dropEspera;
     private int mov = 0;
 
     public Boss(Handler handler, float x, float y) {

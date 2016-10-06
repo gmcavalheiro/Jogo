@@ -17,7 +17,7 @@ public class Inimigo extends Criatura{
     private Musica musica = new Musica();
     private long lastAttk, attkEspera = 10, attkTimer = attkEspera;
     private long lastMov, movEspera = 200, movTimer = movEspera;
-    private long lastDrop, dropEspera = 5000, dropTimer = dropEspera;
+    private long lastDrop, dropEspera = 8000, dropTimer = dropEspera;
     private int mov = 0;
 
     public Inimigo(Handler handler, float x, float y) {
@@ -142,11 +142,6 @@ public class Inimigo extends Criatura{
         movimento();
         ataques();
         dropItem();
-
-        if(handler.getMundo().getGerenciadorDeEntidades().entidadesRestantes() <= 15){
-            dropEspera = 1000;
-            velocidade = 30f;
-        }
     }
 
     @Override
