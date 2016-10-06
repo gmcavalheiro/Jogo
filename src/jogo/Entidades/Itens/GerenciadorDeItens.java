@@ -23,7 +23,7 @@ public class GerenciadorDeItens {
             Item i = it.next();
             i.atualiza();
 
-            if(handler.getMundo().getGerenciadorDeEntidades().entidadesRestantes() == 0) System.out.println(i.getPosicao() + " " + i.getNome());
+            //if(handler.getMundo().getGerenciadorDeEntidades().entidadesRestantes() == 0) System.out.println(i.getPosicao() + " " + i.getNome());
 
             if(i.isPegado()){
                 it.remove();
