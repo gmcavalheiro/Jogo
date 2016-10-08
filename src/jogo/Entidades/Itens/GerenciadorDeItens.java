@@ -38,8 +38,12 @@ public class GerenciadorDeItens {
     }
 
     public void adicionaItenm(Item i){
-        i.setHandler(handler);
-        itens.add(i);
+        if(itens.size() < 900) {
+            i.setHandler(handler);
+            itens.add(i);
+        }else{
+            return;
+        }
     }
 
     public Handler getHandler() {
