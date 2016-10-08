@@ -97,11 +97,21 @@ public class JoystickManager {
 
 
     public int getYDpad(){
+        if(controles.size() == 0) return 0;
         return (int) controller.getPovY();
     }
 
     public int getYJoystick(){
+        if(controles.size() == 0) return 0;
         return (int) controller.getYAxisValue();
+    }
+
+    public boolean noJoy(){
+        if(controles.size() == 0){
+            return true;
+        }else{
+            return false;
+        }
     }
 }
 

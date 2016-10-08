@@ -179,18 +179,23 @@ public class EstadoMenu extends Estado {
     }
 
     public void joystick(){
-        if(handler.getJoystickManager().getYDpad() == 1 || handler.getJoystickManager().getYJoystick() == 1){
-            joy[0] = true;
-        }else if(handler.getJoystickManager().getYDpad() == -1 || handler.getJoystickManager().getYJoystick() == -1){
-            joy[1] = true;
-        }else{
-            joy[0] = joy[1] = false;
-        }
+        if(handler.getJoystickManager().noJoy()){
+            return;
+        }else {
+
+            if (handler.getJoystickManager().getYDpad() == 1 || handler.getJoystickManager().getYJoystick() == 1) {
+                joy[0] = true;
+            } else if (handler.getJoystickManager().getYDpad() == -1 || handler.getJoystickManager().getYJoystick() == -1) {
+                joy[1] = true;
+            } else {
+                joy[0] = joy[1] = false;
+            }
 
         /*
         0 = baixo
         1 = cima
          */
+        }
     }
 
 
